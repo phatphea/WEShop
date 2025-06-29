@@ -19,14 +19,301 @@
   <body>
     <header></header>
 
-    <main class="flex justify-around">
+    <!-- BANNER -->
+    <nav>
+      <div class="relative">
+        <img src="src/img/slider3.JPG" alt="" class="w-full" />
+        <span class="absolute bottom-10 left-20">
+          <i class="fa-solid fa-house" style="color: #0a0a0a"></i>
+          <i class="mx-2 fa-solid fa-angles-right" style="color: #737373"></i>
+          <span class="font-bold text-neutral-950">Products</span>
+          <i class="mx-2 fa-solid fa-angles-right" style="color: #737373"></i>
+          <span class="font-bold text-neutral-950">Men</span>
+        </span>
+      </div>
+    </nav>
+
+    <main class="flex justify-evenly my-12">
       <!-- SIDEBAR -->
-      <aside>
-        <div class="bg-gray-100 h-[1074px] m-[70px] rounded-xl">SIDEBAR</div>
+      <aside class="w-80 mt-10">
+        <div
+          class="bg-stone-100 border border-gray-200 rounded-xl p-6 space-y-8"
+        >
+          <!-- FILTER BY PRICE -->
+          <div>
+            <div class="relative">
+              <!-- Blue accent line -->
+              <div class="absolute left-0 top-0 w-1 h-7 bg-primary -ml-6"></div>
+              <h3 class="font-semibold text-lg mb-4">Filter by price</h3>
+            </div>
+
+            <!-- Price Range Slider (Static) -->
+            <div class="mb-4">
+              <div class="relative">
+                <!-- Slider Track -->
+                <div class="w-full h-2 bg-gray-200 rounded-full relative">
+                  <!-- Active Range -->
+                  <div
+                    class="absolute h-2 bg-primary rounded-full"
+                    style="left: 10%; width: 80%"
+                  ></div>
+                  <!-- Left Handle -->
+                  <div
+                    class="absolute w-5 h-5 bg-primary rounded-full border-2 border-white shadow-lg -mt-1.5"
+                    style="left: 10%; transform: translateX(-50%)"
+                  ></div>
+                  <!-- Right Handle -->
+                  <div
+                    class="absolute w-5 h-5 bg-primary rounded-full border-2 border-white shadow-lg -mt-1.5"
+                    style="left: 90%; transform: translateX(-50%)"
+                  ></div>
+                </div>
+              </div>
+
+              <!-- Price Display -->
+              <div class="flex justify-between mt-3 text-sm text-gray-600">
+                <span>Price: $30 — $940</span>
+              </div>
+            </div>
+
+            <!-- Filter Button -->
+            <button
+              class="w-full bg-primary hover:bg-neutral-950 text-white font-semibold py-2 px-6 rounded-full transition-colors"
+            >
+              Filter
+            </button>
+          </div>
+
+          <!-- AVERAGE RATING -->
+          <div>
+            <div class="relative">
+              <!-- Blue accent line -->
+              <div class="absolute left-0 top-0 w-1 h-7 bg-primary -ml-6"></div>
+              <h3 class="font-semibold text-lg mb-4">Average rating</h3>
+            </div>
+
+            <div class="space-y-3">
+              <!-- 5 Stars -->
+              <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                  <div class="flex">
+                    <i class="fa-solid fa-star" style="color: #0a0a0a"></i>
+                    <i class="fa-solid fa-star" style="color: #0a0a0a"></i>
+                    <i class="fa-solid fa-star" style="color: #0a0a0a"></i>
+                    <i class="fa-solid fa-star" style="color: #0a0a0a"></i>
+                    <i class="fa-solid fa-star" style="color: #0a0a0a"></i>
+                  </div>
+                </div>
+                <span class="text-gray-500 text-sm">(1)</span>
+              </div>
+
+              <!-- 4 Stars -->
+              <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                  <div class="flex">
+                    <i class="fa-solid fa-star" style="color: #0a0a0a"></i>
+                    <i class="fa-solid fa-star" style="color: #0a0a0a"></i>
+                    <i class="fa-solid fa-star" style="color: #0a0a0a"></i>
+                    <i class="fa-solid fa-star" style="color: #0a0a0a"></i>
+                    <i class="fa-regular fa-star" style="color: #a3a3a3"></i>
+                  </div>
+                </div>
+                <span class="text-gray-500 text-sm">(2)</span>
+              </div>
+
+              <!-- 3 Stars -->
+              <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                  <div class="flex">
+                    <i class="fa-solid fa-star" style="color: #0a0a0a"></i>
+                    <i class="fa-solid fa-star" style="color: #0a0a0a"></i>
+                    <i class="fa-solid fa-star" style="color: #0a0a0a"></i>
+                    <i class="fa-regular fa-star" style="color: #a3a3a3"></i>
+                    <i class="fa-regular fa-star" style="color: #a3a3a3"></i>
+                  </div>
+                </div>
+                <span class="text-gray-500 text-sm">(1)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- OTHER PRODUCTS -->
+          <div>
+            <div class="relative">
+              <!-- Blue accent line -->
+              <div class="absolute left-0 top-0 w-1 h-7 bg-primary -ml-6"></div>
+              <h3 class="font-semibold text-lg mb-4">Other Products</h3>
+            </div>
+
+            <div class="space-y-4">
+              <div class="flex items-center space-x-3">
+                <img
+                  src="src/img/p5-1-300x300.jpg.jpeg"
+                  alt="The Trucker"
+                  class="w-18 object-cover rounded-lg"
+                />
+                <div class="flex-1">
+                  <h4 class="font-medium text-sm mb-4">The Trucker</h4>
+                  <div class="flex mb-2">
+                    <i
+                      class="fa-solid fa-star fa-xs"
+                      style="color: #0a0a0a"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-xs"
+                      style="color: #0a0a0a"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-xs"
+                      style="color: #0a0a0a"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-xs"
+                      style="color: #0a0a0a"
+                    ></i>
+                    <i
+                      class="fa-regular fa-star fa-xs"
+                      style="color: #a3a3a3"
+                    ></i>
+                  </div>
+                  <div class="flex items-center space-x-2 mt-1">
+                    <span
+                      class="text-neutral-800 line-through text-xs bg-stone-200 p-1.5 rounded-sm"
+                      >$45</span
+                    >
+                    <span class="font-semibold text-sm">$32</span>
+                  </div>
+                </div>
+              </div>
+
+              <hr class="text-gray-300" />
+
+              <div class="flex items-center space-x-3">
+                <img
+                  src="src/img/p3-1-1-300x300.jpg.jpeg"
+                  alt="Jack by BB Dakota Haole"
+                  class="w-16 object-cover rounded-lg"
+                />
+                <div class="flex-1">
+                  <h4 class="font-medium text-sm mb-4">
+                    Jack by BB Dakota Haole
+                  </h4>
+                  <div class="flex mb-2">
+                    <i
+                      class="fa-solid fa-star fa-xs"
+                      style="color: #0a0a0a"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-xs"
+                      style="color: #0a0a0a"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-xs"
+                      style="color: #0a0a0a"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-xs"
+                      style="color: #0a0a0a"
+                    ></i>
+                    <i
+                      class="fa-regular fa-star-half-stroke fa-xs"
+                      style="color: #0a0a0a"
+                    ></i>
+                  </div>
+                  <div class="mt-1">
+                    <span class="font-semibold text-sm">$35</span>
+                  </div>
+                </div>
+              </div>
+
+              <hr class="text-gray-300" />
+
+              <div class="flex items-center space-x-3">
+                <img
+                  src="src/img/p7-1-300x300.jpg.jpeg"
+                  alt="Gimp Hoodie"
+                  class="w-16 object-cover rounded-lg bg-black"
+                />
+                <div class="flex-1">
+                  <h4 class="font-medium text-sm mb-4">Gimp Hoodie</h4>
+                  <div class="flex mb-2">
+                    <i
+                      class="fa-solid fa-star fa-xs"
+                      style="color: #0a0a0a"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-xs"
+                      style="color: #0a0a0a"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-xs"
+                      style="color: #0a0a0a"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-xs"
+                      style="color: #0a0a0a"
+                    ></i>
+                    <i
+                      class="fa-regular fa-star-half-stroke fa-xs"
+                      style="color: #0a0a0a"
+                    ></i>
+                  </div>
+                  <div class="flex items-center space-x-2 mt-1">
+                    <span
+                      class="text-neutral-800 line-through text-xs bg-stone-200 p-1.5 rounded-sm"
+                      >$980</span
+                    >
+                    <span class="font-semibold text-sm">$939</span>
+                  </div>
+                </div>
+              </div>
+
+              <hr class="text-gray-300" />
+
+              <div class="flex items-center space-x-3">
+                <img
+                  src="src/img/p1-1-1-300x300.jpg.jpeg"
+                  alt="Pink Floyd Animals Tour"
+                  class="w-16 object-cover rounded-lg"
+                />
+                <div class="flex-1">
+                  <h4 class="font-medium text-sm mb-4">
+                    Pink Floyd Animals Tour
+                  </h4>
+                  <div class="flex mb-2">
+                    <i
+                      class="fa-solid fa-star fa-xs"
+                      style="color: #0a0a0a"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-xs"
+                      style="color: #0a0a0a"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-xs"
+                      style="color: #0a0a0a"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-xs"
+                      style="color: #0a0a0a"
+                    ></i>
+                    <i
+                      class="fa-regular fa-star-half-stroke fa-xs"
+                      style="color: #0a0a0a"
+                    ></i>
+                  </div>
+                  <div class="mt-1">
+                    <span class="font-semibold text-sm">$64</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </aside>
 
       <!-- SHOP SECTION -->
-      <section class="m-10">
+      <section class="my-10">
         <div class="h-[1280px]">
           <!-- MEN -->
           <h1 class="font-bold text-3xl my-5">Men</h1>
