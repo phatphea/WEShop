@@ -4,6 +4,314 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WEShop - Home</title>
+    <link rel="stylesheet" href="src/output.css" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- flowbit -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/3.1.2/flowbite.js"
+      integrity="sha512-c9m0HP/+jR+ZgMbKqLHtvn8nT0IiJiw0NhgSWedfZWi1QvGS39Kz2w4Sbo7rD1eYA+fm7ypCLNR0gbAJv2mHQA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="stylesheet" href="index.css" />
   </head>
-  <body></body>
+  <body class="">
+    <!-- header -->
+    <header
+      class="font-roboto bg-white border-b border-[#e6e6e6] dark:bg-gray-900"
+    >
+      <div
+        class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-2"
+      >
+        <div class="flex items-center space-x-6 rtl:space-x-reverse">
+          <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img
+              src="images/logo-fshop.png"
+              class="h-[50px] md:h-[80px] w-auto"
+              alt="weshop Logo"
+            />
+          </a>
+          <div class="relative w-full md:w-[450px]">
+            <form action="#" class="">
+              <input
+                type="text"
+                class="text-sm border border-[#dcdcdc] rounded-full focus:border-blue-500 focus:outline-none px-5 pr-10 py-2.5 w-full"
+                placeholder="Product, brand, name, keyword, ..."
+                required
+              />
+              <button
+                type="submit"
+                class="absolute right-4 top-1/2 transform -translate-y-1/2"
+              >
+                <i
+                  class="fa-solid fa-magnifying-glass text-gray-500 text-sm"
+                ></i>
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="flex items-center space-x-6 rtl:space-x-reverse">
+          <a
+            href="#"
+            class="text-[16px] text-black hover:text-blue-600 dark:text-white dark:hover:text-blue-500"
+          >
+            Track Order
+          </a>
+          <p class="text-gray-500">|</p>
+          <a
+            href="#"
+            class="text-black hover:text-blue-600 dark:text-white dark:hover:text-blue-500"
+          >
+            <i class="fa-regular fa-user text-[20px] font-[400]"></i>
+          </a>
+          <a
+            href="#"
+            class="text-black hover:text-blue-600 dark:text-white dark:hover:text-blue-500"
+          >
+            <i class="fa-regular fa-heart text-[20px] font-[400]"></i>
+          </a>
+          <a
+            href="#"
+            class="text-black hover:text-blue-600 dark:text-white dark:hover:text-blue-500"
+          >
+            <i class="fa-solid fa-cart-shopping text-[20px] font-[400]"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation with dropdown -->
+    <nav
+      id="mainNavbar"
+      class="bg-white border-b border-[#e6e6e6] dark:bg-gray-700 sticky top-0 z-50 transition-all duration-300"
+    >
+      <div class="max-w-screen-xl px-4 pb-4 mx-auto">
+        <div class="flex items-center justify-between">
+          <!-- Navigation Links -->
+          <ul class="flex flex-row mt-0 space-x-8 rtl:space-x-reverse text-sm">
+            <li>
+              <a
+                href="#"
+                class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold hover:border-t-2 hover:border-blue-700 pt-[1.125rem] inline-block"
+              >
+                HOME
+              </a>
+            </li>
+            <!-- WOMEN with Dropdown -->
+            <li class="relative group">
+              <a
+                id="dropdownNavbarLink"
+                data-dropdown-toggle="dropdownNavbar"
+                class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold hover:border-t-2 hover:border-blue-700 pt-[1.125rem] inline-block"
+              >
+                WOMEN
+                <svg
+                  class="w-2.5 h-2.5 ml-2.5 inline-block align-middle"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </a>
+              <!-- Dropdown Menu -->
+              <div
+                id="dropdownNavbar"
+                class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 dark:divide-gray-600 absolute"
+              >
+                <ul
+                  class="py-2 text-sm text-gray-700 dark:text-gray-400"
+                  aria-labelledby="dropdownNavbarLink"
+                >
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >
+                      Clothing
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >
+                      Shoes
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <!-- Other Menu Items -->
+            <li>
+              <a
+                href="#"
+                class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold hover:border-t-2 hover:border-blue-700 pt-[1.125rem] inline-block"
+              >
+                MEN
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold hover:border-t-2 hover:border-blue-700 pt-[1.125rem] inline-block"
+              >
+                KIDS
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold hover:border-t-2 hover:border-blue-700 pt-[1.125rem] inline-block"
+              >
+                ABOUT
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold hover:border-t-2 hover:border-blue-700 pt-[1.125rem] inline-block"
+              >
+                CONTACT
+              </a>
+            </li>
+          </ul>
+          <div
+            class="flex items-center justify-end space-x-5 rtl:space-x-reverse pt-4"
+          >
+            <a
+              href="#"
+              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold"
+            >
+              <i class="fa-brands fa-facebook-f text-[20px]"></i>
+            </a>
+            <a
+              href="#"
+              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold"
+            >
+              <i class="fa-brands fa-x-twitter text-[20px]"></i>
+            </a>
+            <a
+              href="#"
+              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold"
+            >
+              <i class="fa-brands fa-instagram text-[20px]"></i>
+            </a>
+            <a
+              href="#"
+              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold"
+            >
+              <i class="fa-brands fa-skype text-[20px]"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+      <!-- hero -->
+      <section id="hero" class="relative">
+        <div class="max-w-screen">
+          <img
+            src="images/hero.jpeg"
+            alt="Hero Image"
+            class="w-full h-[750px] object-cover"
+          />
+        </div>
+        <section
+          class="text-center max-w-screen-xl mx-auto absolute top-1/3 left-2/7 transform -translate-x-1/2 -translate-y-1/2"
+        >
+          <h1
+            class="text-6xl font-extrabold text-black mb-4 tracking-tight leading-tight"
+          >
+            TRUE STYLE<br />NEVER DIES
+          </h1>
+          <button
+            class="bg-black text-white px-8 py-3 rounded-full text-xl font-normal tracking-wide border-2 border-transparent hover:border-white hover:bg-gray-900 transition duration-300"
+          >
+            QUALITY NEVER GOES OUT OF STYLE
+          </button>
+        </section>
+
+        <!-- button back next -->
+        <section
+          class="back-next max-w-screen absolute top-1/2 left-0 right-0 flex justify-between px-15"
+        >
+          <button
+            class="cursor-pointer bg-white bg-opacity-70 text-black w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-opacity-90 transition duration-300"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
+              />
+            </svg>
+          </button>
+
+          <button
+            class="cursor-pointer bg-white bg-opacity-70 text-black w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-opacity-90 transition duration-300"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+              />
+            </svg>
+          </button>
+        </section>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="bg-gray-100 text-gray-700 py-6">
+      <div class="max-w-screen-xl mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-4 md:mb-0">
+            <p class="text-sm">© 2023 WEShop. All rights reserved.</p>
+          </div>
+          <div class="flex space-x-4 rtl:space-x-reverse">
+            <a href="#" class="text-gray-600 hover:text-blue-600">
+              Privacy Policy
+            </a>
+            <a href="#" class="text-gray-600 hover:text-blue-600">
+              Terms of Service
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- dropdown for women script -->
+    <script src="indexScript.js"></script>
+  </body>
 </html>
