@@ -34,15 +34,15 @@
           <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img
               src="images/logo-fshop.png"
-              class="h-[50px] md:h-[80px] w-auto"
+              class="w-auto sm:h-[48px] md:h-[80px]"
               alt="weshop Logo"
             />
           </a>
           <div class="relative w-full md:w-[450px]">
-            <form action="#" class="">
+            <form action="#" class="hidden md:block">
               <input
                 type="text"
-                class="text-sm border border-[#dcdcdc] rounded-full focus:border-blue-500 focus:outline-none px-5 pr-10 py-2.5 w-full"
+                class="h-[42px] text-sm border border-[#dcdcdc] rounded-full focus:border-blue-500 focus:outline-none px-5 pr-10 py-2.5 w-full"
                 placeholder="Product, brand, name, keyword, ..."
                 required
               />
@@ -60,7 +60,7 @@
         <div class="flex items-center space-x-6 rtl:space-x-reverse">
           <a
             href="#"
-            class="text-[16px] text-black hover:text-blue-600 dark:text-white dark:hover:text-blue-500"
+            class="text-[17px] text-black hover:text-blue-600 dark:text-white dark:hover:text-blue-500"
           >
             Track Order
           </a>
@@ -77,12 +77,19 @@
           >
             <i class="fa-regular fa-heart text-[20px] font-[400]"></i>
           </a>
-          <a
-            href="#"
-            class="text-black hover:text-blue-600 dark:text-white dark:hover:text-blue-500"
-          >
-            <i class="fa-solid fa-cart-shopping text-[20px] font-[400]"></i>
-          </a>
+          <div class="relative">
+            <a
+              href="#"
+              class="text-black hover:text-blue-600 dark:text-white dark:hover:text-blue-500"
+            >
+              <i class="fa-solid fa-cart-shopping text-[20px] font-[400]"></i>
+            </a>
+            <div
+              class="absolute -top-4 -right-4 bg-[#0006ff] text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-normal"
+            >
+              0
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -90,20 +97,18 @@
     <!-- Navigation with dropdown -->
     <nav
       id="mainNavbar"
-      class="bg-white border-b border-[#e6e6e6] dark:bg-gray-700 sticky top-0 z-50 transition-all duration-300"
+      class="bg-white h-[52px] items-center border-b border-[#e6e6e6] dark:bg-gray-700 sticky top-0 z-50 transition-all duration-300"
     >
       <div
-        class="max-w-screen-xl mx-auto px-2 flex items-center justify-between py-4 sticky top-0 z-50 bg-white shadow-md"
+        class="max-w-screen-xl h-[52px] mx-auto px-2 flex items-center justify-between"
       >
-        <ul class="flex flex-row space-x-8 text-sm items-center">
-          <li
-            id="logo-li"
-            class="hidden opacity-0 transition-opacity duration-300"
-          >
+        <ul class="flex flex-row space-x-7 text-sm items-center">
+          <li>
             <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
               <img
+                id="navbarLogo"
                 src="images/logo-fshop.png"
-                class="h-[50px] w-auto"
+                class="h-[48px] w-auto hidden transition-all duration-600 ease-in-out"
                 alt="weshop Logo"
               />
             </a>
@@ -111,7 +116,7 @@
           <li>
             <a
               href="#"
-              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-blue-700"
+              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-blue-700 pt-4"
             >
               HOME
             </a>
@@ -120,7 +125,7 @@
             <a
               id="dropdownNavbarLink"
               data-dropdown-toggle="dropdownNavbar"
-              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-blue-700 cursor-pointer"
+              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-blue-700 pt-4 cursor-pointer"
             >
               WOMEN
               <svg
@@ -169,7 +174,7 @@
           <li>
             <a
               href="#"
-              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-blue-700"
+              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-blue-700 pt-4"
             >
               MEN
             </a>
@@ -177,7 +182,7 @@
           <li>
             <a
               href="#"
-              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-blue-700"
+              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-blue-700 pt-4"
             >
               KIDS
             </a>
@@ -185,7 +190,7 @@
           <li>
             <a
               href="#"
-              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-blue-700"
+              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-blue-700 pt-4"
             >
               ABOUT
             </a>
@@ -193,7 +198,7 @@
           <li>
             <a
               href="#"
-              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-blue-700"
+              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-blue-700 pt-4"
             >
               CONTACT
             </a>
@@ -319,7 +324,21 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      const navbar = document.getElementById("mainNavbar");
+      const logo = document.getElementById("navbarLogo");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 97) {
+          logo.classList.remove("hidden");
+        } else {
+          logo.classList.add("hidden");
+        }
+      });
+    </script>
+
     <!-- dropdown for women script -->
-    <script></script>
+    <script src="indexScript.js"></script>
   </body>
 </html>
