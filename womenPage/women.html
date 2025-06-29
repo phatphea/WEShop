@@ -1,12 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WEShop - Women</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WEShop - Women</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
 </head>
-<body>
-    <h1>This is women</h1>
-    <h2></h2>
+<body class="bg-white text-gray-800 px-4 sm:px-6 lg:px-12">
+
+  <!-- Banner with Breadcrumb -->
+  <!-- Simple Banner -->
+<section class="w-full">
+  <img src="/WEShop/womenPage/womenImages/banner.png" alt="Banner" class="w-full object-cover" />
+</section>
+
+
+  <!-- Main Container -->
+  <main class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+    <!-- Title + Sorting -->
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+      <div>
+        <h1 class="text-3xl font-bold tracking-wide mb-1">Women</h1>
+        <p class="text-sm text-gray-600">Showing all 4 results</p>
+      </div>
+      <div class="flex gap-3 mt-4 md:mt-0">
+        <select class="border px-4 py-2 rounded-full text-sm shadow-sm">
+          <option>64 Products</option>
+        </select>
+        <select class="border px-4 py-2 rounded-full text-sm shadow-sm">
+          <option>Price high to low</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="flex flex-col lg:flex-row gap-6">
+
+      <!-- Sidebar -->
+      <aside class="w-full lg:w-[250px]">
+        <table class="w-full border border-gray-200 text-sm">
+          <thead>
+            <tr class="bg-gray-100">
+              <th class="text-left p-3 font-semibold">Filter</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="p-3 border-t">
+                <h2 class="font-semibold mb-2">Filter by price</h2>
+                <input type="range" min="30" max="70" value="70" class="w-full accent-blue-700" />
+                <p class="text-sm text-gray-600 mt-1 mb-3">Price: $30 — $70</p>
+                <button class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded">Filter</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="p-3 border-t">
+                <h3 class="font-semibold mb-2">Average rating</h3>
+                <ul class="space-y-1">
+                  <li>⭐⭐⭐⭐⭐ (2)</li>
+                  <li>⭐⭐⭐⭐☆ (2)</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td class="p-3 border-t">
+                <h3 class="font-semibold mb-2">Other Products</h3>
+                <div class="space-y-4">
+                  <div class="flex gap-3 items-start hover:bg-gray-50 p-2 rounded">
+                    <img src="https://via.placeholder.com/40" class="rounded" />
+                    <div>
+                      <p class="text-xs font-medium">Queen Anato Crew</p>
+                      <p class="text-xs text-gray-500">$69</p>
+                      <p class="text-yellow-500 text-xs">⭐⭐⭐⭐⭐</p>
+                    </div>
+                  </div>
+                  <div class="flex gap-3 items-start hover:bg-gray-50 p-2 rounded">
+                    <img src="https://via.placeholder.com/40" class="rounded" />
+                    <div>
+                      <p class="text-xs font-medium">Hawaiian Shirt</p>
+                      <p class="text-xs text-gray-500">$189</p>
+                      <p class="text-yellow-500 text-xs">⭐⭐⭐⭐☆</p>
+                    </div>
+                  </div>
+                  <div class="flex gap-3 items-start hover:bg-gray-50 p-2 rounded">
+                    <img src="https://via.placeholder.com/40" class="rounded" />
+                    <div>
+                      <p class="text-xs font-medium">Gimp Hoodie</p>
+                      <p class="text-xs text-gray-500">$999</p>
+                      <p class="text-yellow-500 text-xs">⭐⭐⭐⭐⭐</p>
+                    </div>
+                  </div>
+                  <div class="flex gap-3 items-start hover:bg-gray-50 p-2 rounded">
+                    <img src="https://via.placeholder.com/40" class="rounded" />
+                    <div>
+                      <p class="text-xs font-medium">Mirko Artist Tee</p>
+                      <p class="text-xs text-gray-500">$45</p>
+                      <p class="text-yellow-500 text-xs">⭐⭐⭐☆☆</p>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </aside>
+
+      <!-- Product Grid -->
+      <section class="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <!-- Product Card -->
+        <div class="border p-4 rounded-lg relative">
+          <img src="https://via.placeholder.com/300x400" alt="Product" class="w-full rounded mb-3 h-[400px] object-cover" />
+          <div class="absolute top-3 right-3 bg-black text-white text-sm px-3 py-1 rounded-full">$64</div>
+          <h3 class="font-semibold text-base">Pink Floyd Animals Tour</h3>
+          <p class="text-xs text-gray-500">Women</p>
+          <div class="text-yellow-500 text-sm mb-2">⭐⭐⭐⭐⭐</div>
+          <button class="text-xs font-medium text-blue-600 border border-blue-600 px-3 py-1 rounded hover:bg-blue-50">Add to cart</button>
+        </div>
+
+        <div class="border p-4 rounded-lg relative">
+          <img src="https://via.placeholder.com/300x400" alt="Product" class="w-full rounded mb-3 h-[400px] object-cover" />
+          <div class="absolute top-3 right-3 bg-black text-white text-sm px-3 py-1 rounded-full">$51</div>
+          <h3 class="font-semibold text-base">Marco Tank</h3>
+          <p class="text-xs text-gray-500">Women</p>
+          <div class="text-yellow-500 text-sm mb-2">⭐⭐⭐⭐⭐</div>
+          <button class="text-xs font-medium text-blue-600 border border-blue-600 px-3 py-1 rounded hover:bg-blue-50">Add to cart</button>
+        </div>
+
+        <div class="border p-4 rounded-lg relative">
+          <img src="https://via.placeholder.com/300x400" alt="Product" class="w-full rounded mb-3 h-[400px] object-cover" />
+          <div class="absolute top-3 right-3 bg-black text-white text-sm px-3 py-1 rounded-full">$35</div>
+          <h3 class="font-semibold text-base">Yellow Satin Dress</h3>
+          <p class="text-xs text-gray-500">Women</p>
+          <div class="text-yellow-500 text-sm mb-2">⭐⭐⭐⭐⭐</div>
+          <button class="text-xs font-medium text-blue-600 border border-blue-600 px-3 py-1 rounded hover:bg-blue-50">Add to cart</button>
+        </div>
+
+        <div class="border p-4 rounded-lg relative">
+          <img src="https://via.placeholder.com/300x400" alt="Product" class="w-full rounded mb-3 h-[400px] object-cover" />
+          <div class="absolute top-3 right-3 bg-black text-white text-sm px-3 py-1 rounded-full">$35</div>
+          <h3 class="font-semibold text-base">Floral Split Skirt</h3>
+          <p class="text-xs text-gray-500">Women</p>
+          <div class="text-yellow-500 text-sm mb-2">⭐⭐⭐⭐⭐</div>
+          <button class="text-xs font-medium text-blue-600 border border-blue-600 px-3 py-1 rounded hover:bg-blue-50">Add to cart</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
 </body>
 </html>
