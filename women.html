@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Men</title>
+    <link rel="stylesheet" href="src/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+     <header
+      class="font-roboto bg-white border-b border-[#e6e6e6] dark:bg-gray-900"
+    >
+      <div
+        class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-2"
+      >
+        <div class="flex items-center space-x-6 rtl:space-x-reverse">
+          <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img
+              src="/WEShop/womenImages/logo-fshop.png"
+              class="h-[50px] md:h-[80px] w-auto"
+              alt="weshop Logo"
+            />
+          </a>
+          <div class="relative w-full md:w-[450px]">
+            <form action="#" class="">
+              <input
+                type="text"
+                class="text-sm border border-[#dcdcdc] rounded-full focus:border-blue-500 focus:outline-none px-5 pr-10 py-2.5 w-full"
+                placeholder="Product, brand, name, keyword, ..."
+                required
+              />
+              <button
+                type="submit"
+                class="absolute right-4 top-1/2 transform -translate-y-1/2"
+              >
+                <i
+                  class="fa-solid fa-magnifying-glass text-gray-500 text-sm"
+                ></i>
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="flex items-center space-x-6 rtl:space-x-reverse">
+          <a
+            href="#"
+            class="text-[16px] text-black hover:text-blue-600 dark:text-white dark:hover:text-blue-500"
+          >
+            Track Order
+          </a>
+          <p class="text-gray-500">|</p>
+          <a
+            href="#"
+            class="text-black hover:text-blue-600 dark:text-white dark:hover:text-blue-500"
+          >
+            <i class="fa-regular fa-user text-[20px] font-[400]"></i>
+          </a>
+          <a
+            href="#"
+            class="text-black hover:text-blue-600 dark:text-white dark:hover:text-blue-500"
+          >
+            <i class="fa-regular fa-heart text-[20px] font-[400]"></i>
+          </a>
+          <a
+            href="#"
+            class="text-black hover:text-blue-600 dark:text-white dark:hover:text-blue-500"
+          >
+            <i class="fa-solid fa-cart-shopping text-[20px] font-[400]"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation with dropdown -->
+    <nav
+      id="mainNavbar"
+      class=" bg-white border-b border-[#e6e6e6] dark:bg-gray-700 sticky top-0 z-50 transition-all duration-300"
+    >
+      <div class="max-w-screen-xl mx-auto px-2 flex items-center justify-between">
+        <ul class="flex flex-row space-x-8 text-sm items-center">
+          
+          <li>
+            <a
+              href="#"
+              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-blue-700 pt-4"
+            >
+              HOME
+            </a>
+          </li>
+          <li class="relative group">
+            <a
+              id="dropdownNavbarLink"
+              data-dropdown-toggle="dropdownNavbar"
+              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-blue-700 pt-4 cursor-pointer"
+            >
+              WOMEN
+              <svg
+                class="w-2.5 h-2.5 ml-2.5 inline-block align-middle"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 10 6"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 4 4 4-4"
+                />
+              </svg>
+            </a>
+            <div
+              id="dropdownNavbar"
+              class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 dark:divide-gray-600 absolute group-hover:block"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-400"
+                aria-labelledby="dropdownNavbarLink"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >
+                    Clothing
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >
+                    Shoes
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-blue-700 pt-4"
+            >
+              MEN
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-blue-700 pt-4"
+            >
+              KIDS
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-blue-700 pt-4"
+            >
+              ABOUT
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-blue-700 pt-4"
+            >
+              CONTACT
+            </a>
+          </li>
+        </ul>
+        <div
+          class="flex items-center justify-end space-x-5 rtl:space-x-reverse"
+        >
+          <a
+            href="#"
+            class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold"
+          >
+            <i class="fa-brands fa-facebook-f text-[20px]"></i>
+          </a>
+          <a
+            href="#"
+            class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold"
+          >
+            <i class="fa-brands fa-x-twitter text-[20px]"></i>
+          </a>
+          <a
+            href="#"
+            class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold"
+          >
+            <i class="fa-brands fa-instagram text-[20px]"></i>
+          </a>
+          <a
+            href="#"
+            class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold"
+          >
+            <i class="fa-brands fa-skype text-[20px]"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- BANNER -->
+    <nav>
+      <div class="relative">
+        <img src="/WEShop/womenImages/banner.png" alt="" class="w-full" />
+        <span class="absolute bottom-10 left-20">
+          <i class="fa-solid fa-house" style="color: #0a0a0a"></i>
+          <i class="mx-2 fa-solid fa-angles-right" style="color: #737373"></i>
+          <span class="font-bold text-neutral-950">Products</span>
+          <i class="mx-2 fa-solid fa-angles-right" style="color: #737373"></i>
+          <span class="font-bold text-neutral-950">Women</span>
+        </span>
+      </div>
+    </nav>
+
+    <main class="flex justify-evenly my-12">
+      <!-- SIDEBAR -->
+      <aside class="w-80 mt-10">
+        <div
+          class="bg-stone-100 border border-gray-200 rounded-xl p-6 space-y-8"
+        >
+          <!-- FILTER BY PRICE -->
+          <div>
+            <div class="relative">
+              <!-- Blue accent line -->
+              <div class="absolute left-0 top-0 w-1 h-7 bg-primary -ml-6"></div>
+              <h3 class="font-semibold text-lg mb-4">Filter by price</h3>
+            </div>
+
+            <!-- Price Range Slider (Static) -->
+            <div class="mb-4">
+              <div class="relative">
+                <!-- Slider Track -->
+                <div class="w-full h-2 bg-gray-200 rounded-full relative">
+                  <!-- Active Range -->
+                  <div
+                    class="absolute h-2 bg-primary rounded-full"
+                    style="left: 10%; width: 80%"
+                  ></div>
+                  <!-- Left Handle -->
+                  <div
+                    class="absolute w-5 h-5 bg-primary rounded-full border-2 border-white shadow-lg -mt-1.5"
+                    style="left: 10%; transform: translateX(-50%)"
+                  ></div>
+                  <!-- Right Handle -->
+                  <div
+                    class="absolute w-5 h-5 bg-primary rounded-full border-2 border-white shadow-lg -mt-1.5"
+                    style="left: 90%; transform: translateX(-50%)"
+                  ></div>
+                </div>
+              </div>
+
+              <!-- Price Display -->
+              <div class="flex justify-between mt-3 text-sm text-gray-600">
+                <span>Price: $30 — $940</span>
+              </div>
+            </div>
+
+            <!-- Filter Button -->
+            <button
+              class="w-full bg-primary hover:bg-neutral-950 text-white font-semibold py-2 px-6 rounded-full transition-colors"
+            >
+              Filter
+            </button>
+          </div>
+
+          <!-- AVERAGE RATING -->
+          <div>
+            <div class="relative">
+              <!-- Blue accent line -->
+              <div class="absolute left-0 top-0 w-1 h-7 bg-primary -ml-6"></div>
+              <h3 class="font-semibold text-lg mb-4">Average rating</h3>
+            </div>
+
+            <div class="space-y-3">
+              <!-- 5 Stars -->
+              <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                  <div class="flex">
+                    <i class="fa-solid fa-star" style="color: #0a0a0a"></i>
+                    <i class="fa-solid fa-star" style="color: #0a0a0a"></i>
+                    <i class="fa-solid fa-star" style="color: #0a0a0a"></i>
+                    <i class="fa-solid fa-star" style="color: #0a0a0a"></i>
+                    <i class="fa-solid fa-star" style="color: #0a0a0a"></i>
+                  </div>
+                </div>
+                <span class="text-gray-500 text-sm">(1)</span>
+              </div>
+
+              <!-- 4 Stars -->
+              <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                  <div class="flex">
+                    <i class="fa-solid fa-star" style="color: #0a0a0a"></i>
+                    <i class="fa-solid fa-star" style="color: #0a0a0a"></i>
+                    <i class="fa-solid fa-star" style="color: #0a0a0a"></i>
+                    <i class="fa-solid fa-star" style="color: #0a0a0a"></i>
+                    <i class="fa-regular fa-star" style="color: #a3a3a3"></i>
+                  </div>
+                </div>
+                <span class="text-gray-500 text-sm">(2)</span>
+              </div>
+
+              <!-- 3 Stars -->
+              <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                  <div class="flex">
+                    <i class="fa-solid fa-star" style="color: #0a0a0a"></i>
+                    <i class="fa-solid fa-star" style="color: #0a0a0a"></i>
+                    <i class="fa-solid fa-star" style="color: #0a0a0a"></i>
+                    <i class="fa-regular fa-star" style="color: #a3a3a3"></i>
+                    <i class="fa-regular fa-star" style="color: #a3a3a3"></i>
+                  </div>
+                </div>
+                <span class="text-gray-500 text-sm">(1)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- OTHER PRODUCTS -->
+          <div>
+            <div class="relative">
+              <!-- Blue accent line -->
+              <div class="absolute left-0 top-0 w-1 h-7 bg-primary -ml-6"></div>
+              <h3 class="font-semibold text-lg mb-4">Other Products</h3>
+            </div>
+
+            <div class="space-y-4">
+              <div class="flex items-center space-x-3">
+                <img
+                  src="/WEShop/womenImages/BowieTee.png"
+                  alt="Bowie Tee"
+                  class="w-16 object-cover rounded-lg bg-black"
+                />
+                <div class="flex-1">
+                  <h4 class="font-medium text-sm mb-4">Bowie Tee</h4>
+                  <div class="flex mb-2">
+                    <i
+                      class="fa-solid fa-star fa-xs"
+                      style="color: #0a0a0a"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-xs"
+                      style="color: #0a0a0a"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-xs"
+                      style="color: #0a0a0a"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-xs"
+                      style="color: #0a0a0a"
+                    ></i>
+                    <i
+                      class="fa-regular fa-star-half-stroke fa-xs"
+                      style="color: #0a0a0a"
+                    ></i>
+                  </div>
+                  <div class="flex items-center space-x-2 mt-1">
+                    
+                    <span class="font-semibold text-sm">$24</span>
+                  </div>
+                </div>
+              </div>
+
+              <hr class="text-gray-300" />
+
+              <div class="flex items-center space-x-3">
+                <img
+                  src="/WEShop/womenImages/skirt11.png"
+                  alt="skirt"
+                  class="w-16 object-cover rounded-lg"
+                />
+                <div class="flex-1">
+                  <h4 class="font-medium text-sm mb-4">
+                    Flower Skirt
+                  </h4>
+                  <div class="flex mb-2">
+                    <i
+                      class="fa-solid fa-star fa-xs"
+                      style="color: #0a0a0a"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-xs"
+                      style="color: #0a0a0a"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-xs"
+                      style="color: #0a0a0a"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-xs"
+                      style="color: #0a0a0a"
+                    ></i>
+                    <i
+                      class="fa-regular fa-star-half-stroke fa-xs"
+                      style="color: #0a0a0a"
+                    ></i>
+                  </div>
+                  <div class="mt-1">
+                    <span class="font-semibold text-sm">$35</span>
+                  </div>
+                </div>
+              </div>
+
+              <hr class="text-gray-300" />
+
+              <div class="flex items-center space-x-3">
+                <img
+                  src="/WEShop/womenImages/Tshirt4.png"
+                  alt="Laurena Mini Dress Majorelle"
+                  class="w-16 object-cover rounded-lg bg-black"
+                />
+                <div class="flex-1">
+                  <h4 class="font-medium text-sm mb-4">Pink Tshirt</h4>
+                  <div class="flex mb-2">
+                    <i
+                      class="fa-solid fa-star fa-xs"
+                      style="color: #0a0a0a"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-xs"
+                      style="color: #0a0a0a"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-xs"
+                      style="color: #0a0a0a"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-xs"
+                      style="color: #0a0a0a"
+                    ></i>
+                    <i
+                      class="fa-regular fa-star-half-stroke fa-xs"
+                      style="color: #0a0a0a"
+                    ></i>
+                  </div>
+                  <div class="flex items-center space-x-2 mt-1">
+                    
+                    <span class="font-semibold text-sm">$25</span>
+                  </div>
+                </div>
+              </div>
+
+              <hr class="text-gray-300" />
+
+              <div class="flex items-center space-x-3">
+                <img
+                  src="/WEShop/womenImages/topCrop3.png"
+                  alt="Black Floyd Animals Tour"
+                  class="w-16 object-cover rounded-lg"
+                />
+                <div class="flex-1">
+                  <h4 class="font-medium text-sm mb-4">
+                    Black Floyd Animals Tour
+                  </h4>
+                  <div class="flex mb-2">
+                    <i
+                      class="fa-solid fa-star fa-xs"
+                      style="color: #0a0a0a"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-xs"
+                      style="color: #0a0a0a"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-xs"
+                      style="color: #0a0a0a"
+                    ></i>
+                    <i
+                      class="fa-solid fa-star fa-xs"
+                      style="color: #0a0a0a"
+                    ></i>
+                    <i
+                      class="fa-regular fa-star-half-stroke fa-xs"
+                      style="color: #0a0a0a"
+                    ></i>
+                  </div>
+                  <div class="mt-1">
+                    <span class="font-semibold text-sm">$64</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+       <!-- SHOP SECTION -->
+      <section class="my-10">
+        <div class="h-[1280px]">
+          <!-- Women -->
+          <h1 class="font-bold text-3xl my-5">Women</h1>
+
+          <!-- FILTER & RESULTS -->
+          <div class="flex justify-between">
+            <!-- RESULTS LABEL -->
+            <div><p>Showing all 4 results</p></div>
+
+            <!-- FILTER BUTTONS -->
+            <div class="flex gap-5">
+              <button
+                class="w-[140px] flex justify-between px-5 py-2 text-neutral-600 rounded-full ring-1 ring-gray-300 focus:ring-primary"
+              >
+                6 Products
+                <span
+                  ><i
+                    class="fa-solid fa-caret-down fa-sm"
+                    style="color: #a3a3a3"
+                  ></i
+                ></span>
+              </button>
+              <button
+                class="w-[180px] flex justify-between px-5 py-2 text-neutral-600 rounded-full ring-1 ring-gray-300 focus:ring-primary"
+              >
+                Default
+                <span
+                  ><i
+                    class="fa-solid fa-caret-down fa-sm"
+                    style="color: #a3a3a3"
+                  ></i
+                ></span>
+              </button>
+            </div>
+          </div>
+
+          <!-- CARD CONTAINER -->
+          <div class="mt-8 grid grid-cols-2 gap-10">
+           
+            <!-- ITEM CARD -->
+            <div class="w-[400px]">
+              <!-- IMAGE & BADGES -->
+              <div class="relative">
+                <!-- IMAGE -->
+                <img
+                  src="/WEShop/womenImages/summerDress.png"
+                  alt=""
+                  class="rounded-2xl ring-1 ring-gray-300"
+                />
+                <!-- PRICE TAG -->
+                <span
+                  class="absolute top-4 right-4 bg-neutral-950 text-white font-bold px-6 py-2 rounded-full"
+                >
+                  $89
+                </span>
+                <span class="absolute top-16 right-8"
+                  ><i class="fa-solid fa-star fa-xs" style="color: #0a0a0a"></i
+                  ><i class="fa-solid fa-star fa-xs" style="color: #0a0a0a"></i
+                  ><i class="fa-solid fa-star fa-xs" style="color: #0a0a0a"></i
+                  ><i class="fa-solid fa-star fa-xs" style="color: #0a0a0a"></i
+                  ><i class="fa-solid fa-star fa-xs" style="color: #0a0a0a"></i
+                ></span>
+              </div>
+
+              <!-- DESCRIPTION & BUTTON -->
+              <div class="flex justify-between mt-5">
+                <div>
+                  <h2 class="text-lg font-bold">Summer Dress</h2>
+                  <p class="mt-2 text-gray-500">Women</p>
+                </div>
+                <div class=" ">
+                  <button
+                    class="px-5 py-2 rounded-full bg-blue-50 text-primary font-semibold text-sm hover:bg-primary hover:text-white duration-150"
+                  >
+                    Add to cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+           
+            <!-- ITEM CARD -->
+            <div class="w-[400px]">
+              <!-- IMAGE & BADGES -->
+              <div class="relative">
+                <!-- IMAGE -->
+                <img
+                  src="/WEShop/womenImages/dress2.png"
+                  alt=""
+                  class="rounded-2xl ring-1 ring-gray-300"
+                />
+                <!-- PRICE TAG -->
+                <span
+                  class="absolute top-4 right-4 bg-neutral-950 text-white font-bold px-6 py-2 rounded-full"
+                >
+                  $40
+                </span>
+                <span class="absolute top-16 right-8"
+                  ><i class="fa-solid fa-star fa-xs" style="color: #0a0a0a"></i
+                  ><i class="fa-solid fa-star fa-xs" style="color: #0a0a0a"></i
+                  ><i class="fa-solid fa-star fa-xs" style="color: #0a0a0a"></i
+                  ><i class="fa-solid fa-star fa-xs" style="color: #0a0a0a"></i
+                  ><i class="fa-solid fa-star fa-xs" style="color: #0a0a0a"></i
+                ></span>
+              </div>
+
+              <!-- DESCRIPTION & BUTTON -->
+              <div class="flex justify-between mt-5">
+                <div>
+                  <h2 class="text-lg font-bold">Athletic dress</h2>
+                  <p class="mt-2 text-gray-500">Women</p>
+                </div>
+                <div class=" ">
+                  <button
+                    class="px-5 py-2 rounded-full bg-blue-50 text-primary font-semibold text-sm hover:bg-primary hover:text-white duration-150"
+                  >
+                    Add to cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- ITEM CARD -->
+            <div class="w-[400px]">
+              <!-- IMAGE & BADGES -->
+              <div class="relative">
+                <!-- IMAGE -->
+                <img
+                  src="/WEShop/womenImages/rayShirt.png"
+                  alt=""
+                  class="rounded-2xl ring-1 ring-gray-300"
+                />
+                <!-- PRICE TAG -->
+                <span
+                  class="absolute top-4 right-4 bg-neutral-950 text-white font-bold px-6 py-2 rounded-full"
+                >
+                  $18
+                </span>
+                <span class="absolute top-16 right-8"
+                  ><i class="fa-solid fa-star fa-xs" style="color: #0a0a0a"></i
+                  ><i class="fa-solid fa-star fa-xs" style="color: #0a0a0a"></i
+                  ><i class="fa-solid fa-star fa-xs" style="color: #0a0a0a"></i
+                  ><i class="fa-solid fa-star fa-xs" style="color: #0a0a0a"></i
+                  ><i class="fa-solid fa-star fa-xs" style="color: #0a0a0a"></i
+                ></span>
+              </div>
+
+              <!-- DESCRIPTION & BUTTON -->
+              <div class="flex justify-between mt-5">
+                <div>
+                  <h2 class="text-lg font-bold">Ray Tshirt</h2>
+                  <p class="mt-2 text-gray-500">Women</p>
+                </div>
+                <div class=" ">
+                  <button
+                    class="px-5 py-2 rounded-full bg-blue-50 text-primary font-semibold text-sm hover:bg-primary hover:text-white duration-150"
+                  >
+                    Add to cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- ITEM CARD -->
+            <div class="w-[400px]">
+              <!-- IMAGE & BADGES -->
+              <div class="relative">
+                <!-- IMAGE -->
+                <img
+                  src="/WEShop/womenImages/p4-1-1-600x600.jpg"
+                  alt=""
+                  class="rounded-2xl ring-1 ring-gray-300"
+                />
+
+                <!-- DISCOUNT TAG -->
+                <span
+                  class="absolute top-4 left-4 px-8 py-2 bg-primary rounded-full text-white font-bold"
+                  >4%</span
+                >
+                <!-- PRICE TAG -->
+                <span
+                  class="absolute top-4 right-4 bg-neutral-950 text-white font-bold px-6 py-2 rounded-full"
+                >
+                  <span class="line-through text-neutral-400 text-xs"
+                    >$40</span
+                  >
+                  $38
+                </span>
+                <span class="absolute top-16 right-8"
+                  ><i class="fa-solid fa-star fa-xs" style="color: #0a0a0a"></i
+                  ><i class="fa-solid fa-star fa-xs" style="color: #0a0a0a"></i
+                  ><i class="fa-solid fa-star fa-xs" style="color: #0a0a0a"></i
+                  ><i class="fa-solid fa-star fa-xs" style="color: #0a0a0a"></i
+                  ><i class="fa-solid fa-star fa-xs" style="color: #0a0a0a"></i
+                ></span>
+              </div>
+
+              <!-- DESCRIPTION & BUTTON -->
+              <div class="flex justify-between mt-5">
+                <div>
+                  <h2 class="text-lg font-bold">Laurena Mini Dress Majorelle</h2>
+                  <p class="mt-2 text-gray-500">Women</p>
+                </div>
+                <div class=" ">
+                  <button
+                    class="px-5 py-2 rounded-full bg-blue-50 text-primary font-semibold text-sm hover:bg-primary hover:text-white duration-150"
+                  >
+                    Add to cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </section>
+    </main>
+
+    <footer></footer>
+  </body>
+</html>

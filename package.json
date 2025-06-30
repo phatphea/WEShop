@@ -3,5 +3,8 @@
     "@tailwindcss/cli": "^4.1.11",
     "flowbite": "^3.1.2",
     "tailwindcss": "^4.1.11"
+  },
+  "scripts": {
+    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
   }
 }
