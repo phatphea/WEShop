@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Men</title>
+    <title>Women</title>
     <link rel="stylesheet" href="src/output.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,25 +17,25 @@
     />
   </head>
   <body>
-     <header
+    <header
       class="font-roboto bg-white border-b border-[#e6e6e6] dark:bg-gray-900"
     >
       <div
-        class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-2"
+        class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-6 sm:h-[68px] md:p-2"
       >
         <div class="flex items-center space-x-6 rtl:space-x-reverse">
           <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img
               src="/WEShop/womenImages/logo-fshop.png"
-              class="h-[50px] md:h-[80px] w-auto"
+              class="w-auto h-[48px] md:h-[80px]"
               alt="weshop Logo"
             />
           </a>
-          <div class="relative w-full md:w-[450px]">
-            <form action="#" class="">
+          <div class="relative w-full md:w-[450px] hidden md:block">
+            <form action="#" class="relative">
               <input
                 type="text"
-                class="text-sm border border-[#dcdcdc] rounded-full focus:border-blue-500 focus:outline-none px-5 pr-10 py-2.5 w-full"
+                class="h-[42px] text-sm border border-[#dcdcdc] rounded-full focus:border-blue-500 focus:outline-none px-5 pr-10 py-2.5 w-full"
                 placeholder="Product, brand, name, keyword, ..."
                 required
               />
@@ -50,10 +50,10 @@
             </form>
           </div>
         </div>
-        <div class="flex items-center space-x-6 rtl:space-x-reverse">
+        <div class="hidden md:flex items-center space-x-6 rtl:space-x-reverse">
           <a
             href="#"
-            class="text-[16px] text-black hover:text-blue-600 dark:text-white dark:hover:text-blue-500"
+            class="text-[17px] text-black hover:text-blue-600 dark:text-white dark:hover:text-blue-500"
           >
             Track Order
           </a>
@@ -70,24 +70,65 @@
           >
             <i class="fa-regular fa-heart text-[20px] font-[400]"></i>
           </a>
+          <div class="relative">
+            <a
+              href="#"
+              class="text-black hover:text-blue-600 dark:text-white dark:hover:text-blue-500"
+            >
+              <i class="fa-solid fa-cart-shopping text-[20px] font-[400]"></i>
+            </a>
+            <div
+              class="absolute -top-4 -right-4 bg-[#0006ff] text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-normal"
+            >
+              0
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center space-x-4 md:hidden">
           <a
             href="#"
-            class="text-black hover:text-blue-600 dark:text-white dark:hover:text-blue-500"
+            class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center"
           >
-            <i class="fa-solid fa-cart-shopping text-[20px] font-[400]"></i>
+            <i class="fa-solid fa-lock text-white text-[18px]"></i>
           </a>
+          <div class="relative">
+            <button
+              id="mobileMenuButton"
+              class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center"
+              aria-label="Toggle mobile menu"
+            >
+              <i class="fa-solid fa-bars text-white text-[18px]"></i>
+            </button>
+            <div
+              class="absolute -top-2 -right-2 bg-white text-blue-600 rounded-full w-5 h-5 flex items-center justify-center text-xs font-normal border border-blue-600"
+            >
+              0
+            </div>
+          </div>
         </div>
       </div>
     </header>
 
-    <!-- Navigation with dropdown -->
+     <!-- Navigation with dropdown -->
     <nav
       id="mainNavbar"
-      class=" bg-white border-b border-[#e6e6e6] dark:bg-gray-700 sticky top-0 z-50 transition-all duration-300"
+      class="bg-white h-[52px] items-center border-b border-[#e6e6e6] dark:bg-gray-700 sticky top-0 z-50 transition-all duration-300 hidden md:block"
     >
-      <div class="max-w-screen-xl mx-auto px-2 flex items-center justify-between">
-        <ul class="flex flex-row space-x-8 text-sm items-center">
-          
+      <div
+        class="max-w-screen-xl h-[52px] mx-auto px-2 flex items-center justify-between"
+      >
+        <ul class="flex flex-row space-x-7 text-sm items-center">
+          <li>
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+              <img
+                id="navbarLogo"
+                src="images/logo-fshop.png"
+                class="h-[48px] w-auto hidden transition-all duration-600 ease-in-out"
+                alt="weshop Logo"
+              />
+            </a>
+          </li>
           <li>
             <a
               href="#"
@@ -209,24 +250,127 @@
         </div>
       </div>
     </nav>
+     <!-- hamburgure menu -->
+    <div
+      id="mobileMenuOverlay"
+      class="fixed inset-0 bg-black opacity-[60%] z-40 hidden md:hidden"
+    ></div>
+
+    <div
+      id="mobileMenu"
+      class="fixed top-0 right-0 h-full w-70 bg-blue-600 z-50 transform translate-x-full transition-transform duration-300 md:hidden overflow-y-auto"
+    >
+      <div
+        class="flex justify-between items-center p-4 border-b border-blue-700"
+      >
+        <div class="flex items-center">
+          <img
+            src="/WEShop/womenImages/logo-fshop.png"
+            class="h-10 w-auto"
+            alt="XTShop Logo Mobile"
+          />
+        </div>
+        <button
+          id="closeMobileMenu"
+          class="text-white text-xl"
+          aria-label="Close mobile menu"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <ul class="flex flex-col text-white py-4">
+        <li><a href="#" class="block px-4 py-3 hover:bg-blue-700">HOME</a></li>
+        <li class="relative">
+          <a
+            href="#"
+            class="flex items-center justify-between px-4 py-3 hover:bg-blue-700 mobile-dropdown-toggle"
+          >
+            WOMEN
+            <svg
+              class="w-2.5 h-2.5 ml-2.5 transform transition-transform duration-200"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 10 6"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 1 4 4 4-4"
+              />
+            </svg>
+          </a>
+          <ul class="hidden bg-blue-700 text-sm">
+            <li>
+              <a href="#" class="block px-8 py-2 hover:bg-blue-800">Clothing</a>
+            </li>
+            <li>
+              <a href="#" class="block px-8 py-2 hover:bg-blue-800">Shoes</a>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#" class="block px-4 py-3 hover:bg-blue-700">MEN</a></li>
+        <li><a href="#" class="block px-4 py-3 hover:bg-blue-700">KIDS</a></li>
+        <li><a href="#" class="block px-4 py-3 hover:bg-blue-700">ABOUT</a></li>
+        <li>
+          <a href="#" class="block px-4 py-3 hover:bg-blue-700">CONTACT</a>
+        </li>
+      </ul>
+
+      <div
+        class="absolute bottom-0 left-0 w-full flex justify-center space-x-6 p-4"
+      >
+        <a
+          href="#"
+          class="text-white hover:text-gray-200"
+          aria-label="Facebook"
+        >
+          <i class="fa-brands fa-facebook-f text-[20px]"></i>
+        </a>
+        <a href="#" class="text-white hover:text-gray-200" aria-label="Twitter">
+          <i class="fa-brands fa-x-twitter text-[20px]"></i>
+        </a>
+        <a
+          href="#"
+          class="text-white hover:text-gray-200"
+          aria-label="Instagram"
+        >
+          <i class="fa-brands fa-instagram text-[20px]"></i>
+        </a>
+        <a href="#" class="text-white hover:text-gray-200" aria-label="Skype">
+          <i class="fa-brands fa-skype text-[20px]"></i>
+        </a>
+      </div>
+    </div>
 
     <!-- BANNER -->
     <nav>
       <div class="relative">
-        <img src="/WEShop/womenImages/banner.png" alt="" class="w-full" />
-        <span class="absolute bottom-10 left-20">
-          <i class="fa-solid fa-house" style="color: #0a0a0a"></i>
-          <i class="mx-2 fa-solid fa-angles-right" style="color: #737373"></i>
-          <span class="font-bold text-neutral-950">Products</span>
-          <i class="mx-2 fa-solid fa-angles-right" style="color: #737373"></i>
-          <span class="font-bold text-neutral-950">Women</span>
+        <img
+          src="/WEShop/womenImages/banner.png"
+          alt=""
+          class="h-[80px] w-full lg:h-[140px] object-cover object-top"
+        />
+        <span
+          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 lg:top-auto lg:bottom-10 lg:left-20 lg:transform-none lg:translate-x-0 lg:translate-y-0 text-xs lg:text-base whitespace-nowrap"
+        >
+          <i class="fa-solid fa-house mx-1 lg:mx-2 text-neutral-950 hover:text-primary"></i>
+          <i class="mx-1 lg:mx-2 fa-solid fa-angles-right text-neutral-500"></i>
+          <span class="font-bold text-neutral-950 hover:text-primary">Products</span>
+          <i class="mx-1 lg:mx-2 fa-solid fa-angles-right text-neutral-500"></i>
+          <span class="font-bold text-neutral-950 hover:text-primary">Women</span>
         </span>
       </div>
     </nav>
 
-    <main class="flex justify-evenly my-12">
+    <main class="grid grid-cols-1 lg:flex lg:justify-evenly my-12">
       <!-- SIDEBAR -->
-      <aside class="w-80 mt-10">
+      <aside 
+       class="order-2 lg:order-1 w-full lg:w-80 mt-10 lg:sticky lg:top-20 lg:self-start"
+      >
         <div
           class="bg-stone-100 border border-gray-200 rounded-xl p-6 space-y-8"
         >
@@ -498,78 +642,95 @@
       </aside>
 
        <!-- SHOP SECTION -->
-      <section class="my-10">
-        <div class="h-[1280px]">
-          <!-- Women -->
-          <h1 class="font-bold text-3xl my-5">Women</h1>
-
+      <section class="my-10 order-1 lg:order-2">
+        <div class="h-auto lg:h-[1280px]">
+          <!-- CATEGORY LABEL -->
+          <h1 class="font-bold text-3xl text-center lg:my-5 lg:text-left">
+            Women
+          </h1>
           <!-- FILTER & RESULTS -->
-          <div class="flex justify-between">
+          <div class="lg:flex lg:justify-between">
             <!-- RESULTS LABEL -->
-            <div><p>Showing all 4 results</p></div>
+            <div class="text-center lg:text-left my-5 lg:my-0">
+              <p>Showing all 4 results</p>
+            </div>
 
             <!-- FILTER BUTTONS -->
-            <div class="flex gap-5">
-              <button
-                class="w-[140px] flex justify-between px-5 py-2 text-neutral-600 rounded-full ring-1 ring-gray-300 focus:ring-primary"
-              >
-                6 Products
-                <span
-                  ><i
-                    class="fa-solid fa-caret-down fa-sm"
-                    style="color: #a3a3a3"
-                  ></i
-                ></span>
-              </button>
-              <button
-                class="w-[180px] flex justify-between px-5 py-2 text-neutral-600 rounded-full ring-1 ring-gray-300 focus:ring-primary"
-              >
-                Default
-                <span
-                  ><i
-                    class="fa-solid fa-caret-down fa-sm"
-                    style="color: #a3a3a3"
-                  ></i
-                ></span>
-              </button>
+            <div class="grid grid-cols-2 gap-3 mx-3 lg:mx-0 lg:flex lg:gap-5 lg:justify-end">
+              <!-- Products Count Dropdown -->
+              <div class="relative">
+                <select class="w-full lg:w-[140px] px-5 py-2 text-neutral-600 rounded-full ring-1 ring-gray-300 focus:ring-1 focus:ring-primary focus:outline-none appearance-none bg-white cursor-pointer">
+                  <option value="6">6 Products</option>
+                  <option value="16">16 Products</option>
+                  <option value="32">32 Products</option>
+                  <option value="48">48 Products</option>
+                  <option value="64">64 Products</option>
+                  <option value="128">128 Products</option>
+                </select>
+                <i  class="fa-solid fa-caret-down fa-sm absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none"
+                  style="color: #a3a3a3"></i>
+              </div>
+
+              <!-- Sort Dropdown -->
+              <div class="relative">
+                <select class="w-full lg:w-[180px] px-5 py-2 text-neutral-600 rounded-full ring-1 ring-gray-300 focus:ring-1 focus:ring-primary focus:outline-none appearance-none bg-white cursor-pointer">
+
+                  <option value="default">Default</option>
+                  <option value="popular">Popular</option>
+                  <option value="featured">Featured</option>
+                  <option value="top-rated">Top Rated</option>
+                  <option value="relevance">Relevance</option>
+                  <option value="latest">Sort by latest</option>
+                  <option value="oldest">Sort by oldest</option>
+                  <option value="price-low-high">Price low to high</option>
+                  <option value="price-high-low">Price high to low</option>
+                  <option value="highest-discount">Highest Discount</option>
+                  <option value="lowest-discount">Lowest Discount</option>
+                  <option value="alphabetically-az">Alphabetically, A-Z</option>
+                  <option value="alphabetically-za">Alphabetically, Z-A</option>
+                </select>
+                <i  class="fa-solid fa-caret-down fa-sm absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none"
+                  style="color: #a3a3a3"></i>
+              </div>
             </div>
           </div>
 
           <!-- CARD CONTAINER -->
-          <div class="mt-8 grid grid-cols-2 gap-10">
+          <div class="mx-3 mt-8 gap-3 grid grid-cols-2 lg:mx-0 lg:grid-cols-2 lg:gap-10">
            
             <!-- ITEM CARD -->
-            <div class="w-[400px]">
+            <div class="w-full lg:w-[400px] pb-4 lg:pb-0">
               <!-- IMAGE & BADGES -->
               <div class="relative">
                 <!-- IMAGE -->
                 <img
                   src="/WEShop/womenImages/summerDress.png"
                   alt=""
-                  class="rounded-2xl ring-1 ring-gray-300"
+                   class="rounded-2xl ring-1 ring-gray-300 hover:ring-2 hover:ring-primary hover:scale-102 duration-300"
                 />
                 <!-- PRICE TAG -->
                 <span
-                  class="absolute top-4 right-4 bg-neutral-950 text-white font-bold px-6 py-2 rounded-full"
+                  class="absolute top-2 right-2 lg:top-4 lg:right-4 bg-neutral-950 text-white font-bold px-4.5 py-1.5 lg:px-6 lg:py-2 rounded-full text-xs lg:text-base"
                 >
                   $89
                 </span>
-                <span class="absolute top-16 right-8"
-                  ><i class="fa-solid fa-star fa-xs" style="color: #0a0a0a"></i
-                  ><i class="fa-solid fa-star fa-xs" style="color: #0a0a0a"></i
-                  ><i class="fa-solid fa-star fa-xs" style="color: #0a0a0a"></i
-                  ><i class="fa-solid fa-star fa-xs" style="color: #0a0a0a"></i
-                  ><i class="fa-solid fa-star fa-xs" style="color: #0a0a0a"></i
-                ></span>
+                 <!-- STARS - Hidden on mobile, visible on desktop -->
+                <span class="absolute top-16 right-8 hidden lg:block">
+                  <i class="fa-solid fa-star fa-xs text-neutral-950"></i>
+                  <i class="fa-solid fa-star fa-xs text-neutral-950"></i>
+                  <i class="fa-solid fa-star fa-xs text-neutral-950"></i>
+                  <i class="fa-solid fa-star fa-xs text-neutral-950"></i>
+                  <i class="fa-regular fa-star-half-stroke fa-xs"></i>
+                </span>
               </div>
 
               <!-- DESCRIPTION & BUTTON -->
-              <div class="flex justify-between mt-5">
-                <div>
-                  <h2 class="text-lg font-bold">Summer Dress</h2>
+              <div  class="flex flex-col items-center text-center mt-5 lg:flex-row lg:justify-between lg:text-left">
+                <div class="lg:flex-1">
+                  <h2 class="text-sm lg:text-lg font-bold">Summer Dress</h2>
                   <p class="mt-2 text-gray-500">Women</p>
                 </div>
-                <div class=" ">
+                <div class="mt-3 lg:mt-0 ">
                   <button
                     class="px-5 py-2 rounded-full bg-blue-50 text-primary font-semibold text-sm hover:bg-primary hover:text-white duration-150"
                   >
@@ -581,37 +742,38 @@
 
            
             <!-- ITEM CARD -->
-            <div class="w-[400px]">
+            <div class="w-full lg:w-[400px] pb-4 lg:pb-0">
               <!-- IMAGE & BADGES -->
               <div class="relative">
                 <!-- IMAGE -->
                 <img
                   src="/WEShop/womenImages/dress2.png"
                   alt=""
-                  class="rounded-2xl ring-1 ring-gray-300"
+                  class="rounded-2xl ring-1 ring-gray-300 hover:ring-2 hover:ring-primary hover:scale-102 duration-300"
                 />
                 <!-- PRICE TAG -->
                 <span
-                  class="absolute top-4 right-4 bg-neutral-950 text-white font-bold px-6 py-2 rounded-full"
+                  class="absolute top-2 right-2 lg:top-4 lg:right-4 bg-neutral-950 text-white font-bold px-4.5 py-1.5 lg:px-6 lg:py-2 rounded-full text-xs lg:text-base"
                 >
                   $40
                 </span>
-                <span class="absolute top-16 right-8"
-                  ><i class="fa-solid fa-star fa-xs" style="color: #0a0a0a"></i
-                  ><i class="fa-solid fa-star fa-xs" style="color: #0a0a0a"></i
-                  ><i class="fa-solid fa-star fa-xs" style="color: #0a0a0a"></i
-                  ><i class="fa-solid fa-star fa-xs" style="color: #0a0a0a"></i
-                  ><i class="fa-solid fa-star fa-xs" style="color: #0a0a0a"></i
-                ></span>
+                <!-- STARS - Hidden on mobile, visible on desktop -->
+                <span class="absolute top-16 right-8 hidden lg:block">
+                  <i class="fa-solid fa-star fa-xs text-neutral-950"></i>
+                  <i class="fa-solid fa-star fa-xs text-neutral-950"></i>
+                  <i class="fa-solid fa-star fa-xs text-neutral-950"></i>
+                  <i class="fa-solid fa-star fa-xs text-neutral-950"></i>
+                  <i class="fa-regular fa-star-half-stroke fa-xs"></i>
+                </span>
               </div>
 
               <!-- DESCRIPTION & BUTTON -->
-              <div class="flex justify-between mt-5">
-                <div>
-                  <h2 class="text-lg font-bold">Athletic dress</h2>
+              <div  class="flex flex-col items-center text-center mt-5 lg:flex-row lg:justify-between lg:text-left">
+                <div class="lg:flex-1">
+                  <h2 class="text-sm lg:text-lg font-bold">Athletic dress</h2>
                   <p class="mt-2 text-gray-500">Women</p>
                 </div>
-                <div class=" ">
+                <div class="mt-3 lg:mt-0 ">
                   <button
                     class="px-5 py-2 rounded-full bg-blue-50 text-primary font-semibold text-sm hover:bg-primary hover:text-white duration-150"
                   >
@@ -622,37 +784,38 @@
             </div>
 
             <!-- ITEM CARD -->
-            <div class="w-[400px]">
+            <div class="w-full lg:w-[400px] pb-4 lg:pb-0">
               <!-- IMAGE & BADGES -->
               <div class="relative">
                 <!-- IMAGE -->
                 <img
                   src="/WEShop/womenImages/rayShirt.png"
                   alt=""
-                  class="rounded-2xl ring-1 ring-gray-300"
+                   class="rounded-2xl ring-1 ring-gray-300 hover:ring-2 hover:ring-primary hover:scale-102 duration-300"
                 />
                 <!-- PRICE TAG -->
                 <span
-                  class="absolute top-4 right-4 bg-neutral-950 text-white font-bold px-6 py-2 rounded-full"
+                   class="absolute top-2 right-2 lg:top-4 lg:right-4 bg-neutral-950 text-white font-bold px-4.5 py-1.5 lg:px-6 lg:py-2 rounded-full text-xs lg:text-base"
                 >
                   $18
                 </span>
-                <span class="absolute top-16 right-8"
-                  ><i class="fa-solid fa-star fa-xs" style="color: #0a0a0a"></i
-                  ><i class="fa-solid fa-star fa-xs" style="color: #0a0a0a"></i
-                  ><i class="fa-solid fa-star fa-xs" style="color: #0a0a0a"></i
-                  ><i class="fa-solid fa-star fa-xs" style="color: #0a0a0a"></i
-                  ><i class="fa-solid fa-star fa-xs" style="color: #0a0a0a"></i
-                ></span>
+                 <!-- STARS - Hidden on mobile, visible on desktop -->
+                <span class="absolute top-16 right-8 hidden lg:block">
+                  <i class="fa-solid fa-star fa-xs text-neutral-950"></i>
+                  <i class="fa-solid fa-star fa-xs text-neutral-950"></i>
+                  <i class="fa-solid fa-star fa-xs text-neutral-950"></i>
+                  <i class="fa-solid fa-star fa-xs text-neutral-950"></i>
+                  <i class="fa-solid fa-star fa-xs text-neutral-950"></i>
+                </span>
               </div>
 
               <!-- DESCRIPTION & BUTTON -->
-              <div class="flex justify-between mt-5">
-                <div>
-                  <h2 class="text-lg font-bold">Ray Tshirt</h2>
+              <div class="flex flex-col items-center text-center mt-5 lg:flex-row lg:justify-between lg:text-left">
+                <div class="lg:flex-1">
+                  <h2 class="text-sm lg:text-lg font-bold">Ray Tshirt</h2>
                   <p class="mt-2 text-gray-500">Women</p>
                 </div>
-                <div class=" ">
+                <div class="mt-3 lg:mt-0">
                   <button
                     class="px-5 py-2 rounded-full bg-blue-50 text-primary font-semibold text-sm hover:bg-primary hover:text-white duration-150"
                   >
@@ -663,46 +826,212 @@
             </div>
 
             <!-- ITEM CARD -->
-            <div class="w-[400px]">
+            <div class="w-full lg:w-[400px] pb-4 lg:pb-0">
               <!-- IMAGE & BADGES -->
               <div class="relative">
                 <!-- IMAGE -->
                 <img
                   src="/WEShop/womenImages/p4-1-1-600x600.jpg"
                   alt=""
-                  class="rounded-2xl ring-1 ring-gray-300"
+                  class="rounded-2xl ring-1 ring-gray-300 hover:ring-2 hover:ring-primary hover:scale-102 duration-300"
                 />
 
-                <!-- DISCOUNT TAG -->
-                <span
-                  class="absolute top-4 left-4 px-8 py-2 bg-primary rounded-full text-white font-bold"
-                  >4%</span
-                >
                 <!-- PRICE TAG -->
                 <span
-                  class="absolute top-4 right-4 bg-neutral-950 text-white font-bold px-6 py-2 rounded-full"
+                  class="absolute top-2 right-2 lg:top-4 lg:right-4 bg-neutral-950 text-white font-bold px-4.5 py-1.5 lg:px-6 lg:py-2 rounded-full text-xs lg:text-base"
                 >
-                  <span class="line-through text-neutral-400 text-xs"
-                    >$40</span
-                  >
                   $38
                 </span>
-                <span class="absolute top-16 right-8"
-                  ><i class="fa-solid fa-star fa-xs" style="color: #0a0a0a"></i
-                  ><i class="fa-solid fa-star fa-xs" style="color: #0a0a0a"></i
-                  ><i class="fa-solid fa-star fa-xs" style="color: #0a0a0a"></i
-                  ><i class="fa-solid fa-star fa-xs" style="color: #0a0a0a"></i
-                  ><i class="fa-solid fa-star fa-xs" style="color: #0a0a0a"></i
-                ></span>
+                <!-- STARS - Hidden on mobile, visible on desktop -->
+                <span class="absolute top-16 right-8 hidden lg:block">
+                  <i class="fa-solid fa-star fa-xs text-neutral-950"></i>
+                  <i class="fa-solid fa-star fa-xs text-neutral-950"></i>
+                  <i class="fa-solid fa-star fa-xs text-neutral-950"></i>
+                  <i class="fa-solid fa-star fa-xs text-neutral-950"></i>
+                  <i class="fa-solid fa-star fa-xs text-neutral-950"></i>
+                </span>
               </div>
 
               <!-- DESCRIPTION & BUTTON -->
-              <div class="flex justify-between mt-5">
+              <div  class="flex flex-col items-center text-center mt-5 lg:flex-row lg:justify-between lg:text-left">
                 <div>
-                  <h2 class="text-lg font-bold">Laurena Mini Dress Majorelle</h2>
+                  <h2 class="text-sm lg:text-lg font-bold">Laurena Mini Dress Majorelle</h2>
                   <p class="mt-2 text-gray-500">Women</p>
                 </div>
-                <div class=" ">
+                <div class="mt-3 lg:mt-0">
+                  <button
+                    class="px-5 py-2 rounded-full bg-blue-50 text-primary font-semibold text-sm hover:bg-primary hover:text-white duration-150"
+                  >
+                    Add to cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            
+            <!-- ITEM CARD -->
+            <div class="w-full lg:w-[400px] pb-4 lg:pb-0">
+              <!-- IMAGE & BADGES -->
+              <div class="relative">
+                <!-- IMAGE -->
+                <img
+                  src="/WEShop/womenImages/greenDress.png"
+                  alt=""
+                  class="rounded-2xl ring-1 ring-gray-300 hover:ring-2 hover:ring-primary hover:scale-102 duration-300"
+                />
+
+                <!-- PRICE TAG -->
+                <span
+                  class="absolute top-2 right-2 lg:top-4 lg:right-4 bg-neutral-950 text-white font-bold px-4.5 py-1.5 lg:px-6 lg:py-2 rounded-full text-xs lg:text-base"
+                >
+                  $50
+                </span>
+                <!-- STARS - Hidden on mobile, visible on desktop -->
+                <span class="absolute top-16 right-8 hidden lg:block">
+                  <i class="fa-solid fa-star fa-xs text-neutral-950"></i>
+                  <i class="fa-solid fa-star fa-xs text-neutral-950"></i>
+                  <i class="fa-solid fa-star fa-xs text-neutral-950"></i>
+                  <i class="fa-solid fa-star fa-xs text-neutral-950"></i>
+                  <i class="fa-solid fa-star fa-xs text-neutral-950"></i>
+                </span>
+              </div>
+
+              <!-- DESCRIPTION & BUTTON -->
+              <div  class="flex flex-col items-center text-center mt-5 lg:flex-row lg:justify-between lg:text-left">
+                <div>
+                  <h2 class="text-sm lg:text-lg font-bold">Summer dress</h2>
+                  <p class="mt-2 text-gray-500">Women</p>
+                </div>
+                <div class="mt-3 lg:mt-0">
+                  <button
+                    class="px-5 py-2 rounded-full bg-blue-50 text-primary font-semibold text-sm hover:bg-primary hover:text-white duration-150"
+                  >
+                    Add to cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- ITEM CARD -->
+            <div class="w-full lg:w-[400px] pb-4 lg:pb-0">
+              <!-- IMAGE & BADGES -->
+              <div class="relative">
+                <!-- IMAGE -->
+                <img
+                  src="/WEShop/womenImages/Skirt Short Sleeve dress.png"
+                  alt=""
+                  class="rounded-2xl ring-1 ring-gray-300 hover:ring-2 hover:ring-primary hover:scale-102 duration-300"
+                />
+
+                <!-- PRICE TAG -->
+                <span
+                  class="absolute top-2 right-2 lg:top-4 lg:right-4 bg-neutral-950 text-white font-bold px-4.5 py-1.5 lg:px-6 lg:py-2 rounded-full text-xs lg:text-base"
+                >
+                  $35
+                </span>
+                <!-- STARS - Hidden on mobile, visible on desktop -->
+                <span class="absolute top-16 right-8 hidden lg:block">
+                  <i class="fa-solid fa-star fa-xs text-neutral-950"></i>
+                  <i class="fa-solid fa-star fa-xs text-neutral-950"></i>
+                  <i class="fa-solid fa-star fa-xs text-neutral-950"></i>
+                  <i class="fa-solid fa-star fa-xs text-neutral-950"></i>
+                  <i class="fa-solid fa-star fa-xs text-neutral-950"></i>
+                </span>
+              </div>
+
+              <!-- DESCRIPTION & BUTTON -->
+              <div  class="flex flex-col items-center text-center mt-5 lg:flex-row lg:justify-between lg:text-left">
+                <div>
+                  <h2 class="text-sm lg:text-lg font-bold">Skirt Short Sleeve dress</h2>
+                  <p class="mt-2 text-gray-500">Women</p>
+                </div>
+                <div class="mt-3 lg:mt-0">
+                  <button
+                    class="px-5 py-2 rounded-full bg-blue-50 text-primary font-semibold text-sm hover:bg-primary hover:text-white duration-150"
+                  >
+                    Add to cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- ITEM CARD -->
+            <div class="w-full lg:w-[400px] pb-4 lg:pb-0">
+              <!-- IMAGE & BADGES -->
+              <div class="relative">
+                <!-- IMAGE -->
+                <img
+                  src="/WEShop/womenImages/Jacket Dust Pink.png"
+                  alt=""
+                  class="rounded-2xl ring-1 ring-gray-300 hover:ring-2 hover:ring-primary hover:scale-102 duration-300"
+                />
+
+                <!-- PRICE TAG -->
+                <span
+                  class="absolute top-2 right-2 lg:top-4 lg:right-4 bg-neutral-950 text-white font-bold px-4.5 py-1.5 lg:px-6 lg:py-2 rounded-full text-xs lg:text-base"
+                >
+                  $25
+                </span>
+                <!-- STARS - Hidden on mobile, visible on desktop -->
+                <span class="absolute top-16 right-8 hidden lg:block">
+                  <i class="fa-solid fa-star fa-xs text-neutral-950"></i>
+                  <i class="fa-solid fa-star fa-xs text-neutral-950"></i>
+                  <i class="fa-solid fa-star fa-xs text-neutral-950"></i>
+                  <i class="fa-solid fa-star fa-xs text-neutral-950"></i>
+                  <i class="fa-solid fa-star fa-xs text-neutral-950"></i>
+                </span>
+              </div>
+
+              <!-- DESCRIPTION & BUTTON -->
+              <div  class="flex flex-col items-center text-center mt-5 lg:flex-row lg:justify-between lg:text-left">
+                <div>
+                  <h2 class="text-sm lg:text-lg font-bold">Jacket Dust Pink</h2>
+                  <p class="mt-2 text-gray-500">Women</p>
+                </div>
+                <div class="mt-3 lg:mt-0">
+                  <button
+                    class="px-5 py-2 rounded-full bg-blue-50 text-primary font-semibold text-sm hover:bg-primary hover:text-white duration-150"
+                  >
+                    Add to cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+             <!-- ITEM CARD -->
+            <div class="w-full lg:w-[400px] pb-4 lg:pb-0">
+              <!-- IMAGE & BADGES -->
+              <div class="relative">
+                <!-- IMAGE -->
+                <img
+                  src="/WEShop/womenImages/Scoop neck crinkle maxi dress.png"
+                  alt=""
+                  class="rounded-2xl ring-1 ring-gray-300 hover:ring-2 hover:ring-primary hover:scale-102 duration-300"
+                />
+
+                <!-- PRICE TAG -->
+                <span
+                  class="absolute top-2 right-2 lg:top-4 lg:right-4 bg-neutral-950 text-white font-bold px-4.5 py-1.5 lg:px-6 lg:py-2 rounded-full text-xs lg:text-base"
+                >
+                  $65
+                </span>
+                <!-- STARS - Hidden on mobile, visible on desktop -->
+                <span class="absolute top-16 right-8 hidden lg:block">
+                  <i class="fa-solid fa-star fa-xs text-neutral-950"></i>
+                  <i class="fa-solid fa-star fa-xs text-neutral-950"></i>
+                  <i class="fa-solid fa-star fa-xs text-neutral-950"></i>
+                  <i class="fa-solid fa-star fa-xs text-neutral-950"></i>
+                  <i class="fa-solid fa-star fa-xs text-neutral-950"></i>
+                </span>
+              </div>
+
+              <!-- DESCRIPTION & BUTTON -->
+              <div  class="flex flex-col items-center text-center mt-5 lg:flex-row lg:justify-between lg:text-left">
+                <div>
+                  <h2 class="text-sm lg:text-lg font-bold">JScoop neck crinkle maxi dress</h2>
+                  <p class="mt-2 text-gray-500">Women</p>
+                </div>
+                <div class="mt-3 lg:mt-0">
                   <button
                     class="px-5 py-2 rounded-full bg-blue-50 text-primary font-semibold text-sm hover:bg-primary hover:text-white duration-150"
                   >
@@ -718,5 +1047,8 @@
     </main>
 
     <footer></footer>
+
+
+    
   </body>
 </html>
