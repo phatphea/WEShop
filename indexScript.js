@@ -53,3 +53,42 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// Dark Mode Toggle
+const themeToggle = document.getElementById("theme-toggle");
+const sunIcon = document.getElementById("sun-icon");
+const moonIcon = document.getElementById("moon-icon");
+
+// Function to set initial theme
+function setInitialTheme() {
+  const savedTheme = localStorage.getItem("theme");
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+    document.documentElement.classList.add("dark");
+    sunIcon.classList.add("hidden");
+    moonIcon.classList.remove("hidden");
+  } else {
+    document.documentElement.classList.remove("dark");
+    sunIcon.classList.remove("hidden");
+    moonIcon.classList.add("hidden");
+  }
+}
+
+// Toggle theme
+themeToggle.addEventListener("click", () => {
+  const isDark = document.documentElement.classList.toggle("dark");
+
+  if (isDark) {
+    localStorage.setItem("theme", "dark");
+    sunIcon.classList.add("hidden");
+    moonIcon.classList.remove("hidden");
+  } else {
+    localStorage.setItem("theme", "light");
+    sunIcon.classList.remove("hidden");
+    moonIcon.classList.add("hidden");
+  }
+});
+
+// Set theme on initial load
+setInitialTheme();

@@ -22,27 +22,32 @@
     ></script>
     <link rel="stylesheet" href="index.css" />
   </head>
-  <body class="">
+  <body>
     <!-- header -->
     <header
-      class="font-roboto bg-white border-b border-[#e6e6e6] dark:bg-gray-900"
+      class="dark-bg font-roboto bg-white border-b border-[#e6e6e6] dark:bg-gray-900"
     >
       <div
-        class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-6 sm:h-[68px] md:p-2"
+        class="flex flex-wrap md:flex-nowrap justify-between items-center mx-auto max-w-screen-xl px-6 h-[68px] md:h-[96px] md:p-2"
       >
         <div class="flex items-center space-x-6 rtl:space-x-reverse">
           <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img
               src="images/logo-fshop.png"
-              class="w-auto h-[48px] md:h-[80px]"
+              class="w-auto h-[48px] md:h-[70px] lg:h-[80px] transition-all duration-600 ease-in-out"
               alt="weshop Logo"
             />
           </a>
-          <div class="relative w-full md:w-[450px] hidden md:block">
-            <form action="#" class="relative">
+          <div
+            class="relative w-full md:w-[430px] lg:w-[450px] hidden md:block"
+          >
+            <form
+              action="#"
+              class="relative md:w-[80%] lg:w-full transition-all duration-800 ease-in-out"
+            >
               <input
                 type="text"
-                class="h-[42px] text-sm border border-[#dcdcdc] rounded-full focus:border-blue-500 focus:outline-none px-5 pr-10 py-2.5 w-full"
+                class="search h-[42px] text-sm dark:text-white border border-[#dcdcdc] rounded-full focus:border-blue-500 focus:outline-none px-5 pr-10 py-2.5 w-full"
                 placeholder="Product, brand, name, keyword, ..."
                 required
               />
@@ -60,27 +65,27 @@
         <div class="hidden md:flex items-center space-x-6 rtl:space-x-reverse">
           <a
             href="#"
-            class="text-[17px] text-black hover:text-blue-600 dark:text-white dark:hover:text-blue-500"
+            class="white text-[17px] text-black hover:text-blue-600 dark:text-white dark:hover:text-blue-500"
           >
             Track Order
           </a>
           <p class="text-gray-500">|</p>
           <a
             href="#"
-            class="text-black hover:text-blue-600 dark:text-white dark:hover:text-blue-500"
+            class="white text-black hover:text-blue-600 dark:text-white dark:hover:text-blue-500"
           >
             <i class="fa-regular fa-user text-[20px] font-[400]"></i>
           </a>
           <a
             href="#"
-            class="text-black hover:text-blue-600 dark:text-white dark:hover:text-blue-500"
+            class="white text-black hover:text-blue-600 dark:text-white dark:hover:text-blue-500"
           >
             <i class="fa-regular fa-heart text-[20px] font-[400]"></i>
           </a>
           <div class="relative">
             <a
               href="#"
-              class="text-black hover:text-blue-600 dark:text-white dark:hover:text-blue-500"
+              class="white text-black hover:text-blue-600 dark:text-white dark:hover:text-blue-500"
             >
               <i class="fa-solid fa-cart-shopping text-[20px] font-[400]"></i>
             </a>
@@ -120,14 +125,14 @@
     <!-- Navigation with dropdown -->
     <nav
       id="mainNavbar"
-      class="bg-white h-[52px] items-center border-b border-[#e6e6e6] dark:bg-gray-700 sticky top-0 z-50 transition-all duration-300 hidden md:block"
+      class="dark-bg bg-white h-[52px] items-center border-b border-[#e6e6e6] dark:bg-gray-700 sticky top-0 z-50 transition-all duration-300 hidden md:block"
     >
       <div
         class="max-w-screen-xl h-[52px] mx-auto px-2 flex items-center justify-between"
       >
-        <ul class="flex flex-row space-x-7 text-sm items-center">
+        <ul class="flex flex-row space-x-7 justify-start items-center text-sm">
           <li>
-            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <a href="#" class="flex items-center rtl:space-x-reverse">
               <img
                 id="navbarLogo"
                 src="images/logo-fshop.png"
@@ -139,7 +144,7 @@
           <li>
             <a
               href="#"
-              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-blue-700 pt-4"
+              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-blue-700 pt-4 white"
             >
               HOME
             </a>
@@ -148,7 +153,7 @@
             <a
               id="dropdownNavbarLink"
               data-dropdown-toggle="dropdownNavbar"
-              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-blue-700 pt-4 cursor-pointer"
+              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-blue-700 pt-4 cursor-pointer white "
             >
               WOMEN
               <svg
@@ -178,7 +183,7 @@
                 <li>
                   <a
                     href="#"
-                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    class=" block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                   >
                     Clothing
                   </a>
@@ -186,7 +191,7 @@
                 <li>
                   <a
                     href="#"
-                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    class=" block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                   >
                     Shoes
                   </a>
@@ -197,7 +202,7 @@
           <li>
             <a
               href="#"
-              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-blue-700 pt-4"
+              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-blue-700 pt-4 white"
             >
               MEN
             </a>
@@ -205,7 +210,7 @@
           <li>
             <a
               href="#"
-              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-blue-700 pt-4"
+              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-blue-700 pt-4 white"
             >
               KIDS
             </a>
@@ -213,7 +218,7 @@
           <li>
             <a
               href="#"
-              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-blue-700 pt-4"
+              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-blue-700 pt-4 white"
             >
               ABOUT
             </a>
@@ -221,7 +226,7 @@
           <li>
             <a
               href="#"
-              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-blue-700 pt-4"
+              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-blue-700 pt-4 white"
             >
               CONTACT
             </a>
@@ -230,27 +235,66 @@
         <div
           class="flex items-center justify-end space-x-5 rtl:space-x-reverse"
         >
+          <!-- dark mode -->
+          <button
+            id="theme-toggle"
+            class="text-gray-600 hover:text-blue-700 focus:outline-none cursor-pointer dark:text-gray-300 dark:hover:text-blue-500 transition duration-300"
+            aria-label="Toggle dark mode"
+          >
+            <!-- sun icon (light mode) -->
+            <svg
+              id="sun-icon"
+              class="w-7 h-7"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+              ></path>
+            </svg>
+
+            <!-- moon icon (dark mode) -->
+            <svg
+              id="moon-icon"
+              class="w-6 h-6 hidden"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+              ></path>
+            </svg>
+          </button>
+
           <a
             href="#"
-            class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold"
+            class="white text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold"
           >
             <i class="fa-brands fa-facebook-f text-[20px]"></i>
           </a>
           <a
             href="#"
-            class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold"
+            class="white text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold"
           >
             <i class="fa-brands fa-x-twitter text-[20px]"></i>
           </a>
           <a
             href="#"
-            class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold"
+            class="white text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold"
           >
             <i class="fa-brands fa-instagram text-[20px]"></i>
           </a>
           <a
             href="#"
-            class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold"
+            class="white text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold"
           >
             <i class="fa-brands fa-skype text-[20px]"></i>
           </a>
@@ -425,27 +469,7 @@
       </section>
     </main>
 
-    <!-- footer -->
-    <footer class="bg-gray-100 text-gray-700 py-6">
-      <div class="max-w-screen-xl mx-auto px-4">
-        <div class="flex flex-col md:flex-row justify-between items-center">
-          <div class="mb-4 md:mb-0">
-            <p class="text-sm">© 2023 WEShop. All rights reserved.</p>
-          </div>
-          <div class="flex space-x-4 rtl:space-x-reverse">
-            <a href="#" class="text-gray-600 hover:text-blue-600">
-              Privacy Policy
-            </a>
-            <a href="#" class="text-gray-600 hover:text-blue-600">
-              Terms of Service
-            </a>
-          </div>
-        </div>
-      </div>
-    </footer>
-
     <script src="indexScript.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
-    ;
   </body>
 </html>
