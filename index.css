@@ -32,3 +32,7 @@
   border-width: 8px;
   border-color: #a4a4eb;
 }
+
+.dark .bg-login{
+  background-color: #5d6d7e;
+}

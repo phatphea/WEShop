@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WEShop - Cart</title>
+    <link rel="stylesheet" href="src/output.css" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- flowbit -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/3.1.2/flowbite.js"
+      integrity="sha512-c9m0HP/+jR+ZgMbKqLHtvn8nT0IiJiw0NhgSWedfZWi1QvGS39Kz2w4Sbo7rD1eYA+fm7ypCLNR0gbAJv2mHQA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header class="dark-bg font-roboto bg-white dark:bg-gray-900">
+      <div
+        class="flex flex-wrap md:flex-nowrap justify-between items-center mx-auto max-w-screen-xl px-6 h-[68px] md:h-[96px] md:p-2"
+      >
+        <div class="flex items-center space-x-6 rtl:space-x-reverse">
+          <a
+            href="index.html"
+            class="flex items-center space-x-3 rtl:space-x-reverse"
+          >
+            <img
+              src="images/logo-fshop.png"
+              class="w-auto h-[48px] md:h-[70px] lg:h-[80px] transition-all duration-600 ease-in-out"
+              alt="weshop Logo"
+            />
+          </a>
+          <div
+            class="relative w-full md:w-[430px] lg:w-[450px] hidden md:block"
+          >
+            <form
+              action="#"
+              class="relative md:w-[80%] lg:w-full transition-all duration-800 ease-in-out"
+            >
+              <input
+                type="text"
+                class="search h-[42px] text-sm dark:text-white border border-[#dcdcdc] rounded-full focus:border-blue-500 focus:outline-none px-5 pr-10 py-2.5 w-full"
+                placeholder="Product, brand, name, keyword, ..."
+                required
+              />
+              <button
+                type="submit"
+                class="absolute right-4 top-1/2 transform -translate-y-1/2"
+              >
+                <i
+                  class="fa-solid fa-magnifying-glass text-gray-500 text-sm"
+                ></i>
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-6 rtl:space-x-reverse">
+          <a
+            href="trackOrder.html"
+            class="white text-[17px] text-black hover:text-blue-600 dark:text-white dark:hover:text-blue-500"
+          >
+            Track Order
+          </a>
+          <p class="text-gray-500">|</p>
+          <a
+            href="login.html"
+            class="white text-black hover:text-blue-600 dark:text-white dark:hover:text-blue-500"
+          >
+            <i class="fa-regular fa-user text-[20px] font-[400]"></i>
+          </a>
+          <a
+            href="cart.html"
+            class="white text-black hover:text-blue-600 dark:text-white dark:hover:text-blue-500"
+          >
+            <i class="fa-regular fa-heart text-[20px] font-[400]"></i>
+          </a>
+          <div class="relative">
+            <a
+              href="#"
+              class="white text-black hover:text-blue-600 dark:text-white dark:hover:text-blue-500"
+            >
+              <i class="fa-solid fa-cart-shopping text-[20px] font-[400]"></i>
+            </a>
+            <div
+              class="absolute -top-4 -right-4 bg-[#0006ff] text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-normal"
+            >
+              0
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center space-x-4 md:hidden">
+          <a
+            href="#"
+            class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center"
+          >
+            <i class="fa-solid fa-lock text-white text-[18px]"></i>
+          </a>
+          <div class="relative">
+            <button
+              id="mobileMenuButton"
+              class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center"
+              aria-label="Toggle mobile menu"
+            >
+              <i class="fa-solid fa-bars text-white text-[18px]"></i>
+            </button>
+            <div
+              class="absolute -top-2 -right-2 bg-white text-blue-600 rounded-full w-5 h-5 flex items-center justify-center text-xs font-normal border border-blue-600"
+            >
+              0
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation with dropdown -->
+    <nav
+      id="mainNavbar"
+      class="dark-bg bg-white h-[52px] items-center border-t border-b border-[#e6e6e6] dark:bg-gray-700 sticky top-0 z-50 transition-all duration-300 hidden md:block"
+    >
+      <div
+        class="max-w-screen-xl h-[52px] mx-auto px-2 flex items-center justify-between"
+      >
+        <ul class="flex flex-row space-x-7 justify-start items-center text-sm">
+          <li>
+            <a href="#" class="flex items-center rtl:space-x-reverse">
+              <img
+                id="navbarLogo"
+                src="images/logo-fshop.png"
+                class="h-[48px] w-auto hidden transition-all duration-600 ease-in-out"
+                alt="weshop Logo"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              href="index.html"
+              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-blue-700 pt-4 white"
+            >
+              HOME
+            </a>
+          </li>
+          <li class="relative group">
+            <a
+              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-blue-700 pt-4 cursor-pointer white"
+            >
+              WOMEN
+              <svg
+                class="w-2.5 h-2.5 ml-2.5 inline-block align-middle"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 10 6"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 4 4 4-4"
+                />
+              </svg>
+            </a>
+            <div
+              class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 dark:divide-gray-600 absolute group-hover:block"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-400"
+                aria-labelledby="dropdownNavbarLink"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >
+                    Clothing
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >
+                    Shoes
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-blue-700 pt-4 white"
+            >
+              MEN
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-blue-700 pt-4 white"
+            >
+              KIDS
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-blue-700 pt-4 white"
+            >
+              ABOUT
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-blue-700 pt-4 white"
+            >
+              CONTACT
+            </a>
+          </li>
+        </ul>
+        <div
+          class="flex items-center justify-end space-x-5 rtl:space-x-reverse"
+        >
+          <!-- dark mode -->
+          <button
+            id="theme-toggle"
+            class="text-gray-600 hover:text-blue-700 focus:outline-none cursor-pointer dark:text-gray-300 dark:hover:text-blue-500 transition duration-300"
+            aria-label="Toggle dark mode"
+          >
+            <!-- sun icon (light mode) -->
+            <svg
+              id="sun-icon"
+              class="w-7 h-7"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+              ></path>
+            </svg>
+
+            <!-- moon icon (dark mode) -->
+            <svg
+              id="moon-icon"
+              class="w-6 h-6 hidden"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+              ></path>
+            </svg>
+          </button>
+
+          <a
+            href="#"
+            class="white text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold"
+          >
+            <i class="fa-brands fa-facebook-f text-[20px]"></i>
+          </a>
+          <a
+            href="#"
+            class="white text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold"
+          >
+            <i class="fa-brands fa-x-twitter text-[20px]"></i>
+          </a>
+          <a
+            href="#"
+            class="white text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold"
+          >
+            <i class="fa-brands fa-instagram text-[20px]"></i>
+          </a>
+          <a
+            href="#"
+            class="white text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold"
+          >
+            <i class="fa-brands fa-skype text-[20px]"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- hamburgure menu -->
+    <div
+      id="mobileMenuOverlay"
+      class="fixed inset-0 bg-black opacity-[60%] z-40 hidden md:hidden"
+    ></div>
+
+    <div
+      id="mobileMenu"
+      class="fixed top-0 right-0 h-full w-70 bg-blue-600 z-50 transform translate-x-full transition-transform duration-300 md:hidden overflow-y-auto"
+    >
+      <div
+        class="flex justify-between items-center p-4 border-b border-blue-700"
+      >
+        <div class="flex items-center">
+          <img
+            src="images/logo-fshop.png"
+            class="h-10 w-auto"
+            alt="XTShop Logo Mobile"
+          />
+        </div>
+        <button
+          id="closeMobileMenu"
+          class="text-white text-xl"
+          aria-label="Close mobile menu"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <ul class="flex flex-col text-white py-4">
+        <li><a href="index.html" class="block px-4 py-3 hover:bg-blue-700">HOME</a></li>
+        <li class="relative">
+          <a
+            href="#"
+            class="flex items-center justify-between px-4 py-3 hover:bg-blue-700 mobile-dropdown-toggle"
+          >
+            WOMEN
+            <svg
+              class="w-2.5 h-2.5 ml-2.5 transform transition-transform duration-200"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 10 6"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 1 4 4 4-4"
+              />
+            </svg>
+          </a>
+          <ul class="hidden bg-blue-700 text-sm">
+            <li>
+              <a href="#" class="block px-8 py-2 hover:bg-blue-800">Clothing</a>
+            </li>
+            <li>
+              <a href="#" class="block px-8 py-2 hover:bg-blue-800">Shoes</a>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#" class="block px-4 py-3 hover:bg-blue-700">MEN</a></li>
+        <li><a href="#" class="block px-4 py-3 hover:bg-blue-700">KIDS</a></li>
+        <li><a href="#" class="block px-4 py-3 hover:bg-blue-700">ABOUT</a></li>
+        <li>
+          <a href="#" class="block px-4 py-3 hover:bg-blue-700">CONTACT</a>
+        </li>
+      </ul>
+
+      <div
+        class="absolute bottom-0 left-0 w-full flex justify-center space-x-6 p-4"
+      >
+        <a
+          href="#"
+          class="text-white hover:text-gray-200"
+          aria-label="Facebook"
+        >
+          <i class="fa-brands fa-facebook-f text-[20px]"></i>
+        </a>
+        <a href="#" class="text-white hover:text-gray-200" aria-label="Twitter">
+          <i class="fa-brands fa-x-twitter text-[20px]"></i>
+        </a>
+        <a
+          href="#"
+          class="text-white hover:text-gray-200"
+          aria-label="Instagram"
+        >
+          <i class="fa-brands fa-instagram text-[20px]"></i>
+        </a>
+        <a href="#" class="text-white hover:text-gray-200" aria-label="Skype">
+          <i class="fa-brands fa-skype text-[20px]"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- banner -->
+    <nav class="mx-auto max-w-screen">
+      <div class="relative">
+        <img
+          src="images/banner.jpg"
+          alt=""
+          class="h-[80px] w-full sm:h-[140px] md:h-[140px] object-cover object-top"
+        />
+        <span
+          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 sm:top-2/3 sm:left-2/14 sm:-translate-x-1/2 sm:-translate-y-1/2"
+        >
+          <i class="fa-solid fa-house text-neutral-950 hover:text-primary"></i>
+          <i
+            class="mx-1 md:mx-2 lg:mx-2 fa-solid fa-angles-right text-neutral-500"
+          ></i>
+          <span class="font-bold text-neutral-950 hover:text-primary"
+            >Cart</span
+          >
+        </span>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="bg-white py-16 sm:py-20 px-4 dark-bg">
+      <div class="max-w-screen-xl mx-auto">
+        <div class="flex justify-center items-start mb-16 md:mb-24 flex-wrap">
+          <div class="flex flex-col items-center mx-2 text-center">
+            <div
+              class="w-16 h-16 rounded-full flex items-center justify-center bg-blue-600 text-white font-semibold text-4xl mb-2"
+            >
+              1
+            </div>
+            <p
+              class="text-sm md:text-xl mt-5 font-semibold text-black whitespace-nowrap t-white"
+            >
+              Cart Review
+            </p>
+          </div>
+
+          <div
+            class="flex-grow h-0.5 bg-gray-300 mx-2 mt-7 md:mt-7 max-w-[calc(33%-6rem)]"
+          ></div>
+
+          <div class="flex flex-col items-center mx-2 text-center">
+            <div
+              class="w-16 h-16 rounded-full flex items-center justify-center border-2 border-blue-600 text-gray-500 font-semibold text-4xl mb-2"
+            >
+              2
+            </div>
+            <p
+              class="text-sm md:text-xl mt-5 font-semibold text-black whitespace-nowrap t-white"
+            >
+              Checkout
+            </p>
+          </div>
+
+          <div
+            class="flex-grow h-0.5 bg-gray-300 mx-2 mt-7 md:mt-7 max-w-[calc(33%-6rem)]"
+          ></div>
+
+          <div class="flex flex-col items-center mx-2 text-center">
+            <div
+              class="w-16 h-16 rounded-full flex items-center justify-center border-2 border-blue-600 text-gray-500 font-semibold text-4xl mb-2"
+            >
+              3
+            </div>
+            <p
+              class="text-sm md:text-xl mt-5 font-semibold text-gray-700 whitespace-nowrap t-white"
+            >
+              Delivery
+            </p>
+          </div>
+        </div>
+
+        <div class="text-center pt-10">
+          <i
+            class="fa-solid fa-shopping-cart text-gray-300 text-8xl md:text-9xl mb-8 opacity-75"
+          ></i>
+
+          <p class="text-3xl sm:text-4xl font-bold text-gray-800 mb-2 t-white">
+            Looks like your cart is empty!
+          </p>
+          <p class="text-gray-500 text-lg t-white">Time to start your shopping</p>
+        </div>
+      </div>
+    </main>
+    <!-- footer -->
+    <footer>
+      <section class="bg-white py-6 border-b border-t border-[#eaeaea] dark-bg">
+        <div
+          class="max-w-screen-xl mx-auto flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-10 px-4"
+        >
+          <a
+            href="trackOrder.html"
+            class="text-gray-700 text-base font-bold whitespace-nowrap px-4 py-2 hover:bg-blue-600 hover:text-white rounded-full transition-all duration-200 ease-in-out t-white"
+            >Track Your Order</a
+          >
+          <a
+            href="#"
+            class="text-gray-700 text-base font-bold whitespace-nowrap px-4 py-2 hover:bg-blue-600 hover:text-white rounded-full transition-all duration-200 ease-in-out t-white"
+            >About Us</a
+          >
+          <a
+            href="#"
+            class="text-gray-700 text-base font-bold whitespace-nowrap px-4 py-2 hover:bg-blue-600 hover:text-white rounded-full transition-all duration-200 ease-in-out t-white"
+            >Contact Us</a
+          >
+        </div>
+      </section>
+      <section class="bg-white py-6 dark-bg">
+        <p
+          class="max-w-screen-xl mx-auto text-center text-[#7f7f7f] text-base t-white"
+        >
+          Copyright © 2025 XTShop. All Rights Reserved
+        </p>
+      </section>
+    </footer>
+
+    <script src="indexScript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+  </body>
+</html>
