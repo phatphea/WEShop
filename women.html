@@ -20,10 +20,8 @@
   </head>
   <body class="dark:bg-neutral-900">
     
-    <!-- header -->
-    <header
-      class="dark-bg font-roboto bg-white border-b border-neutral-200 dark:border-0 dark:bg-neutral-900"
-    >
+        <!-- header -->
+    <header class="dark-bg font-roboto bg-white dark:bg-gray-900">
       <div
         class="flex flex-wrap md:flex-nowrap justify-between items-center mx-auto max-w-screen-xl px-6 h-[68px] md:h-[96px] md:p-2"
       >
@@ -53,7 +51,7 @@
                 class="absolute right-4 top-1/2 transform -translate-y-1/2"
               >
                 <i
-                  class="fa-solid fa-magnifying-glass text-neutral-500 text-sm"
+                  class="fa-solid fa-magnifying-glass text-gray-500 text-sm"
                 ></i>
               </button>
             </form>
@@ -66,7 +64,7 @@
           >
             Track Order
           </a>
-          <p class="text-neutral-500">|</p>
+          <p class="text-gray-500">|</p>
           <a
             href="#"
             class="white text-black hover:text-blue-600 dark:text-white dark:hover:text-blue-500"
@@ -122,7 +120,7 @@
     <!-- Navigation with dropdown -->
     <nav
       id="mainNavbar"
-      class="dark-bg bg-white h-[52px] items-center border-b border-neutral-200 dark:border-0 dark:bg-neutral-800 sticky top-0 z-50 transition-all duration-300 hidden md:block"
+      class="dark-bg bg-white h-[52px] items-center border-t border-b border-[#e6e6e6] dark:bg-gray-700 sticky top-0 z-50 transition-all duration-300 hidden md:block"
     >
       <div
         class="max-w-screen-xl h-[52px] mx-auto px-2 flex items-center justify-between"
@@ -141,7 +139,7 @@
           <li>
             <a
               href="#"
-              class="text-neutral-900 dark:text-white hover:text-primary dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-primary pt-4 white"
+              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-blue-700 pt-4 white"
             >
               HOME
             </a>
@@ -150,7 +148,7 @@
             <a
               id="dropdownNavbarLink"
               data-dropdown-toggle="dropdownNavbar"
-               class="text-primary border-t-primary dark:text-primary hover:text-primary dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-primary pt-4 white"
+              class="text-primary border-t-primary dark:text-primary hover:text-primary dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-primary pt-4 white"
             >
               WOMEN
               <svg
@@ -171,16 +169,16 @@
             </a>
             <div
               id="dropdownNavbar"
-              class="z-10 hidden font-normal bg-white divide-y divide-neutral-100 rounded-lg shadow-sm w-44 dark:bg-neutral-700 dark:divide-neutral-600 absolute group-hover:block"
+              class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 dark:divide-gray-600 absolute group-hover:block"
             >
               <ul
-                class="py-2 text-sm text-neutral-700 dark:text-neutral-400"
+                class="py-2 text-sm text-gray-700 dark:text-gray-400"
                 aria-labelledby="dropdownNavbarLink"
               >
                 <li>
                   <a
                     href="#"
-                    class="block px-4 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-600 dark:hover:text-white"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                   >
                     Clothing
                   </a>
@@ -188,7 +186,7 @@
                 <li>
                   <a
                     href="#"
-                    class="block px-4 py-2 hover:bg-neutral-100 dark:hover:bg-neutral-600 dark:hover:text-white"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                   >
                     Shoes
                   </a>
@@ -198,9 +196,8 @@
           </li>
           <li>
             <a
-            
               href="#"
-              class="text-neutral-900 dark:text-white hover:text-primary dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-primary pt-4 white"
+              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-blue-700 pt-4 white"
             >
               MEN
             </a>
@@ -208,7 +205,7 @@
           <li>
             <a
               href="#"
-              class="text-neutral-900 dark:text-white hover:text-primary dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-primary pt-4 white"
+              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-blue-700 pt-4 white"
             >
               KIDS
             </a>
@@ -216,7 +213,7 @@
           <li>
             <a
               href="#"
-              class="text-neutral-900 dark:text-white hover:text-primary dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-primary pt-4 white"
+              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-blue-700 pt-4 white"
             >
               ABOUT
             </a>
@@ -224,7 +221,7 @@
           <li>
             <a
               href="#"
-              class="text-neutral-900 dark:text-white hover:text-primary dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-primary pt-4 white"
+              class="text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-blue-700 pt-4 white"
             >
               CONTACT
             </a>
@@ -236,7 +233,7 @@
           <!-- dark mode -->
           <button
             id="theme-toggle"
-            class="text-neutral-600 hover:text-primary focus:outline-none cursor-pointer dark:text-neutral-300 dark:hover:text-blue-500 transition duration-300"
+            class="text-gray-600 hover:text-blue-700 focus:outline-none cursor-pointer dark:text-gray-300 dark:hover:text-blue-500 transition duration-300"
             aria-label="Toggle dark mode"
           >
             <!-- sun icon (light mode) -->
@@ -274,25 +271,25 @@
 
           <a
             href="#"
-            class="white text-neutral-900 dark:text-white hover:text-primary dark:hover:text-blue-500 font-bold"
+            class="white text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold"
           >
             <i class="fa-brands fa-facebook-f text-[20px]"></i>
           </a>
           <a
             href="#"
-            class="white text-neutral-900 dark:text-white hover:text-primary dark:hover:text-blue-500 font-bold"
+            class="white text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold"
           >
             <i class="fa-brands fa-x-twitter text-[20px]"></i>
           </a>
           <a
             href="#"
-            class="white text-neutral-900 dark:text-white hover:text-primary dark:hover:text-blue-500 font-bold"
+            class="white text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold"
           >
             <i class="fa-brands fa-instagram text-[20px]"></i>
           </a>
           <a
             href="#"
-            class="white text-neutral-900 dark:text-white hover:text-primary dark:hover:text-blue-500 font-bold"
+            class="white text-gray-900 dark:text-white hover:text-blue-700 dark:hover:text-blue-500 font-bold"
           >
             <i class="fa-brands fa-skype text-[20px]"></i>
           </a>
@@ -308,10 +305,10 @@
 
     <div
       id="mobileMenu"
-      class="fixed top-0 right-0 h-full w-70 bg-blue-600 z-50 transform translate-x-full transition-transform duration-300 md:hidden overflow-y-auto dark:bg-neutral-900"
+      class="fixed top-0 right-0 h-full w-70 bg-blue-600 z-50 transform translate-x-full transition-transform duration-300 md:hidden overflow-y-auto"
     >
       <div
-        class="flex justify-between items-center p-4 border-b border-primary"
+        class="flex justify-between items-center p-4 border-b border-blue-700"
       >
         <div class="flex items-center">
           <img
@@ -330,11 +327,11 @@
       </div>
 
       <ul class="flex flex-col text-white py-4">
-        <li><a href="#" class="block px-4 py-3 hover:bg-primary">HOME</a></li>
+        <li><a href="#" class="block px-4 py-3 hover:bg-blue-700">HOME</a></li>
         <li class="relative">
           <a
             href="#"
-            class="flex items-center justify-between px-4 py-3 hover:bg-primary mobile-dropdown-toggle"
+            class="flex items-center justify-between px-4 py-3 hover:bg-blue-700 mobile-dropdown-toggle"
           >
             WOMEN
             <svg
@@ -353,7 +350,7 @@
               />
             </svg>
           </a>
-          <ul class="hidden bg-primary text-sm">
+          <ul class="hidden bg-blue-700 text-sm">
             <li>
               <a href="#" class="block px-8 py-2 hover:bg-blue-800">Clothing</a>
             </li>
@@ -362,11 +359,11 @@
             </li>
           </ul>
         </li>
-        <li><a href="#" class="block px-4 py-3 hover:bg-primary">MEN</a></li>
-        <li><a href="#" class="block px-4 py-3 hover:bg-primary">KIDS</a></li>
-        <li><a href="#" class="block px-4 py-3 hover:bg-primary">ABOUT</a></li>
+        <li><a href="#" class="block px-4 py-3 hover:bg-blue-700">MEN</a></li>
+        <li><a href="#" class="block px-4 py-3 hover:bg-blue-700">KIDS</a></li>
+        <li><a href="#" class="block px-4 py-3 hover:bg-blue-700">ABOUT</a></li>
         <li>
-          <a href="#" class="block px-4 py-3 hover:bg-primary">CONTACT</a>
+          <a href="#" class="block px-4 py-3 hover:bg-blue-700">CONTACT</a>
         </li>
       </ul>
 
@@ -375,30 +372,22 @@
       >
         <a
           href="#"
-          class="text-white hover:text-neutral-200"
+          class="text-white hover:text-gray-200"
           aria-label="Facebook"
         >
           <i class="fa-brands fa-facebook-f text-[20px]"></i>
         </a>
-        <a
-          href="#"
-          class="text-white hover:text-neutral-200"
-          aria-label="Twitter"
-        >
+        <a href="#" class="text-white hover:text-gray-200" aria-label="Twitter">
           <i class="fa-brands fa-x-twitter text-[20px]"></i>
         </a>
         <a
           href="#"
-          class="text-white hover:text-neutral-200"
+          class="text-white hover:text-gray-200"
           aria-label="Instagram"
         >
           <i class="fa-brands fa-instagram text-[20px]"></i>
         </a>
-        <a
-          href="#"
-          class="text-white hover:text-neutral-200"
-          aria-label="Skype"
-        >
+        <a href="#" class="text-white hover:text-gray-200" aria-label="Skype">
           <i class="fa-brands fa-skype text-[20px]"></i>
         </a>
       </div>
@@ -1091,13 +1080,13 @@
       </section>
     </main>
      
-    <!-- footer -->
+    
+     <!-- footer -->
     <footer>
       <section class="bg-white py-6 border-b border-t border-[#eaeaea] dark-bg">
         <div
-         class="max-w-screen-xl mx-auto flex flex-row flex-wrap items-center justify-center space-y-0 space-x-10 px-4 sm:flex-col sm:space-y-4 sm:space-x-0">
-
-        
+          class="max-w-screen-xl mx-auto flex flex-row flex-wrap items-center justify-center space-y-0 space-x-10 px-4 sm:flex-col sm:space-y-4 sm:space-x-0"
+        >
           <a
             href="#"
             class="text-gray-700 text-base font-bold whitespace-nowrap px-4 py-2 hover:bg-blue-600 hover:text-white rounded-full transition-all duration-200 ease-in-out t-white"
@@ -1113,7 +1102,7 @@
             class="text-gray-700 text-base font-bold whitespace-nowrap px-4 py-2 hover:bg-blue-600 hover:text-white rounded-full transition-all duration-200 ease-in-out t-white"
             >Contact Us</a
           >
-        </>
+        </div>
       </section>
       <section class="bg-white py-6 dark-bg ">
         <p class="max-w-screen-xl mx-auto text-center text-[#7f7f7f] text-base t-white">
