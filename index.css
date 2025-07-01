@@ -4,6 +4,7 @@
 
 .dark .search {
   color: #f7fafc;
+  background-color: #2d3748;
 }
 
 .dark .dark-bg {
@@ -16,4 +17,9 @@
 
 .dark .white:hover {
   color: #155dfc;
+}
+
+.dark .button-back-next {
+  background-color: #808b96;
+  color: white;
 }
