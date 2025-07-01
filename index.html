@@ -24,9 +24,7 @@
   </head>
   <body>
     <!-- header -->
-    <header
-      class="dark-bg font-roboto bg-white border-b border-[#e6e6e6] dark:bg-gray-900"
-    >
+    <header class="dark-bg font-roboto bg-white dark:bg-gray-900">
       <div
         class="flex flex-wrap md:flex-nowrap justify-between items-center mx-auto max-w-screen-xl px-6 h-[68px] md:h-[96px] md:p-2"
       >
@@ -125,7 +123,7 @@
     <!-- Navigation with dropdown -->
     <nav
       id="mainNavbar"
-      class="dark-bg bg-white h-[52px] items-center border-b border-[#e6e6e6] dark:bg-gray-700 sticky top-0 z-50 transition-all duration-300 hidden md:block"
+      class="dark-bg bg-white h-[52px] items-center border-t border-b border-[#e6e6e6] dark:bg-gray-700 sticky top-0 z-50 transition-all duration-300 hidden md:block"
     >
       <div
         class="max-w-screen-xl h-[52px] mx-auto px-2 flex items-center justify-between"
@@ -470,7 +468,7 @@
         </section>
       </section>
       <!-- 4 card -->
-      <section class="bg-white border-b border-[#e6e6e6]">
+      <section class="bg-white border-b border-[#e6e6e6] dark-bg">
         <div
           class="max-w-screen-xl mx-auto grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4"
         >
@@ -478,14 +476,19 @@
             class="flex flex-row items-center gap-5 justify-center text-center px-4 py-10 md:px-6 md:py-8 lg:px-10 lg:py-12 border-b sm:border-b md:border-b lg:border-b-0 border-r border-[#e6e6e6]"
           >
             <div>
-              <img src="images/delivery-truck-1-1.png" alt="delivery" 
-              class="w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] md:w-[64px] md:h-[64px]" />
+              <img
+                src="images/delivery-truck-1-1.png"
+                alt="delivery"
+                class="w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] md:w-[64px] md:h-[64px]"
+              />
             </div>
             <div class="text-left">
-              <p class="text-sm sm:text-base md:text-lg font-bold text-gray-900 mb-1">
-                Free <span class="font-normal text-gray-700">Shipping</span>
+              <p
+                class="text-sm sm:text-base md:text-lg font-bold text-gray-900 mb-1 t-white"
+              >
+                Free <span class="font-normal text-gray-700 t-white">Shipping</span>
               </p>
-              <p class="text-sm text-gray-600">Save up to $70</p>
+              <p class="text-sm text-gray-600 t-white">Save up to $70</p>
             </div>
           </div>
 
@@ -493,14 +496,19 @@
             class="flex flex-row items-center gap-5 justify-center text-center px-4 py-10 md:px-6 md:py-8 lg:px-10 lg:py-12 border-b sm:border-b md:border-b lg:border-b-0 border-r border-[#e6e6e6]"
           >
             <div>
-              <img src="images/coupon-1-1.png" alt="delivery"
-              class="w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] md:w-[64px] md:h-[64px]" />
+              <img
+                src="images/coupon-1-1.png"
+                alt="delivery"
+                class="w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] md:w-[64px] md:h-[64px]"
+              />
             </div>
             <div class="text-left">
-              <p class="text-sm sm:text-base md:text-lg font-bold text-gray-900 mb-1">
-                Member <span class="font-normal text-gray-700">Coupons</span>
+              <p
+                class="text-sm sm:text-base md:text-lg font-bold text-gray-900 mb-1 t-white"
+              >
+                Member <span class="font-normal text-gray-700 t-white">Coupons</span>
               </p>
-              <p class="text-sm text-gray-600">Save your purchase</p>
+              <p class="text-sm text-gray-600 t-white">Save your purchase</p>
             </div>
           </div>
 
@@ -508,77 +516,396 @@
             class="flex flex-row items-center gap-5 justify-center text-center px-4 py-10 md:px-6 md:py-8 lg:px-10 lg:py-12 border-r border-[#e6e6e6]"
           >
             <div>
-              <img src="images/credit-card-back-side-1.png" alt="delivery"
-              class="w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] md:w-[64px] md:h-[64px]" />
+              <img
+                src="images/credit-card-back-side-1.png"
+                alt="delivery"
+                class="w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] md:w-[64px] md:h-[64px]"
+              />
             </div>
             <div class="text-left">
-              <p class="text-sm sm:text-base md:text-lg font-bold text-gray-900 mb-1">
-                Secure <span class="font-normal text-gray-700">Payments</span>
+              <p
+                class="text-sm sm:text-base md:text-lg font-bold text-gray-900 mb-1 t-white"
+              >
+                Secure <span class="font-normal text-gray-700 t-white">Payments</span>
               </p>
-              <p class="text-sm text-gray-600">All Credit Cards</p>
+              <p class="text-sm text-gray-600 t-white">All Credit Cards</p>
             </div>
           </div>
 
           <div
-            class="flex flex-row items-center gap-5 justify-center text-center px-4 py-10 md:px-6 md:py-8 lg:px-10 lg:py-12 "
+            class="flex flex-row items-center gap-5 justify-center text-center px-4 py-10 md:px-6 md:py-8 lg:px-10 lg:py-12"
           >
             <div>
-              <img src="images/shopping-list-1.png" alt="delivery"
-              class="w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] md:w-[64px] md:h-[64px]" />
+              <img
+                src="images/shopping-list-1.png"
+                alt="delivery"
+                class="w-[36px] h-[36px] sm:w-[40px] sm:h-[40px] md:w-[64px] md:h-[64px]"
+              />
             </div>
             <div class="text-left">
-              <p class="text-sm sm:text-base md:text-lg font-bold text-gray-900 mb-1">
-                Fast <span class="font-normal text-gray-700">Delivery</span>
+              <p
+                class="text-sm sm:text-base md:text-lg font-bold text-gray-900 mb-1 t-white"
+              >
+                Fast <span class="font-normal text-gray-700 t-white">Delivery</span>
               </p>
-              <p class="text-sm text-gray-600">Fast On Delivery</p>
+              <p class="text-sm text-gray-600 t-white">Fast On Delivery</p>
             </div>
           </div>
         </div>
       </section>
       <!-- new collection -->
-       <section class="bg-white">
-        
-       </section>
-    </main>
-    <!-- footer -->
-    <footer class="bg-white text-white py-8">
-      <div class="max-w-screen-xl mx-auto px-4">
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div>
-            <h3 class="text-lg font-semibold mb-4">About Us</h3>
-            <p class="text-sm text-gray-400">
-              We are a leading online store offering a wide range of products at
-              unbeatable prices. Our mission is to provide the best shopping
-              experience for our customers.
+      <section class="py-25 bg-white text-center dark-bg">
+        <div class="relative inline-block">
+          <div
+            class="absolute w-36 h-36 -top-4 left-1/2 transform -translate-x-1/2 rounded-full border-8 border-[#f2f2ff] circle"
+          ></div>
+          <i
+            class="fa-solid fa-caret-down text-[#0006ff] text-5xl absolute -top-4 left-1/2 transform -translate-x-1/2 mt-3"
+          ></i>
+
+          <div class="mt-8">
+            <h2
+              class="text-[25px] sm:text-3xl md:text-4xl font-bold text-gray-900 mb-2 relative z-10 t-white"
+            >
+              New
+              <i class="font-normal text-gray-700 t-white">Collections</i>
+              Of Arrivals
+            </h2>
+            <p class="text-gray-900 relative z-10 t-white">
+              Sweatshirt, Hoodie, Lingerie, etc.
             </p>
           </div>
-          <div>
-            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul class="space-y-2">
-              <li>
-                <a href="#" class="text-sm text-gray-400 hover:text-white"
-                  >Home</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-sm text-gray-400 hover:text-white"
-                  >Shop</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-sm text-gray-400 hover:text-white"
-                  >Contact Us</a
-                >
-              </li>
-              <li>
-                <a href="#" class="text-sm text-gray-400 hover:text-white"
-                  >Privacy Policy</a
-                >
-              </li>
-            </ul>
+        </div>
+      </section>
+
+      <!-- collection-card -->
+      <section class="bg-white dark-bg">
+        <div
+          class="max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-4 px-4"
+        >
+          <div class="relative rounded-lg overflow-hidden group">
+            <img
+              src="images/collection1.jpg"
+              alt="Woman wearing sunglasses, representing women's clothes"
+              class="w-full h-[260px] object-cover rounded-lg transform group-hover:scale-105 transition duration-300 ease-in-out"
+            />
+            <div
+              class="absolute bottom-4 left-4 right-4 bg-white p-4 rounded-lg text-center shadow-md z-10 sm:bottom-4 sm:left-4 sm:right-4 sm:bg-white sm:p-4 sm:rounded-lg sm:text-center sm:shadow-md sm:z-10 md:inset-0 md:flex md:flex-col md:justify-end md:p-6 md:text-black md:bg-transparent md:text-left"
+            >
+              <p class="text-2xl font-bold mb-1">
+                <span class="text-pink-500">WOMEN</span> CLOTHES
+              </p>
+              <p class="text-sm font-semibold text-gray-500">NEW ARRIVALS</p>
+            </div>
+          </div>
+
+          <div class="relative rounded-lg overflow-hidden group">
+            <img
+              src="images/collection2.jpg"
+              alt="Man wearing ripped jeans, representing men's clothes"
+              class="w-full h-[260px] object-cover rounded-lg transform group-hover:scale-105 transition duration-300 ease-in-out"
+            />
+            <div
+              class="absolute bottom-4 left-4 right-4 bg-white p-4 rounded-lg text-center shadow-md z-10 sm:bottom-4 sm:left-4 sm:right-4 sm:bg-white sm:p-4 sm:rounded-lg sm:text-center sm:shadow-md sm:z-10 md:inset-0 md:flex md:flex-col md:justify-end md:p-6 md:text-black md:bg-transparent md:text-left"
+            >
+              <p class="text-2xl font-bold mb-1">
+                <span class="text-blue-600">MEN</span> CLOTHES
+              </p>
+              <p class="text-sm font-semibold text-gray-500">NEW ARRIVALS</p>
+            </div>
+          </div>
+
+          <div
+            class="sm:h-[200px] md:h-[260px] col-span-full bg-[#e7e7e7] rounded-lg p-8 flex flex-col items-center justify-center text-center relative overflow-hidden"
+          >
+            <div
+              class="absolute inset-0 flex items-center justify-center text-center text-[#eeeeee] text-6xl sm:text-8xl md:text-9xl lg:text-[10rem] font-extrabold"
+            >
+              DISCOUNT
+            </div>
+            <div class="relative z-10 mt-3">
+              <p
+                class="text-[20px] sm:text-[30px] md:text-[44px] font-bold text-gray-800 mb-1 items-center justify-center text-center"
+              >
+                50% OFF ON
+                <i class="text-purple-600 font-extralight">ALL PRODUCTS</i>
+              </p>
+              <p class="text-gray-600 text-sm sm:text-lg">
+                All the discounts you love, right in your pocket
+              </p>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      <!-- popular -->
+      <section class="py-25 bg-white text-center dark-bg">
+        <div class="relative inline-block">
+          <div
+            class="absolute w-36 h-36 -top-4 left-1/2 transform -translate-x-1/2 rounded-full border-8 border-[#f2f2ff] circle"
+          ></div>
+          <i
+            class="fa-solid fa-caret-down text-[#0006ff] text-5xl absolute -top-4 left-1/2 transform -translate-x-1/2 mt-3"
+          ></i>
+
+          <div class="mt-8">
+            <h2
+              class="text-[25px] sm:text-3xl md:text-4xl font-bold text-gray-900 mb-2 relative z-10 t-white"
+            >
+              Some
+              <i class="font-normal text-gray-700 t-white">Popular</i>
+              Products
+            </h2>
+            <p class="text-gray-900 relative z-10 t-white">
+              Sweatshirt, Hoodie, Lingerie, etc.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- popular card -->
+      <section class="bg-white dark-bg">
+        <div
+          class="z-10 max-w-screen-xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 px-4"
+        >
+          <div class="relative rounded-lg overflow-hidden group">
+            <div class="relative">
+              <img
+                src="images/popular1.jpg"
+                alt="Queen Anato Crest"
+                class="w-full h-auto rounded-lg object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div
+                class="absolute inset-x-0 bottom-0 h-full bg-[linear-gradient(180deg,rgb(0_0_0_/_0.01),rgb(0_0_0_/_0.1),rgb(0_0_0_/_0.7))] transition-opacity duration-300 group-hover:opacity-0"
+              ></div>
+
+              <div
+                class="absolute inset-x-0 bottom-20 flex items-end justify-center pb-4 z-10 transition-opacity duration-300 group-hover:opacity-0 group-hover:invisible"
+              >
+                <div
+                  class="bg-blue-600 text-white px-4 py-2 rounded-full text-xl font-semibold"
+                >
+                  $69
+                </div>
+              </div>
+
+              <div
+                class="absolute bottom-10 left-0 right-0 p-2 text-center text-xl z-10 transition-opacity duration-300 group-hover:opacity-0 group-hover:invisible"
+              >
+                <p class="font-bold text-white">Queen Anato Crest</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="relative rounded-lg overflow-hidden group col-span-1 row-span-1 sm:col-span-1 sm:row-span-1 md:col-span-2 md:row-span-2"
+          >
+            <div class="relative">
+              <img
+                src="images/popular2.jpg"
+                alt="Bowie Tee"
+                class="w-full h-auto rounded-lg object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div
+                class="absolute inset-x-0 bottom-0 h-full bg-[linear-gradient(180deg,rgb(0_0_0_/_0.01),rgb(0_0_0_/_0.1),rgb(0_0_0_/_0.7))] transition-opacity duration-300 group-hover:opacity-0"
+              ></div>
+
+              <div
+                class="absolute inset-x-0 bottom-20 flex items-end justify-center pb-4 z-10 transition-opacity duration-300 group-hover:opacity-0 group-hover:invisible"
+              >
+                <div
+                  class="bg-blue-600 text-white px-4 py-2 rounded-full text-xl font-semibold"
+                >
+                  $79
+                </div>
+              </div>
+
+              <div
+                class="absolute bottom-10 left-0 right-0 p-2 text-center text-xl z-10 transition-opacity duration-300 group-hover:opacity-0 group-hover:invisible"
+              >
+                <p class="font-bold text-white">Bowie Tee</p>
+              </div>
+            </div>
+          </div>
+          <div class="relative rounded-lg overflow-hidden group">
+            <div class="relative">
+              <img
+                src="images/popular3.jpg"
+                alt="The Trucker"
+                class="w-full h-auto rounded-lg object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div
+                class="absolute inset-x-0 bottom-0 h-full bg-[linear-gradient(180deg,rgb(0_0_0_/_0.01),rgb(0_0_0_/_0.1),rgb(0_0_0_/_0.7))] transition-opacity duration-300 group-hover:opacity-0"
+              ></div>
+
+              <div
+                class="absolute inset-x-0 bottom-20 flex items-end justify-center pb-4 z-10 transition-opacity duration-300 group-hover:opacity-0 group-hover:invisible"
+              >
+                <div
+                  class="bg-blue-600 text-white px-4 py-2 rounded-full text-xl font-semibold"
+                >
+                  <strike>$35</strike> $32
+                </div>
+              </div>
+
+              <div
+                class="absolute bottom-10 left-0 right-0 p-2 text-center text-xl z-10 transition-opacity duration-300 group-hover:opacity-0 group-hover:invisible"
+              >
+                <p class="font-bold text-white">The Trucker</p>
+              </div>
+            </div>
+          </div>
+          <div class="relative rounded-lg overflow-hidden group">
+            <div class="relative">
+              <img
+                src="images/popular4.jpg"
+                alt="Laurena"
+                class="w-full h-auto rounded-lg object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div
+                class="absolute inset-x-0 bottom-0 h-full bg-[linear-gradient(180deg,rgb(0_0_0_/_0.01),rgb(0_0_0_/_0.1),rgb(0_0_0_/_0.7))] transition-opacity duration-300 group-hover:opacity-0"
+              ></div>
+
+              <div
+                class="absolute inset-x-0 bottom-25 flex items-end justify-center pb-4 z-10 transition-opacity duration-300 group-hover:opacity-0 group-hover:invisible"
+              >
+                <div
+                  class="bg-blue-600 text-white px-4 py-2 rounded-full text-xl font-semibold"
+                >
+                  $35
+                </div>
+              </div>
+
+              <div
+                class="absolute bottom-8 left-0 right-0 p-2 text-center text-xl z-10 transition-opacity duration-300 group-hover:opacity-0 group-hover:invisible"
+              >
+                <p class="font-bold text-white">
+                  Laurena Mini Dress <br />Majorelle
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="relative rounded-lg overflow-hidden group">
+            <div class="relative">
+              <img
+                src="images/popular5.jpg"
+                alt="Laurena"
+                class="w-full h-auto rounded-lg object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div
+                class="absolute inset-x-0 bottom-0 h-full bg-[linear-gradient(180deg,rgb(0_0_0_/_0.01),rgb(0_0_0_/_0.1),rgb(0_0_0_/_0.7))] transition-opacity duration-300 group-hover:opacity-0"
+              ></div>
+
+              <div
+                class="absolute inset-x-0 bottom-25 flex items-end justify-center pb-4 z-10 transition-opacity duration-300 group-hover:opacity-0 group-hover:invisible"
+              >
+                <div
+                  class="bg-blue-600 text-white px-4 py-2 rounded-full text-xl font-semibold"
+                >
+                  $45
+                </div>
+              </div>
+
+              <div
+                class="absolute bottom-8 left-0 right-0 p-2 text-center text-xl z-10 transition-opacity duration-300 group-hover:opacity-0 group-hover:invisible"
+              >
+                <p class="font-bold text-white">
+                  Mirko Artist Tee <br />off white
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- partner -->
+      <section class="py-25 bg-white text-center dark-bg">
+        <div class="relative inline-block">
+          <div
+            class="absolute w-36 h-36 -top-4 left-1/2 transform -translate-x-1/2 rounded-full border-8 border-[#f2f2ff] circle"
+          ></div>
+          <i
+            class="fa-solid fa-caret-down text-[#0006ff] text-5xl absolute -top-4 left-1/2 transform -translate-x-1/2 mt-3"
+          ></i>
+
+          <div class="mt-8">
+            <h2
+              class="text-[25px] sm:text-3xl md:text-4xl font-bold text-gray-900 mb-2 relative z-10 t-white"
+            >
+              Our
+              <i class="font-normal text-gray-700 t-white">Partners</i>
+            </h2>
+            <p class="text-gray-900 relative z-10 t-white">
+              Famous brands, Partners, Logos
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- card-partners -->
+      <section class="bg-black border-t border-[#eaeaea]">
+        <div
+          class="max-w-screen-xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-5 py-[40px]"
+        >
+          <img
+            src="images/partner1.png"
+            class="w-[97%] hover:scale-110 transition-all duration-300 ease-in-out"
+            alt="partner1"
+          />
+          <img
+            src="images/partner2.png"
+            class="w-[97%] hover:scale-110 transition-all duration-300 ease-in-out"
+            alt="partner2"
+          />
+          <img
+            src="images/partner3.png"
+            class="w-[97%] hover:scale-110 transition-all duration-300 ease-in-out"
+            alt="partner3"
+          />
+          <img
+            src="images/partner4.png"
+            class="w-[97%] hover:scale-110 transition-all duration-300 ease-in-out"
+            alt="partner4"
+          />
+          <img
+            src="images/partner5.png"
+            class="w-[97%] hover:scale-110 transition-all duration-300 ease-in-out"
+            alt="partner5"
+          />
+          <img
+            src="images/partner6.png"
+            class="w-[97%] hover:scale-110 transition-all duration-300 ease-in-out"
+            alt="partner6"
+          />
+        </div>
+      </section>
+    </main>
+    <!-- footer -->
+    <footer>
+      <section class="bg-white py-6 border-b border-t border-[#eaeaea] dark-bg">
+        <div
+          class="max-w-screen-xl mx-auto flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-10 px-4"
+        >
+          <a
+            href="#"
+            class="text-gray-700 text-base font-bold whitespace-nowrap px-4 py-2 hover:bg-blue-600 hover:text-white rounded-full transition-all duration-200 ease-in-out t-white"
+            >Track Your Order</a
+          >
+          <a
+            href="#"
+            class="text-gray-700 text-base font-bold whitespace-nowrap px-4 py-2 hover:bg-blue-600 hover:text-white rounded-full transition-all duration-200 ease-in-out t-white"
+            >About Us</a
+          >
+          <a
+            href="#"
+            class="text-gray-700 text-base font-bold whitespace-nowrap px-4 py-2 hover:bg-blue-600 hover:text-white rounded-full transition-all duration-200 ease-in-out t-white"
+            >Contact Us</a
+          >
+        </div>
+      </section>
+      <section class="bg-white py-6 dark-bg ">
+        <p class="max-w-screen-xl mx-auto text-center text-[#7f7f7f] text-base t-white">
+          Copyright © 2025 XTShop. All Rights Reserved
+        </p>
+      </section>
     </footer>
     <script src="indexScript.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>

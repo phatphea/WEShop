@@ -23,3 +23,12 @@
   background-color: #808b96;
   color: white;
 }
+
+.dark .t-white{
+  color: white;
+}
+
+.dark .circle{
+  border-width: 8px;
+  border-color: #a4a4eb;
+}
