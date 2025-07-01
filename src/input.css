@@ -10,4 +10,4 @@
   @apply font-roboto;
 }
 
-
+@custom-variant dark (&:where(.dark, .dark *));
