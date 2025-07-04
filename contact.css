@@ -1,0 +1,47 @@
+  .group .icon-wrapper {
+            transition: background-color 0.3s ease-in-out;
+        }
+        .group .icon-wrapper .icon {
+            transition: color 0.3s ease-in-out;
+        }
+        .group .text-content h3 {
+            transition: color 0.3s ease-in-out;
+        }
+        /* Ensure triangle border color is explicitly set */
+        .triangle-down {
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 16px solid #2563eb; /* Tailwind blue-600 */
+        }
+
+         /* Custom styles for smoother transitions */
+        .group .icon-wrapper {
+            transition: background-color 0.3s ease-in-out;
+        }
+        .group .icon-wrapper .icon {
+            transition: color 0.3s ease-in-out;
+        }
+        .group .text-content h3 {
+            transition: color 0.3s ease-in-out;
+        }
+        /* Style for the map container (the iframe itself) */
+        .map-iframe-container {
+            /* You might want to wrap the iframe to apply padding/margin consistently */
+            width: 100%;
+            border-radius: 0.5rem; /* Matches Tailwind's rounded-lg */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Matches Tailwind's shadow-md */
+            overflow: hidden; /* Ensures rounded corners apply to the iframe content */
+        }
+        .map-iframe-container iframe {
+            display: block; /* Removes extra space below iframe */
+            width: 100%; /* Make iframe responsive within its container */
+            height: 300px; /* Set a fixed height or adjust as needed */
+            border: 0; /* Already in your inline style, but good to ensure */
+        }
+
+         /* Custom triangle for "Contact us Today" */
+        .contact-us-triangle {
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 16px solid #2563eb; /* Tailwind blue-600 */
+        }

@@ -1,0 +1,28 @@
+ .image-container {
+            position: relative; /* Needed for absolute positioning of children */
+        }
+        .icon-overlay {
+            position: absolute;
+            bottom: 20px; /* Adjust as needed */
+            left: 20px; /* Adjust as needed */
+            display: flex;
+            gap: 10px; /* Space between icons */
+        }
+        .icon-circle {
+            width: 48px; /* Smaller size for icons */
+            height: 48px;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+        .icon-circle:hover {
+            transform: translateY(-5px);
+        }
+        .icon-circle i {
+            color: white;
+            font-size: 20px; /* Smaller icon size */
+        }

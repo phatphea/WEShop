@@ -92,3 +92,62 @@ themeToggle.addEventListener("click", () => {
 
 // Set theme on initial load
 setInitialTheme();
+
+
+
+//code for counting number
+document.addEventListener('DOMContentLoaded', () => {
+            // Select all span elements that have the data-target attribute
+            const counters = document.querySelectorAll('span[data-target]');
+
+            // Options for the Intersection Observer (to start animation when visible)
+            const observerOptions = {
+                root: null, // use the viewport as the root
+                rootMargin: '0px',
+                threshold: 0.7 // trigger when 70% of the element is visible
+            };
+
+            // Create a new Intersection Observer
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) { // If the element is currently visible
+                        const counter = entry.target;
+                        const target = +counter.getAttribute('data-target');
+                        let current = 0; // Start counting from 0
+
+                        const duration = 3000; // Animation duration in milliseconds
+                        let start = null;
+
+                        // The animation function
+                        const animate = (timestamp) => {
+                            if (!start) start = timestamp;
+                            const progress = timestamp - start;
+                            const percentage = Math.min(progress / duration, 1); // Clamp to 1 (100%)
+
+                            // Calculate the value based on percentage
+                            current = Math.floor(percentage * target); // Use Math.floor for whole numbers
+
+                            // Update the text content of the span
+                            counter.innerText = current;
+
+                            if (percentage < 1) {
+                                requestAnimationFrame(animate); // Continue animation if not finished
+                            } else {
+                                counter.innerText = target; // Ensure final target value is set accurately
+                                observer.unobserve(counter); // Stop observing after animation is complete
+                            }
+                        };
+
+                        requestAnimationFrame(animate); // Start the animation
+                    }
+                });
+            }, observerOptions);
+
+            // Observe each counter element
+            counters.forEach(counter => {
+                observer.observe(counter);
+            });
+        });
+
+
+

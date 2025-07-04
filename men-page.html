@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Men</title>
+    <link rel="stylesheet" href="src/output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body class="dark:bg-gray-900">
+    <!-- header -->
+    <header
+      class="dark-bg font-roboto bg-white border-b border-gray-200 dark:border-0 dark:bg-gray-900"
+    >
+      <div
+        class="flex flex-wrap md:flex-nowrap justify-between items-center mx-auto max-w-screen-xl px-6 h-[68px] md:h-[96px] md:p-2"
+      >
+        <div class="flex items-center space-x-6 rtl:space-x-reverse">
+          <a
+            href="index.html"
+            class="flex items-center space-x-3 rtl:space-x-reverse"
+          >
+            <img
+              src="src/img/logo-fshop.png"
+              class="w-auto h-[48px] md:h-[70px] lg:h-[80px] transition-all duration-600 ease-in-out"
+              alt="weshop Logo"
+            />
+          </a>
+          <div
+            class="relative w-full md:w-[430px] lg:w-[450px] hidden md:block"
+          >
+            <form
+              action="#"
+              class="relative md:w-[80%] lg:w-full transition-all duration-800 ease-in-out"
+            >
+              <input
+                type="text"
+                class="search h-[42px] text-sm dark:text-white border border-[#dcdcdc] rounded-full focus:border-blue-500 focus:outline-none px-5 pr-10 py-2.5 w-full"
+                placeholder="Product, brand, name, keyword, ..."
+                required
+              />
+              <button
+                type="submit"
+                class="absolute right-4 top-1/2 transform -translate-y-1/2"
+              >
+                <i
+                  class="fa-solid fa-magnifying-glass text-gray-500 text-sm"
+                ></i>
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-6 rtl:space-x-reverse">
+          <a
+            href="trackOrder.html"
+            class="white text-[17px] text-black hover:text-blue-600 dark:text-white dark:hover:text-blue-500"
+          >
+            Track Order
+          </a>
+          <p class="text-gray-500">|</p>
+          <a
+            href="login.html"
+            class="white text-black hover:text-blue-600 dark:text-white dark:hover:text-blue-500"
+          >
+            <i class="fa-regular fa-user text-[20px] font-[400]"></i>
+          </a>
+          <a
+            href="favorite.html"
+            class="white text-black hover:text-blue-600 dark:text-white dark:hover:text-blue-500"
+          >
+            <i class="fa-regular fa-heart text-[20px] font-[400]"></i>
+          </a>
+          <div class="relative">
+            <a
+              href="cart.html"
+              class="white text-black hover:text-blue-600 dark:text-white dark:hover:text-blue-500"
+            >
+              <i class="fa-solid fa-cart-shopping text-[20px] font-[400]"></i>
+            </a>
+            <div
+              class="absolute -top-4 -right-4 bg-[#0006ff] text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-normal"
+            >
+              0
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center space-x-4 md:hidden">
+          <a
+            href="cart.html"
+            class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center"
+          >
+            <i class="fa-solid fa-lock text-white text-[18px]"></i>
+          </a>
+          <div class="relative">
+            <button
+              id="mobileMenuButton"
+              class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center"
+              aria-label="Toggle mobile menu"
+            >
+              <i class="fa-solid fa-bars text-white text-[18px]"></i>
+            </button>
+            <div
+              class="absolute -top-2 -right-2 bg-white text-blue-600 rounded-full w-5 h-5 flex items-center justify-center text-xs font-normal border border-blue-600"
+            >
+              0
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation with dropdown -->
+    <nav
+      id="mainNavbar"
+      class="dark-bg bg-white h-[52px] items-center border-b border-gray-200 dark:border-0 dark:bg-gray-800 sticky top-0 z-50 transition-all duration-300 hidden md:block"
+    >
+      <div
+        class="max-w-screen-xl h-[52px] mx-auto px-2 flex items-center justify-between"
+      >
+        <ul class="flex flex-row space-x-7 justify-start items-center text-sm">
+          <li>
+            <a href="#" class="flex items-center rtl:space-x-reverse">
+              <img
+                id="navbarLogo"
+                src="src/img/logo-fshop.png"
+                class="h-[48px] w-auto hidden transition-all duration-600 ease-in-out"
+                alt="weshop Logo"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              href="index.html"
+              class=" dark:text-white hover:text-primary font-bold border-t-2 border-transparent hover:border-primary pt-4 white"
+            >
+              HOME
+            </a>
+          </li>
+          <li class="relative group">
+            <a
+              href="women.html"
+              class="text-gray-900 dark:text-white hover:text-primary dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-primary pt-4 cursor-pointer white"
+            >
+              WOMEN
+              <svg
+                class="w-2.5 h-2.5 ml-2.5 inline-block align-middle"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 10 6"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 4 4 4-4"
+                />
+              </svg>
+            </a>
+            <div
+              class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 dark:divide-gray-600 absolute group-hover:block"
+            >
+              <ul
+                class="py-2 text-sm text-gray-700 dark:text-gray-400"
+                aria-labelledby="dropdownNavbarLink"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >
+                    Clothing
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  >
+                    Shoes
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a
+              href="men-page.html"
+              class="text-primary border-t-primary dark:text-primary hover:text-primary dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-primary pt-4 white"
+            >
+              MEN
+            </a>
+          </li>
+          <li>
+            <a
+              href="kids-page.html"
+              class="text-gray-900 dark:text-white hover:text-primary dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-primary pt-4 cursor-pointer white"
+            >
+              KIDS
+            </a>
+          </li>
+          <li>
+            <a
+              href="about.html"
+              class="text-gray-900 dark:text-white hover:text-primary dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-primary pt-4 white"
+            >
+              ABOUT
+            </a>
+          </li>
+          <li>
+            <a
+              href="contact.html"
+              class="text-gray-900 dark:text-white hover:text-primary dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-primary pt-4 white"
+            >
+              CONTACT
+            </a>
+          </li>
+        </ul>
+        <div
+          class="flex items-center justify-end space-x-5 rtl:space-x-reverse"
+        >
+          <!-- dark mode -->
+          <button
+            id="theme-toggle"
+            class="text-gray-600 hover:text-primary focus:outline-none cursor-pointer dark:text-gray-300 dark:hover:text-blue-500 transition duration-300"
+            aria-label="Toggle dark mode"
+          >
+            <!-- sun icon (light mode) -->
+            <svg
+              id="sun-icon"
+              class="w-7 h-7"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+              ></path>
+            </svg>
+
+            <!-- moon icon (dark mode) -->
+            <svg
+              id="moon-icon"
+              class="w-6 h-6 hidden"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+              ></path>
+            </svg>
+          </button>
+
+          <a
+            href="#"
+            class="white text-gray-900 dark:text-white hover:text-primary dark:hover:text-blue-500 font-bold"
+          >
+            <i class="fa-brands fa-facebook-f text-[20px]"></i>
+          </a>
+          <a
+            href="#"
+            class="white text-gray-900 dark:text-white hover:text-primary dark:hover:text-blue-500 font-bold"
+          >
+            <i class="fa-brands fa-x-twitter text-[20px]"></i>
+          </a>
+          <a
+            href="#"
+            class="white text-gray-900 dark:text-white hover:text-primary dark:hover:text-blue-500 font-bold"
+          >
+            <i class="fa-brands fa-instagram text-[20px]"></i>
+          </a>
+          <a
+            href="#"
+            class="white text-gray-900 dark:text-white hover:text-primary dark:hover:text-blue-500 font-bold"
+          >
+            <i class="fa-brands fa-skype text-[20px]"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- hamburgure menu -->
+    <div
+      id="mobileMenuOverlay"
+      class="fixed inset-0 bg-black opacity-[60%] z-40 hidden md:hidden"
+    ></div>
+
+    <div
+      id="mobileMenu"
+      class="fixed top-0 right-0 h-full w-70 bg-blue-600 z-50 transform translate-x-full transition-transform duration-300 md:hidden overflow-y-auto dark:bg-gray-900"
+    >
+      <div
+        class="flex justify-between items-center p-4 border-b border-primary"
+      >
+        <div class="flex items-center">
+          <img
+            src="src/img/logo-fshop.png"
+            class="h-10 w-auto"
+            alt="XTShop Logo Mobile"
+          />
+        </div>
+        <button
+          id="closeMobileMenu"
+          class="text-white text-xl"
+          aria-label="Close mobile menu"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <ul class="flex flex-col text-white py-4">
+        <li>
+          <a href="index.html" class="block px-4 py-3 hover:bg-primary">HOME</a>
+        </li>
+        <li class="relative">
+          <a
+            href="women.html"
+            class="flex items-center justify-between px-4 py-3 hover:bg-primary mobile-dropdown-toggle"
+          >
+            WOMEN
+            <svg
+              class="w-2.5 h-2.5 ml-2.5 transform transition-transform duration-200"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 10 6"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 1 4 4 4-4"
+              />
+            </svg>
+          </a>
+          <ul class="hidden bg-primary text-sm">
+            <li>
+              <a href="#" class="block px-8 py-2 hover:bg-blue-800">Clothing</a>
+            </li>
+            <li>
+              <a href="#" class="block px-8 py-2 hover:bg-blue-800">Shoes</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="men-page.html" class="block px-4 py-3 hover:bg-primary"
+            >MEN</a
+          >
+        </li>
+        <li>
+          <a href="kids-page.html" class="block px-4 py-3 hover:bg-primary"
+            >KIDS</a
+          >
+        </li>
+        <li>
+          <a href="about.html" class="block px-4 py-3 hover:bg-primary"
+            >ABOUT</a
+          >
+        </li>
+        <li>
+          <a href="contact.html" class="block px-4 py-3 hover:bg-primary"
+            >CONTACT</a
+          >
+        </li>
+      </ul>
+
+      <div
+        class="absolute bottom-0 left-0 w-full flex justify-center space-x-6 p-4"
+      >
+        <a
+          href="#"
+          class="text-white hover:text-gray-200"
+          aria-label="Facebook"
+        >
+          <i class="fa-brands fa-facebook-f text-[20px]"></i>
+        </a>
+        <a href="#" class="text-white hover:text-gray-200" aria-label="Twitter">
+          <i class="fa-brands fa-x-twitter text-[20px]"></i>
+        </a>
+        <a
+          href="#"
+          class="text-white hover:text-gray-200"
+          aria-label="Instagram"
+        >
+          <i class="fa-brands fa-instagram text-[20px]"></i>
+        </a>
+        <a href="#" class="text-white hover:text-gray-200" aria-label="Skype">
+          <i class="fa-brands fa-skype text-[20px]"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- BANNER -->
+    <nav>
+      <div class="relative">
+        <img
+          src="src/img/slider3.jpeg"
+          alt=""
+          class="h-[80px] w-full md:h-[140px] lg:h-[140px] object-cover object-top"
+        />
+        <span
+          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:top-auto lg:top-auto md:bottom-10 lg:bottom-10 md:left-20 lg:left-20 md:transform-none lg:transform-none md:translate-x-0 lg:translate-x-0 md:translate-y-0 lg:translate-y-0 text-xs md:text-base lg:text-base whitespace-nowrap"
+        >
+          <i
+            class="fa-solid fa-house mx-1 md:mx-2 lg:mx-2 text-gray-950 hover:text-primary"
+          ></i>
+          <i
+            class="mx-1 md:mx-2 lg:mx-2 fa-solid fa-angles-right text-gray-500"
+          ></i>
+          <span class="font-bold text-gray-950 hover:text-primary"
+            >Products</span
+          >
+          <i
+            class="mx-1 md:mx-2 lg:mx-2 fa-solid fa-angles-right text-gray-500"
+          ></i>
+          <span class="font-bold text-gray-950 hover:text-primary">Men</span>
+        </span>
+      </div>
+    </nav>
+
+    <!-- MAIN -->
+    <main class="grid grid-cols-1 lg:ml-8 lg:flex lg:justify-evenly my-12">
+      <!-- SIDEBAR -->
+      <aside
+        class="order-2 lg:order-1 w-full lg:w-80 mt-10 lg:sticky lg:top-20 lg:self-start"
+      >
+        <div
+          class="bg-stone-100 border border-gray-200 rounded-xl p-6 space-y-8 mx-3 md:mx-8 lg:mx-0 dark:bg-gray-800 dark:border-gray-800"
+        >
+          <!-- FILTER BY PRICE -->
+          <div>
+            <div class="relative">
+              <!-- Blue accent line -->
+              <div class="absolute left-0 top-0 w-1 h-7 bg-primary -ml-6"></div>
+              <h3 class="font-semibold text-lg mb-4 dark:text-gray-300">
+                Filter by price
+              </h3>
+            </div>
+
+            <!-- Price Range Slider (Static) -->
+            <div class="mb-4">
+              <div class="relative">
+                <!-- Slider Track -->
+                <div
+                  class="w-full h-2 bg-gray-200 rounded-full relative dark:bg-gray-700"
+                >
+                  <!-- Active Range -->
+                  <div
+                    class="absolute h-2 bg-primary rounded-full"
+                    style="left: 10%; width: 80%"
+                  ></div>
+                  <!-- Left Handle -->
+                  <div
+                    class="absolute w-5 h-5 bg-primary rounded-full border-2 border-white shadow-lg -mt-1.5 dark:border-gray-800"
+                    style="left: 10%; transform: translateX(-50%)"
+                  ></div>
+                  <!-- Right Handle -->
+                  <div
+                    class="absolute w-5 h-5 bg-primary rounded-full border-2 border-white shadow-lg -mt-1.5 dark:border-gray-800"
+                    style="left: 90%; transform: translateX(-50%)"
+                  ></div>
+                </div>
+              </div>
+
+              <!-- Price Display -->
+              <div
+                class="flex justify-between mt-3 text-sm text-gray-600 dark:text-gray-400"
+              >
+                <span>Price: $30 — $940</span>
+              </div>
+            </div>
+
+            <!-- Filter Button -->
+            <button
+              class="w-full bg-primary hover:bg-gray-950 text-white font-semibold py-2 px-6 rounded-full transition-colors duration-200"
+            >
+              Filter
+            </button>
+          </div>
+
+          <!-- AVERAGE RATING -->
+          <div>
+            <div class="relative">
+              <!-- Blue accent line -->
+              <div class="absolute left-0 top-0 w-1 h-7 bg-primary -ml-6"></div>
+              <h3 class="font-semibold text-lg mb-4 dark:text-gray-300">
+                Average rating
+              </h3>
+            </div>
+
+            <div class="space-y-3">
+              <!-- 5 Stars -->
+              <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                  <div class="flex">
+                    <i class="fa-solid fa-star text-amber-500"></i>
+                    <i class="fa-solid fa-star text-amber-500"></i>
+                    <i class="fa-solid fa-star text-amber-500"></i>
+                    <i class="fa-solid fa-star text-amber-500"></i>
+                    <i class="fa-solid fa-star text-amber-500"></i>
+                  </div>
+                </div>
+                <span class="text-gray-500 text-sm dark:text-gray-300"
+                  >(1)</span
+                >
+              </div>
+
+              <!-- 4 Stars -->
+              <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                  <div class="flex">
+                    <i class="fa-solid fa-star text-amber-500"></i>
+                    <i class="fa-solid fa-star text-amber-500"></i>
+                    <i class="fa-solid fa-star text-amber-500"></i>
+                    <i class="fa-solid fa-star text-amber-500"></i>
+                    <i class="fa-regular fa-star" style="color: #a3a3a3"></i>
+                  </div>
+                </div>
+                <span class="text-gray-500 text-sm dark:text-gray-300"
+                  >(2)</span
+                >
+              </div>
+
+              <!-- 3 Stars -->
+              <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                  <div class="flex">
+                    <i class="fa-solid fa-star text-amber-500"></i>
+                    <i class="fa-solid fa-star text-amber-500"></i>
+                    <i class="fa-solid fa-star text-amber-500"></i>
+                    <i class="fa-regular fa-star" style="color: #a3a3a3"></i>
+                    <i class="fa-regular fa-star" style="color: #a3a3a3"></i>
+                  </div>
+                </div>
+                <span class="text-gray-500 text-sm dark:text-gray-300"
+                  >(1)</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- OTHER PRODUCTS -->
+          <div>
+            <div class="relative">
+              <!-- Blue accent line -->
+              <div class="absolute left-0 top-0 w-1 h-7 bg-primary -ml-6"></div>
+              <h3 class="font-semibold text-lg mb-4 dark:text-gray-300">
+                Other Products
+              </h3>
+            </div>
+
+            <div class="space-y-4">
+              <div class="flex items-center space-x-3">
+                <img
+                  src="src/img/p5-1-300x300.jpg.jpeg"
+                  alt="The Trucker"
+                  class="w-18 object-cover rounded-lg"
+                />
+                <div class="flex-1">
+                  <h4 class="font-medium text-sm mb-4 dark:text-gray-300">
+                    The Trucker
+                  </h4>
+                  <div class="flex mb-2">
+                    <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                    <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                    <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                    <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                    <i
+                      class="fa-regular fa-star fa-xs"
+                      style="color: #a3a3a3"
+                    ></i>
+                  </div>
+                  <div class="flex items-center space-x-2 mt-1">
+                    <span
+                      class="text-gray-800 line-through text-xs bg-stone-200 p-1.5 rounded-sm dark:bg-gray-600 dark:text-gray-300"
+                      >$45</span
+                    >
+                    <span class="font-semibold text-sm dark:text-gray-300"
+                      >$32</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <hr class="text-gray-300 dark:text-gray-700" />
+
+              <div class="flex items-center space-x-3">
+                <img
+                  src="src/img/p3-1-1-300x300.jpg.jpeg"
+                  alt="Jack by BB Dakota Haole"
+                  class="w-16 object-cover rounded-lg"
+                />
+                <div class="flex-1">
+                  <h4 class="font-medium text-sm mb-4 dark:text-gray-300">
+                    Jack by BB Dakota Haole
+                  </h4>
+                  <div class="flex mb-2">
+                    <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                    <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                    <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                    <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                    <i
+                      class="fa-regular fa-star-half-stroke fa-xs text-amber-500"
+                    ></i>
+                  </div>
+                  <div class="mt-1">
+                    <span class="font-semibold text-sm dark:text-gray-300"
+                      >$35</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <hr class="text-gray-300 dark:text-gray-700" />
+
+              <div class="flex items-center space-x-3">
+                <img
+                  src="src/img/p7-1-300x300.jpg.jpeg"
+                  alt="Gimp Hoodie"
+                  class="w-16 object-cover rounded-lg bg-black"
+                />
+                <div class="flex-1">
+                  <h4 class="font-medium text-sm mb-4 dark:text-gray-300">
+                    Gimp Hoodie
+                  </h4>
+                  <div class="flex mb-2">
+                    <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                    <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                    <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                    <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                    <i
+                      class="fa-regular fa-star-half-stroke fa-xs text-amber-500"
+                    ></i>
+                  </div>
+                  <div class="flex items-center space-x-2 mt-1">
+                    <span
+                      class="text-gray-800 line-through text-xs bg-stone-200 p-1.5 rounded-sm dark:bg-gray-600 dark:text-gray-300"
+                      >$980</span
+                    >
+                    <span class="font-semibold text-sm dark:text-gray-300"
+                      >$939</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <hr class="text-gray-300 dark:text-gray-700" />
+
+              <div class="flex items-center space-x-3">
+                <img
+                  src="src/img/p1-1-1-300x300.jpg.jpeg"
+                  alt="Pink Floyd Animals Tour"
+                  class="w-16 object-cover rounded-lg"
+                />
+                <div class="flex-1">
+                  <h4 class="font-medium text-sm mb-4 dark:text-gray-300">
+                    Pink Floyd Animals Tour
+                  </h4>
+                  <div class="flex mb-2">
+                    <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                    <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                    <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                    <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                    <i
+                      class="fa-regular fa-star-half-stroke fa-xs text-amber-500"
+                    ></i>
+                  </div>
+                  <div class="mt-1">
+                    <span class="font-semibold text-sm dark:text-gray-300"
+                      >$64</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- SHOP SECTION -->
+      <section class="my-10 order-1 lg:order-2">
+        <div class="h-auto">
+          <!-- CATEGORY LABEL -->
+          <h1
+            class="font-bold text-3xl text-center md:mx-8 lg:mx-8 md:my-5 lg:my-5 md:text-left lg:text-left dark:text-gray-300"
+          >
+            Men
+          </h1>
+
+          <!-- FILTER & RESULTS -->
+          <div class="md:flex md:justify-between lg:flex lg:justify-between">
+            <!-- RESULTS LABEL -->
+            <div
+              class="text-center md:text-left lg:text-left md:mx-8 lg:mx-8 my-5 md:my-0 lg:my-0 dark:text-gray-300"
+            >
+              <p>Showing all 8 results</p>
+            </div>
+
+            <!-- FILTER BUTTONS -->
+            <div
+              class="grid grid-cols-2 gap-3 mx-3 md:mx-8 lg:mx-8 md:flex lg:flex md:gap-5 lg:gap-5 md:justify-end lg:justify-end"
+            >
+              <!-- Products Count Dropdown -->
+              <div class="relative">
+                <select
+                  class="w-full md:w-[140px] lg:w-[140px] px-5 py-2 text-gray-600 rounded-full ring-1 ring-gray-300 focus:ring-1 focus:ring-primary focus:outline-none appearance-none bg-white cursor-pointer dark:bg-gray-700 dark:text-gray-300 dark:ring-gray-700"
+                >
+                  <option value="6">6 Products</option>
+                  <option value="16">16 Products</option>
+                  <option value="32">32 Products</option>
+                  <option value="48">48 Products</option>
+                  <option value="64">64 Products</option>
+                  <option value="128">128 Products</option>
+                </select>
+                <i
+                  class="fa-solid fa-caret-down fa-sm absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none"
+                  style="color: #a3a3a3"
+                ></i>
+              </div>
+
+              <!-- Sort Dropdown -->
+              <div class="relative">
+                <select
+                  class="w-full md:w-[180px] lg:w-[180px] px-5 py-2 text-gray-600 rounded-full ring-1 ring-gray-300 focus:ring-1 focus:ring-primary focus:outline-none appearance-none bg-white cursor-pointer dark:bg-gray-700 dark:text-gray-300 dark:ring-gray-700"
+                >
+                  <option value="default">Default</option>
+                  <option value="popular">Popular</option>
+                  <option value="featured">Featured</option>
+                  <option value="top-rated">Top Rated</option>
+                  <option value="relevance">Relevance</option>
+                  <option value="latest">Sort by latest</option>
+                  <option value="oldest">Sort by oldest</option>
+                  <option value="price-low-high">Price low to high</option>
+                  <option value="price-high-low">Price high to low</option>
+                  <option value="highest-discount">Highest Discount</option>
+                  <option value="lowest-discount">Lowest Discount</option>
+                  <option value="alphabetically-az">Alphabetically, A-Z</option>
+                  <option value="alphabetically-za">Alphabetically, Z-A</option>
+                </select>
+                <i
+                  class="fa-solid fa-caret-down fa-sm absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none"
+                  style="color: #a3a3a3"
+                ></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD CONTAINER -->
+          <div
+            class="mx-3 mt-8 gap-3 grid grid-cols-2 md:mx-8 lg:mx-8 md:gap-8 lg:grid-cols-2 lg:gap-10"
+          >
+            <!-- ITEM CARD -->
+            <div class="w-full lg:max-w-[400px] pb-4 lg:pb-0">
+              <!-- IMAGE & BADGES -->
+              <div class="relative">
+                <!-- IMAGE -->
+                <img
+                  src="src/img/p7-1-600x600.jpg.jpeg"
+                  alt=""
+                  class="rounded-2xl ring-1 ring-gray-300 hover:ring-2 hover:ring-primary hover:scale-102 duration-300 dark:ring-gray-700"
+                />
+
+                <!-- DISCOUNT TAG -->
+                <span
+                  class="absolute top-2 left-2 md:top-4 lg:top-4 md:left-4 lg:left-4 bg-primary rounded-full text-white font-bold px-4.5 py-1.5 text-xs md:text-base lg:text-base"
+                  >4%</span
+                >
+                <!-- PRICE TAG -->
+                <span
+                  class="absolute top-2 right-2 md:top-4 lg:top-4 md:right-4 lg:right-4 bg-gray-950 text-white font-bold px-4.5 py-1.5 md:px-6 lg:px-6 md:py-2 lg:py-2 rounded-full text-xs md:text-base lg:text-base"
+                >
+                  <span
+                    class="line-through text-gray-400 text-[8px] md:text-xs lg:text-xs"
+                    >$980</span
+                  >
+                  $939
+                </span>
+                <!-- STARS - Hidden on mobile, visible on desktop -->
+                <span class="absolute top-16 right-8 hidden lg:block">
+                  <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                  <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                  <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                  <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                  <i
+                    class="fa-regular fa-star-half-stroke fa-xs text-amber-500"
+                  ></i>
+                </span>
+              </div>
+
+              <!-- DESCRIPTION & BUTTON -->
+              <div
+                class="flex flex-col items-center text-center mt-5 md:flex-row lg:flex-row md:justify-between lg:justify-between md:text-left lg:text-left"
+              >
+                <div class="lg:flex-1">
+                  <h2
+                    class="text-sm md:text-lg lg:text-lg font-bold dark:text-gray-300"
+                  >
+                    Gimp Hoodie
+                  </h2>
+                  <p class="mt-2 text-gray-500 dark:text-gray-400">Men</p>
+                </div>
+                <div class="mt-3 lg:mt-0">
+                  <button
+                    class="px-5 py-2 rounded-full bg-blue-50 text-primary font-semibold text-sm hover:bg-primary hover:text-white duration-150 dark:text-gray-900"
+                  >
+                    Add to cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- ITEM CARD -->
+            <div class="w-full lg:max-w-[400px] pb-4 lg:pb-0">
+              <!-- IMAGE & BADGES -->
+              <div class="relative">
+                <!-- IMAGE -->
+                <img
+                  src="src/img/p8-1-600x600.jpg.jpeg"
+                  alt=""
+                  class="rounded-2xl ring-1 ring-gray-300 hover:ring-2 hover:ring-primary hover:scale-102 duration-300 dark:ring-gray-700"
+                />
+
+                <!-- PRICE TAG -->
+                <span
+                  class="absolute top-2 right-2 md:top-4 lg:top-4 md:right-4 lg:right-4 bg-gray-950 text-white font-bold px-4.5 py-1.5 md:px-6 lg:px-6 md:py-2 lg:py-2 rounded-full text-xs md:text-base lg:text-base"
+                >
+                  $189
+                </span>
+                <!-- STARS - Hidden on mobile, visible on desktop -->
+                <span class="absolute top-16 right-8 hidden lg:block">
+                  <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                  <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                  <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                  <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                  <i
+                    class="fa-regular fa-star-half-stroke fa-xs text-amber-500"
+                  ></i>
+                </span>
+              </div>
+
+              <!-- DESCRIPTION & BUTTON -->
+              <div
+                class="flex flex-col items-center text-center mt-5 md:flex-row lg:flex-row md:justify-between lg:justify-between md:text-left lg:text-left"
+              >
+                <div class="lg:flex-1">
+                  <h2
+                    class="text-sm md:text-lg lg:text-lg font-bold dark:text-gray-300"
+                  >
+                    Hawaiian Shirt
+                  </h2>
+                  <p class="mt-2 text-gray-500 dark:text-gray-400">Men</p>
+                </div>
+                <div class="mt-3 lg:mt-0">
+                  <button
+                    class="px-5 py-2 rounded-full bg-blue-50 text-primary font-semibold text-sm hover:bg-primary hover:text-white duration-150 dark:text-gray-900"
+                  >
+                    Add to cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- ITEM CARD -->
+            <div class="w-full lg:max-w-[400px] pb-4 lg:pb-0">
+              <!-- IMAGE & BADGES -->
+              <div class="relative">
+                <!-- IMAGE -->
+                <img
+                  src="src/img/p6-1-600x600.jpg.jpeg"
+                  alt=""
+                  class="rounded-2xl ring-1 ring-gray-300 hover:ring-2 hover:ring-primary hover:scale-102 duration-300 dark:ring-gray-700"
+                />
+
+                <!-- PRICE TAG -->
+                <span
+                  class="absolute top-2 right-2 md:top-4 lg:top-4 md:right-4 lg:right-4 bg-gray-950 text-white font-bold px-4.5 py-1.5 md:px-6 lg:px-6 md:py-2 lg:py-2 rounded-full text-xs md:text-base lg:text-base"
+                >
+                  $45
+                </span>
+                <!-- STARS - Hidden on mobile, visible on desktop -->
+                <span class="absolute top-16 right-8 hidden lg:block">
+                  <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                  <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                  <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                  <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                  <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                </span>
+              </div>
+
+              <!-- DESCRIPTION & BUTTON -->
+              <div
+                class="flex flex-col items-center text-center mt-5 md:flex-row lg:flex-row md:justify-between lg:justify-between md:text-left lg:text-left"
+              >
+                <div class="lg:flex-1">
+                  <h2
+                    class="text-sm md:text-lg lg:text-lg font-bold dark:text-gray-300"
+                  >
+                    Mirko Artist Tee off white
+                  </h2>
+                  <p class="mt-2 text-gray-500 dark:text-gray-400">Men</p>
+                </div>
+                <div class="mt-3 lg:mt-0">
+                  <button
+                    class="px-5 py-2 rounded-full bg-blue-50 text-primary font-semibold text-sm hover:bg-primary hover:text-white duration-150 dark:text-gray-900"
+                  >
+                    Add to cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- ITEM CARD -->
+            <div class="w-full lg:max-w-[400px] pb-4 lg:pb-0">
+              <!-- IMAGE & BADGES -->
+              <div class="relative">
+                <!-- IMAGE -->
+                <img
+                  src="src/img/p5-1-600x600.jpg.jpeg"
+                  alt=""
+                  class="rounded-2xl ring-1 ring-gray-300 hover:ring-2 hover:ring-primary hover:scale-102 duration-300 dark:ring-gray-700"
+                />
+
+                <!-- DISCOUNT TAG -->
+                <span
+                  class="absolute top-2 left-2 md:top-4 lg:top-4 md:left-4 lg:left-4 bg-primary rounded-full text-white font-bold px-4.5 py-1.5 text-xs md:text-base lg:text-base"
+                  >9%</span
+                >
+                <!-- PRICE TAG -->
+                <span
+                  class="absolute top-2 right-2 md:top-4 lg:top-4 md:right-4 lg:right-4 bg-gray-950 text-white font-bold px-4.5 py-1.5 md:px-6 lg:px-6 md:py-2 lg:py-2 rounded-full text-xs md:text-base lg:text-base"
+                >
+                  <span class="line-through text-gray-400 text-xs">$35</span>
+                  $32
+                </span>
+                <!-- STARS - Hidden on mobile, visible on desktop -->
+                <span class="absolute top-16 right-8 hidden lg:block">
+                  <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                  <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                  <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                  <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                  <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                </span>
+              </div>
+
+              <!-- DESCRIPTION & BUTTON -->
+              <div
+                class="flex flex-col items-center text-center mt-5 md:flex-row lg:flex-row md:justify-between lg:justify-between md:text-left lg:text-left"
+              >
+                <div class="lg:flex-1">
+                  <h2
+                    class="text-sm md:text-lg lg:text-lg font-bold dark:text-gray-300"
+                  >
+                    The Trucker
+                  </h2>
+                  <p class="mt-2 text-gray-500 dark:text-gray-400">Men</p>
+                </div>
+                <div class="mt-3 lg:mt-0">
+                  <button
+                    class="px-5 py-2 rounded-full bg-blue-50 text-primary font-semibold text-sm hover:bg-primary hover:text-white duration-150 dark:text-gray-900"
+                  >
+                    Add to cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- ITEM CARD -->
+            <div class="w-full lg:max-w-[400px] pb-4 lg:pb-0">
+              <!-- IMAGE & BADGES -->
+              <div class="relative">
+                <!-- IMAGE -->
+                <img
+                  src="src/img/Men/Blue T-shirt.jpg"
+                  alt=""
+                  class="rounded-2xl ring-1 ring-gray-300 hover:ring-2 hover:ring-primary hover:scale-102 duration-300 dark:ring-gray-700"
+                />
+
+                <!-- DISCOUNT TAG -->
+                <span
+                  class="absolute top-2 left-2 md:top-4 lg:top-4 md:left-4 lg:left-4 bg-primary rounded-full text-white font-bold px-4.5 py-1.5 text-xs md:text-base lg:text-base"
+                  >4%</span
+                >
+                <!-- PRICE TAG -->
+                <span
+                  class="absolute top-2 right-2 md:top-4 lg:top-4 md:right-4 lg:right-4 bg-gray-950 text-white font-bold px-4.5 py-1.5 md:px-6 lg:px-6 md:py-2 lg:py-2 rounded-full text-xs md:text-base lg:text-base"
+                >
+                  <span class="line-through text-gray-400 text-[8px] lg:text-xs"
+                    >$980</span
+                  >
+                  $939
+                </span>
+                <!-- STARS - Hidden on mobile, visible on desktop -->
+                <span class="absolute top-16 right-8 hidden lg:block">
+                  <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                  <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                  <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                  <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                  <i
+                    class="fa-regular fa-star-half-stroke fa-xs text-amber-500"
+                  ></i>
+                </span>
+              </div>
+
+              <!-- DESCRIPTION & BUTTON -->
+              <div
+                class="flex flex-col items-center text-center mt-5 md:flex-row lg:flex-row md:justify-between lg:justify-between md:text-left lg:text-left"
+              >
+                <div class="lg:flex-1">
+                  <h2
+                    class="text-sm md:text-lg lg:text-lg font-bold dark:text-gray-300"
+                  >
+                    Blue Polo Shirt
+                  </h2>
+                  <p class="mt-2 text-gray-500 dark:text-gray-400">Men</p>
+                </div>
+                <div class="mt-3 lg:mt-0">
+                  <button
+                    class="px-5 py-2 rounded-full bg-blue-50 text-primary font-semibold text-sm hover:bg-primary hover:text-white duration-150 dark:text-gray-900"
+                  >
+                    Add to cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- ITEM CARD -->
+            <div class="w-full lg:max-w-[400px] pb-4 lg:pb-0">
+              <!-- IMAGE & BADGES -->
+              <div class="relative">
+                <!-- IMAGE -->
+                <img
+                  src="src/img/Men/Lotto Squadra T-shirt.jpg"
+                  alt=""
+                  class="rounded-2xl ring-1 ring-gray-300 hover:ring-2 hover:ring-primary hover:scale-102 duration-300 dark:ring-gray-700"
+                />
+
+                <!-- PRICE TAG -->
+                <span
+                  class="absolute top-2 right-2 md:top-4 lg:top-4 md:right-4 lg:right-4 bg-gray-950 text-white font-bold px-4.5 py-1.5 md:px-6 lg:px-6 md:py-2 lg:py-2 rounded-full text-xs md:text-base lg:text-base"
+                >
+                  $189
+                </span>
+                <!-- STARS - Hidden on mobile, visible on desktop -->
+                <span class="absolute top-16 right-8 hidden lg:block">
+                  <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                  <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                  <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                  <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                  <i
+                    class="fa-regular fa-star-half-stroke fa-xs text-amber-500"
+                  ></i>
+                </span>
+              </div>
+
+              <!-- DESCRIPTION & BUTTON -->
+              <div
+                class="flex flex-col items-center text-center mt-5 md:flex-row lg:flex-row md:justify-between lg:justify-between md:text-left lg:text-left"
+              >
+                <div class="lg:flex-1">
+                  <h2
+                    class="text-sm md:text-lg lg:text-lg font-bold dark:text-gray-300"
+                  >
+                    Lotto Squadra T-shirt
+                  </h2>
+                  <p class="mt-2 text-gray-500 dark:text-gray-400">Men</p>
+                </div>
+                <div class="mt-3 lg:mt-0">
+                  <button
+                    class="px-5 py-2 rounded-full bg-blue-50 text-primary font-semibold text-sm hover:bg-primary hover:text-white duration-150 dark:text-gray-900"
+                  >
+                    Add to cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- ITEM CARD -->
+            <div class="w-full lg:max-w-[400px] pb-4 lg:pb-0">
+              <!-- IMAGE & BADGES -->
+              <div class="relative">
+                <!-- IMAGE -->
+                <img
+                  src="src/img/Men/Short Sleeve Harf Zipper.webp"
+                  alt=""
+                  class="rounded-2xl ring-1 ring-gray-300 hover:ring-2 hover:ring-primary hover:scale-102 duration-300 dark:ring-gray-700"
+                />
+
+                <!-- PRICE TAG -->
+                <span
+                  class="absolute top-2 right-2 md:top-4 lg:top-4 md:right-4 lg:right-4 bg-gray-950 text-white font-bold px-4.5 py-1.5 md:px-6 lg:px-6 md:py-2 lg:py-2 rounded-full text-xs md:text-base lg:text-base"
+                >
+                  $45
+                </span>
+                <!-- STARS - Hidden on mobile, visible on desktop -->
+                <span class="absolute top-16 right-8 hidden lg:block">
+                  <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                  <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                  <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                  <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                  <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                </span>
+              </div>
+
+              <!-- DESCRIPTION & BUTTON -->
+              <div
+                class="flex flex-col items-center text-center mt-5 md:flex-row lg:flex-row md:justify-between lg:justify-between md:text-left lg:text-left"
+              >
+                <div class="lg:flex-1">
+                  <h2
+                    class="text-sm md:text-lg lg:text-lg font-bold dark:text-gray-300"
+                  >
+                    Short Sleeve Harf Zipper
+                  </h2>
+                  <p class="mt-2 text-gray-500 dark:text-gray-400">Men</p>
+                </div>
+                <div class="mt-3 lg:mt-0">
+                  <button
+                    class="px-5 py-2 rounded-full bg-blue-50 text-primary font-semibold text-sm hover:bg-primary hover:text-white duration-150 dark:text-gray-900"
+                  >
+                    Add to cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- ITEM CARD -->
+            <div class="w-full lg:max-w-[400px] pb-4 lg:pb-0">
+              <!-- IMAGE & BADGES -->
+              <div class="relative">
+                <!-- IMAGE -->
+                <img
+                  src="src/img/Men/Sleeve Cotton Casual Shirt.jpg"
+                  alt=""
+                  class="rounded-2xl ring-1 ring-gray-300 hover:ring-2 hover:ring-primary hover:scale-102 duration-300 dark:ring-gray-700"
+                />
+
+                <!-- DISCOUNT TAG -->
+                <span
+                  class="absolute top-2 left-2 md:top-4 lg:top-4 md:left-4 lg:left-4 bg-primary rounded-full text-white font-bold px-4.5 py-1.5 text-xs md:text-base lg:text-base"
+                  >9%</span
+                >
+                <!-- PRICE TAG -->
+                <span
+                  class="absolute top-2 right-2 md:top-4 lg:top-4 md:right-4 lg:right-4 bg-gray-950 text-white font-bold px-4.5 py-1.5 md:px-6 lg:px-6 md:py-2 lg:py-2 rounded-full text-xs md:text-base lg:text-base"
+                >
+                  <span class="line-through text-gray-400 text-xs">$35</span>
+                  $32
+                </span>
+                <!-- STARS - Hidden on mobile, visible on desktop -->
+                <span class="absolute top-16 right-8 hidden lg:block">
+                  <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                  <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                  <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                  <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                  <i class="fa-solid fa-star text-amber-500 fa-xs"></i>
+                </span>
+              </div>
+
+              <!-- DESCRIPTION & BUTTON -->
+              <div
+                class="flex flex-col items-center text-center mt-5 md:flex-row lg:flex-row md:justify-between lg:justify-between md:text-left lg:text-left"
+              >
+                <div class="lg:flex-1">
+                  <h2
+                    class="text-sm md:text-lg lg:text-lg font-bold dark:text-gray-300"
+                  >
+                    Sleeve Cotton Shirt
+                  </h2>
+                  <p class="mt-2 text-gray-500 dark:text-gray-400">Men</p>
+                </div>
+                <div class="mt-3 lg:mt-0">
+                  <button
+                    class="px-5 py-2 rounded-full bg-blue-50 text-primary font-semibold text-sm hover:bg-primary hover:text-white duration-150 dark:text-gray-900"
+                  >
+                    Add to cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer>
+      <section
+        class="bg-white py-6 border-b border-t border-[#eaeaea] dark:border-gray-900 dark:bg-gray-800"
+      >
+        <div
+          class="max-w-screen-xl mx-auto flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-10 px-4"
+        >
+          <a
+            href="#"
+            class="text-gray-700 dark:text-gray-200 text-base font-bold whitespace-nowrap px-4 py-2 hover:bg-blue-600 hover:text-white rounded-full transition-all duration-200 ease-in-out t-white"
+            >Track Your Order</a
+          >
+          <a
+            href="#"
+            class="text-gray-700 dark:text-gray-200 text-base font-bold whitespace-nowrap px-4 py-2 hover:bg-blue-600 hover:text-white rounded-full transition-all duration-200 ease-in-out t-white"
+            >About Us</a
+          >
+          <a
+            href="#"
+            class="text-gray-700 dark:text-gray-200 text-base font-bold whitespace-nowrap px-4 py-2 hover:bg-blue-600 hover:text-white rounded-full transition-all duration-200 ease-in-out t-white"
+            >Contact Us</a
+          >
+        </div>
+      </section>
+      <section class="bg-white dark:bg-gray-800 py-6 dark-bg">
+        <p
+          class="max-w-screen-xl mx-auto text-center text-[#7f7f7f] text-base t-white"
+        >
+          Copyright © 2025 XTShop. All Rights Reserved
+        </p>
+      </section>
+    </footer>
+
+    <script src="indexScript.js"></script>
+  </body>
+</html>

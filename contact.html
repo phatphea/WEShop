@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WEShop - Track Order</title>
+    <title>Contact Page Layout</title>
     <link rel="stylesheet" href="src/output.css" />
-    <!-- font awesome -->
+    <link rel="stylesheet" href="../contact_page/contact.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -13,16 +13,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!-- flowbit -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/3.1.2/flowbite.js"
-      integrity="sha512-c9m0HP/+jR+ZgMbKqLHtvn8nT0IiJiw0NhgSWedfZWi1QvGS39Kz2w4Sbo7rD1eYA+fm7ypCLNR0gbAJv2mHQA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <link rel="stylesheet" href="index.css" />
   </head>
-  <body>
+  <body class="dark:bg-gray-900 dark:text-gray-100">
     <!-- header -->
     <header
       class="dark-bg font-roboto bg-white border-b border-gray-200 dark:border-0 dark:bg-gray-900"
@@ -147,7 +139,7 @@
           <li>
             <a
               href="index.html"
-              class="dark:text-white hover:text-primary font-bold border-t-2 border-transparent hover:border-primary pt-4 white"
+              class="text-gray-900 dark:text-white hover:text-primary dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-primary pt-4 white"
             >
               HOME
             </a>
@@ -227,7 +219,7 @@
           <li>
             <a
               href="contact.html"
-              class="text-gray-900 dark:text-white hover:text-primary dark:hover:text-blue-500 font-bold border-t-2 border-transparent hover:border-primary pt-4 white"
+              class="text-primary border-t-primary dark:text-primary hover:text-primary font-bold border-t-2 border-transparent hover:border-primary pt-4 white"
             >
               CONTACT
             </a>
@@ -239,7 +231,7 @@
           <!-- dark mode -->
           <button
             id="theme-toggle"
-            class="text-gray-600 hover:text-primary focus:outline-none cursor-pointer dark:text-gray-300 dark:hover:text-blue-500 transition duration-300"
+            class="text-gray-600 dark:text-gray-400 hover:text-primary focus:outline-none cursor-pointer dark:text-gray-300 dark:hover:text-blue-500 transition duration-300"
             aria-label="Toggle dark mode"
           >
             <!-- sun icon (light mode) -->
@@ -415,83 +407,255 @@
       </div>
     </div>
 
-    <!-- banner -->
-    <nav class="mx-auto max-w-screen">
+    <!-- BANNER -->
+    <nav>
       <div class="relative">
         <img
-          src="images/banner.jpg"
+          src="src/img/navPic.jpg"
           alt=""
-          class="h-[80px] w-full sm:h-[140px] md:h-[140px] object-cover object-top"
+          class="h-[80px] w-full lg:h-[140px] object-cover object-top"
         />
         <span
-          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 sm:top-2/3 sm:left-2/14 sm:-translate-x-1/2 sm:-translate-y-1/2"
+          class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 lg:top-auto lg:bottom-10 lg:left-20 lg:transform-none lg:translate-x-0 lg:translate-y-0 text-xs lg:text-base whitespace-nowrap"
         >
-          <i class="fa-solid fa-house text-neutral-950 hover:text-primary"></i>
           <i
-            class="mx-1 md:mx-2 lg:mx-2 fa-solid fa-angles-right text-neutral-500"
+            class="fa-solid fa-house mx-1 lg:mx-2 text-neutral-950 hover:text-primary"
           ></i>
+          <i class="mx-1 lg:mx-2 fa-solid fa-angles-right text-neutral-500"></i>
           <span class="font-bold text-neutral-950 hover:text-primary"
-            >Track your order</span
+            >CONTACT</span
           >
         </span>
       </div>
     </nav>
 
-    <!-- Main Content -->
-    <main class="bg-white py-20 px-4 dark:bg-gray-800 dark:text-white">
-      <div class="max-w-screen-xl mx-auto">
-        <p
-          class="text-black mb-15 text-base md:text-base text-justify leading-relaxed t-white dark:text-gray-100"
-        >
-          To track your order please enter your Order ID in the box below and
-          press the "Track" button. This was given to you on your receipt and in
-          the confirmation email you should have received.
-        </p>
-
-        <form class="grid grid-cols-1 md:grid-cols-2 gap-6 items-end">
-          <div>
-            <label
-              for="order_id"
-              class="block text-gray-700 text-sm font-semibold mb-3 t-white dark:text-gray-400"
-              >Order ID</label
+    <div
+      class="max-w-screen-xl flex flex-col md:flex-row md:space-x-12 mx-auto items-start py-20"
+    >
+      <div class="flex flex-col space-y-6 mb-8 md:mb-0 md:w-1/2">
+        <div class="flex items-center group">
+          <div
+            class="icon-wrapper w-16 h-16 rounded-full bg-gray-800 flex justify-center items-center mr-6 group-hover:bg-blue-600"
+          >
+            <svg
+              class="icon w-8 h-8 text-white"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
             >
-            <input
-              type="text"
-              id="order_id"
-              name="order_id"
-              placeholder="Found in your order confirmation email."
-              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 t-white dark:border-gray-600"
-              required
-            />
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M8.228 9.272a.5.5 0 01.353-.146H18.5a.5.5 0 01.353.146l3.536 3.536a.5.5 0 010 .707l-3.536 3.536a.5.5 0 01-.353.146H8.5a.5.5 0 01-.353-.146L4.228 13.515a.5.5 0 010-.707l3.536-3.536z"
+              />
+            </svg>
           </div>
-
-          <div>
-            <label
-              for="billing_email"
-              class="block text-gray-700 text-sm font-semibold mb-3 t-white dark:text-gray-400"
-              >Billing email</label
+          <div class="text-content">
+            <h3
+              class="text-2xl font-bold text-gray-800 group-hover:text-blue-600 dark:text-gray-200 dark:text-gray-200"
             >
-            <input
-              type="email"
-              id="billing_email"
-              name="billing_email"
-              placeholder="Email you used during checkout."
-              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 t-white dark:border-gray-600"
-              required
-            />
+              Support
+            </h3>
+            <p class="text-gray-600 dark:text-gray-400">support@yoursite.com</p>
           </div>
+        </div>
 
-          <div class="col-span-full md:col-span-1">
-            <button
-              type="submit"
-              class="bg-blue-600 text-white px-8 py-2 rounded-full font-semibold hover:bg-blue-700 transition-colors duration-200 cursor-pointer"
+        <div class="flex items-center group">
+          <div
+            class="icon-wrapper w-16 h-16 rounded-full bg-gray-800 flex justify-center items-center mr-6 group-hover:bg-blue-600"
+          >
+            <svg
+              class="icon w-8 h-8 text-white"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
             >
-              Track
-            </button>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.105L10.293 12a1.148 1.148 0 00-.098 1.056l3.35 3.35a1.148 1.148 0 001.055-.098l2.42-2.42a1 1 0 011.105-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+              />
+            </svg>
           </div>
-        </form>
+          <div class="text-content">
+            <h3
+              class="text-2xl font-bold text-gray-800 group-hover:text-blue-600 dark:text-gray-200"
+            >
+              Phone
+            </h3>
+            <p class="text-gray-600 dark:text-gray-400">+1 (800) 333 44 55</p>
+          </div>
+        </div>
+
+        <div class="flex items-center group">
+          <div
+            class="icon-wrapper w-16 h-16 rounded-full bg-gray-800 flex justify-center items-center mr-6 group-hover:bg-blue-600"
+          >
+            <svg
+              class="icon w-8 h-8 text-white"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0L6.343 16.657a8 8 0 1111.314 0z"
+              />
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+              />
+            </svg>
+          </div>
+          <div class="text-content">
+            <h3
+              class="text-2xl font-bold text-gray-800 group-hover:text-blue-600 dark:text-gray-200"
+            >
+              Address
+            </h3>
+            <p class="text-gray-600 dark:text-gray-400">
+              121 King Street, New York
+            </p>
+          </div>
+        </div>
+
+        <div class="map-iframe-container mt-6">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.631478132765!2d104.8992118750538!3d11.578254588623508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310951e96d257a6f%3A0x6b66703c5fc0c7cc!2sScience%20and%20Technology%20Advanced%20Development%20Co.%2C%20Ltd.!5e0!3m2!1sen!2skh!4v1751304306256!5m2!1sen!2skh"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
+        </div>
       </div>
-    </main>
+
+      <div class="text-center md:w-1/2 md:text-left">
+        <div class="pb-20 text-center">
+          <h1 class="mt-4 text-3xl font-bold">
+            Contact us <span class="italic font-normal">Today</span>
+          </h1>
+          <p class="mt-2 text-lg text-gray-900 dark:text-gray-300">
+            send message via below form...
+          </p>
+        </div>
+
+        <div class="w-full max-w-xl p-0 md:p-0 rounded-lg">
+          <form>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <label
+                  for="name"
+                  class="block text-gray-700 text-sm font-medium mb-2 dark:text-gray-400"
+                  >Your Name (required)</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  class="shadow-sm appearance-none border border-gray-300 rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:text-gray-400"
+                />
+              </div>
+              <div>
+                <label
+                  for="email"
+                  class="block text-gray-700 text-sm font-medium mb-2 dark:text-gray-400"
+                  >Your Email (required)</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="shadow-sm appearance-none border border-gray-300 rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:text-gray-400"
+                />
+              </div>
+            </div>
+
+            <div class="mb-6">
+              <label
+                for="subject"
+                class="block text-gray-700 text-sm font-medium mb-2 dark:text-gray-400"
+                >Subject</label
+              >
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                class="shadow-sm appearance-none border border-gray-300 rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+              />
+            </div>
+
+            <div class="mb-6">
+              <label
+                for="department"
+                class="block text-gray-700 text-sm font-medium mb-2 dark:text-gray-400"
+                >Department</label
+              >
+              <div class="relative">
+                <select
+                  id="department"
+                  name="department"
+                  class="block appearance-none w-full bg-white border border-gray-300 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+                >
+                  <option value="" disabled selected>
+                    Business Department
+                  </option>
+                  <option value="business">Business Department</option>
+                  <option value="support">Support Department</option>
+                  <option value="sales">Other</option>
+                </select>
+                <div
+                  class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+                >
+                  <svg
+                    class="fill-current h-4 w-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M9.293 12.95l.707.707L15 9.293V10a1 1 0 001 1h1a1 1 0 001-1V5a1 1 0 00-1-1H14a1 1 0 00-1 1v1a1 1 0 001 1h.707L10 11.293 4.293 5.586a1 1 0 00-1.414 1.414l5 5a1 1 0 001.414 0z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-8">
+              <label
+                for="message"
+                class="block text-gray-700 text-sm font-medium mb-2 dark:text-gray-400"
+                >Your Message</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                class="shadow-sm appearance-none border border-gray-300 rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-blue-500 focus:border-blue-500 resize-y"
+              ></textarea>
+            </div>
+
+            <div class="flex justify-start">
+              <button
+                type="submit"
+                class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg focus:outline-none focus:shadow-outline transition duration-150 ease-in-out"
+              >
+                Send
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
     <!-- footer -->
     <footer>
       <section
@@ -506,12 +670,12 @@
             >Track Your Order</a
           >
           <a
-            href="#"
+            href="about.html"
             class="text-gray-700 dark:text-gray-200 text-base font-bold whitespace-nowrap px-4 py-2 hover:bg-blue-600 hover:text-white rounded-full transition-all duration-200 ease-in-out t-white"
             >About Us</a
           >
           <a
-            href="#"
+            href="contact.html"
             class="text-gray-700 dark:text-gray-200 text-base font-bold whitespace-nowrap px-4 py-2 hover:bg-blue-600 hover:text-white rounded-full transition-all duration-200 ease-in-out t-white"
             >Contact Us</a
           >
@@ -527,6 +691,5 @@
     </footer>
 
     <script src="indexScript.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
   </body>
 </html>
