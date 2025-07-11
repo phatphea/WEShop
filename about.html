@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WEShop</title>
+    <title>About</title>
     <link rel="stylesheet" href="../about_page/about.css" />
     <link rel="stylesheet" href="src/output.css" />
     <link
@@ -14,7 +14,7 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body class="dark:bg-gray-900">
+  <body class="dark:bg-gray-900 overflow-x-hidden">
     <!-- header -->
     <header
       class="dark-bg font-roboto bg-white border-b border-gray-200 dark:border-0 dark:bg-gray-900"
@@ -23,7 +23,10 @@
         class="flex flex-wrap md:flex-nowrap justify-between items-center mx-auto max-w-screen-xl px-6 h-[68px] md:h-[96px] md:p-2"
       >
         <div class="flex items-center space-x-6 rtl:space-x-reverse">
-          <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <a
+            href="index.html"
+            class="flex items-center space-x-3 rtl:space-x-reverse"
+          >
             <img
               src="src/img/logo-fshop.png"
               class="w-auto h-[48px] md:h-[70px] lg:h-[80px] transition-all duration-600 ease-in-out"
@@ -164,7 +167,6 @@
               </svg>
             </a>
             <div
-              
               class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 dark:divide-gray-600 absolute group-hover:block"
             >
               <ul
@@ -323,7 +325,9 @@
       </div>
 
       <ul class="flex flex-col text-white py-4">
-        <li><a href="index.html" class="block px-4 py-3 hover:bg-primary">HOME</a></li>
+        <li>
+          <a href="index.html" class="block px-4 py-3 hover:bg-primary">HOME</a>
+        </li>
         <li class="relative">
           <a
             href="women.html"
@@ -355,11 +359,25 @@
             </li>
           </ul>
         </li>
-        <li><a href="men-page.html" class="block px-4 py-3 hover:bg-primary">MEN</a></li>
-        <li><a href="kids-page.html" class="block px-4 py-3 hover:bg-primary">KIDS</a></li>
-        <li><a href="about.html" class="block px-4 py-3 hover:bg-primary">ABOUT</a></li>
         <li>
-          <a href="contact.html" class="block px-4 py-3 hover:bg-primary">CONTACT</a>
+          <a href="men-page.html" class="block px-4 py-3 hover:bg-primary"
+            >MEN</a
+          >
+        </li>
+        <li>
+          <a href="kids-page.html" class="block px-4 py-3 hover:bg-primary"
+            >KIDS</a
+          >
+        </li>
+        <li>
+          <a href="about.html" class="block px-4 py-3 hover:bg-primary"
+            >ABOUT</a
+          >
+        </li>
+        <li>
+          <a href="contact.html" class="block px-4 py-3 hover:bg-primary"
+            >CONTACT</a
+          >
         </li>
       </ul>
 
@@ -373,11 +391,7 @@
         >
           <i class="fa-brands fa-facebook-f text-[20px]"></i>
         </a>
-        <a
-          href="#"
-          class="text-white hover:text-gray-200"
-          aria-label="Twitter"
-        >
+        <a href="#" class="text-white hover:text-gray-200" aria-label="Twitter">
           <i class="fa-brands fa-x-twitter text-[20px]"></i>
         </a>
         <a
@@ -387,11 +401,7 @@
         >
           <i class="fa-brands fa-instagram text-[20px]"></i>
         </a>
-        <a
-          href="#"
-          class="text-white hover:text-gray-200"
-          aria-label="Skype"
-        >
+        <a href="#" class="text-white hover:text-gray-200" aria-label="Skype">
           <i class="fa-brands fa-skype text-[20px]"></i>
         </a>
       </div>
@@ -419,197 +429,264 @@
       </div>
     </nav>
 
-    <div class="text-center flex flex-col mb-12 pt-20">
-      <h2 class="text-4xl font-bold text-gray-800 mb-2 dark:text-gray-100">
-        About the <span class="italic font-light">Company</span>
-      </h2>
-      <p class="text-gray-600 text-lg dark:text-gray-300">Young, Fun and Original</p>
-    </div>
-
-    <section class="flex items-start space-x-8 m-20">
-      <img
-        src="src/img/fashion.jpg"
-        alt="Fashion model wearing a black and white sweater and jeans"
-        class="w-1/3 rounded-lg shadow-lg"
-      />
-      <div class="w-2/3">
-        <p class="text-lg text-gray-700 leading-relaxed pt-10 pb-10 dark:text-gray-300">
-          Young, fun and original, Xtra offers a totally unique online retail
-          experience for the Middle East. Fashion-conscious, 20-something
-          customers choose Xtra for its own aspirational yet accessible product
-          selection, brands huge why choice of brands and authentically urban
-          aesthetic. Born in 2018, Xtra has grown into a brand that champions
-          digital innovation, has a fiercely independent spirit and inspires its
-          fashion loving customer to experiment with their style. Its vast
-          product mix includes exclusive in-house collections, sports &
-          activewear and globally recognized brands.
-        </p>
-
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4 max-w-4xl mx-auto"
+    <!-- main -->
+    <!-- Main Content -->
+    <main class="bg-white dark:bg-gray-900">
+      <!-- About Section Header -->
+      <div class="text-center flex flex-col mb-12 pt-20">
+        <h2
+          class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-2 dark:text-gray-100"
         >
-          <!-- icon -->
-          <div
-            class="group flex items-center p-4 cursor-pointer hover:-translate-y-1 transition-transform duration-200 ease-in-out"
-          >
-            <div
-              class="w-16 h-16 bg-black rounded-full flex items-center justify-center mr-4 flex-shrink-0 transition-colors duration-300 ease-in-out group-hover:bg-primary"
-            >
-              <i class="fas fa-shopping-bag text-white text-2xl"></i>
-            </div>
-            <div class="flex flex-col">
-              <h3
-                class="text-xl font-bold text-gray-800 whitespace-nowrap group-hover:text-primary dark:text-gray-200"
-              >
-                Newest Products
-              </h3>
-              <p class="text-gray-600 text-sm dark:text-gray-400 dark:text-gray-300">Modern and new products</p>
-            </div>
-          </div>
-
-          <div
-            class="group flex items-center p-4 cursor-pointer hover:-translate-y-1 transition-transform duration-200 ease-in-out"
-          >
-            <div
-              class="w-16 h-16 bg-black rounded-full flex items-center justify-center mr-4 flex-shrink-0 transition-colors duration-300 ease-in-out group-hover:bg-primary"
-            >
-              <i class="fas fa-globe-americas text-white text-2xl"></i>
-            </div>
-            <div class="flex flex-col">
-              <h3
-                class="text-xl font-bold text-gray-800 whitespace-nowrap group-hover:text-primary dark:text-gray-200"
-              >
-                Free Shipping
-              </h3>
-              <p class="text-gray-600 text-sm dark:text-gray-400 dark:text-gray-300">All around the world</p>
-            </div>
-          </div>
-
-          <div
-            class="group flex items-center p-4 cursor-pointer hover:-translate-y-1 transition-transform duration-200 ease-in-out"
-          >
-            <div
-              class="w-16 h-16 bg-black rounded-full flex items-center justify-center mr-4 flex-shrink-0 transition-colors duration-300 ease-in-out group-hover:bg-primary"
-            >
-              <i class="fas fa-credit-card text-white text-2xl"></i>
-            </div>
-            <div class="flex flex-col">
-              <h3
-                class="text-xl font-bold text-gray-800 whitespace-nowrap group-hover:text-primary dark:text-gray-200"
-              >
-                100% Return Guarantee
-              </h3>
-              <p class="text-gray-600 text-sm dark:text-gray-400 dark:text-gray-300">
-                100% Money back back guarantee
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="group flex items-center p-4 cursor-pointer hover:-translate-y-1 transition-transform duration-200 ease-in-out"
-          >
-            <div
-              class="w-16 h-16 bg-black rounded-full flex items-center justify-center mr-4 flex-shrink-0 transition-colors duration-300 ease-in-out group-hover:bg-primary"
-            >
-              <i class="fas fa-shield-alt text-white text-2xl"></i>
-            </div>
-            <div class="flex flex-col">
-              <h3
-                class="text-xl font-bold text-gray-800 whitespace-nowrap group-hover:text-primary dark:text-gray-200"
-              >
-                Origainal Brands
-              </h3>
-              <p class="text-gray-600 text-sm dark:text-gray-400 dark:text-gray-300">
-                Al brands are new original products
-              </p>
-            </div>
-          </div>
-
-          <div
-            class="group flex items-center p-4 cursor-pointer hover:-translate-y-1 transition-transform duration-200 ease-in-out"
-          >
-            <div
-              class="w-16 h-16 bg-black rounded-full flex items-center justify-center mr-4 flex-shrink-0 transition-colors duration-300 ease-in-out group-hover:bg-primary"
-            >
-              <i class="fas fa-hands text-white text-2xl"></i>
-            </div>
-            <div class="flex flex-col">
-              <h3
-                class="text-xl font-bold text-gray-800 whitespace-nowrap group-hover:text-primary dark:text-gray-200"
-              >
-                Live Support
-              </h3>
-              <p class="text-gray-600 text-sm dark:text-gray-400 dark:text-gray-300">Phone and Email support</p>
-            </div>
-          </div>
-
-          <div
-            class="group flex items-center p-4 cursor-pointer hover:-translate-y-1 transition-transform duration-200 ease-in-out"
-          >
-            <div
-              class="w-16 h-16 bg-black rounded-full flex items-center justify-center mr-4 flex-shrink-0 transition-colors duration-300 ease-in-out group-hover:bg-primary"
-            >
-              <i class="fas fa-headset text-white text-2xl"></i>
-            </div>
-            <div class="flex flex-col">
-              <h3
-                class="text-xl font-bold text-gray-800 whitespace-nowrap group-hover:text-primary dark:text-gray-200"
-              >
-                Warranty Replace
-              </h3>
-              <p class="text-gray-600 text-sm dark:text-gray-400 dark:text-gray-300">
-                100% Safe warranty replacement
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="text-center">
-      <h1 class="mt-4 text-3xl font-bold dark:text-gray-200">
-        We are in <span class="italic font-normal">Numbers</span>
-      </h1>
-      <p class="mt-2 text-lg text-gray-900 dark:text-gray-300">We are expert in fashion clothes</p>
-    </div>
-
-    <div
-      class="grid grid-cols-1 md:grid-cols-3 gap-x-70 gap-y-8 max-w-4xl mx-auto pt-10"
-    >
-      <div class="flex flex-col items-center">
-        <div
-          class="bg-blue-600 rounded-lg p-8 w-80 h-40 flex items-center justify-center mb-4"
-        >
-          <span class="text-white text-5xl font-bold" data-target="63">0</span>
-          <span class="text-white text-5xl font-bold">+</span>
-        </div>
-        <p class="text-blue-600 text-lg text-center">Years of Experience</p>
-      </div>
-
-      <div class="flex flex-col items-center">
-        <div
-          class="bg-blue-600 rounded-lg p-8 w-80 h-40 flex items-center justify-center mb-4"
-        >
-          <span class="text-white text-5xl font-bold" data-target="93">0</span>
-          <span class="text-white text-5xl font-bold">+</span>
-        </div>
-        <p class="text-blue-600 text-lg text-center">
-          Branch all over the world
+          About the <span class="italic font-light">Company</span>
+        </h2>
+        <p class="text-gray-600 text-base sm:text-lg dark:text-gray-300">
+          Young, Fun and Original
         </p>
       </div>
 
-      <div class="flex flex-col items-center">
-        <div
-          class="bg-blue-600 rounded-lg p-8 w-80 h-40 flex items-center justify-center mb-4"
-        >
-          <span class="text-white text-5xl font-bold" data-target="14000"
-            >0</span
+      <!-- About Content -->
+      <section
+        class="flex flex-col lg:flex-row items-start space-y-8 lg:space-y-0 lg:space-x-8 mx-4 sm:mx-8 lg:mx-20"
+      >
+        <img
+          src="src/img/fashion.jpg"
+          alt="Fashion model wearing a black and white sweater and jeans"
+          class="w-full lg:w-1/3 rounded-lg shadow-lg"
+        />
+        <div class="w-full lg:w-2/3">
+          <p
+            class="text-base sm:text-lg text-gray-700 leading-relaxed pt-0 lg:pt-10 pb-6 lg:pb-10 dark:text-gray-300"
           >
-          <span class="text-white text-5xl font-bold">k</span>
+            Young, fun and original, Xtra offers a totally unique online retail
+            experience for the Middle East. Fashion-conscious, 20-something
+            customers choose Xtra for its own aspirational yet accessible
+            product selection, brands huge why choice of brands and
+            authentically urban aesthetic. Born in 2018, Xtra has grown into a
+            brand that champions digital innovation, has a fiercely independent
+            spirit and inspires its fashion loving customer to experiment with
+            their style. Its vast product mix includes exclusive in-house
+            collections, sports & activewear and globally recognized brands.
+          </p>
+
+          <!-- Features Grid -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-x-6 lg:gap-x-12 gap-y-4 max-w-4xl mx-auto"
+          >
+            <!-- Feature 1 -->
+            <div
+              class="group flex items-center p-4 cursor-pointer hover:-translate-y-1 transition-transform duration-200 ease-in-out"
+            >
+              <div
+                class="w-12 h-12 sm:w-16 sm:h-16 bg-black rounded-full flex items-center justify-center mr-4 flex-shrink-0 transition-colors duration-300 ease-in-out group-hover:bg-primary"
+              >
+                <i
+                  class="fas fa-shopping-bag text-white text-lg sm:text-2xl"
+                ></i>
+              </div>
+              <div class="flex flex-col">
+                <h3
+                  class="text-lg sm:text-xl font-bold text-gray-800 whitespace-nowrap group-hover:text-primary dark:text-gray-200"
+                >
+                  Newest Products
+                </h3>
+                <p
+                  class="text-gray-600 text-xs sm:text-sm dark:text-gray-400 dark:text-gray-300"
+                >
+                  Modern and new products
+                </p>
+              </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div
+              class="group flex items-center p-4 cursor-pointer hover:-translate-y-1 transition-transform duration-200 ease-in-out"
+            >
+              <div
+                class="w-12 h-12 sm:w-16 sm:h-16 bg-black rounded-full flex items-center justify-center mr-4 flex-shrink-0 transition-colors duration-300 ease-in-out group-hover:bg-primary"
+              >
+                <i
+                  class="fas fa-globe-americas text-white text-lg sm:text-2xl"
+                ></i>
+              </div>
+              <div class="flex flex-col">
+                <h3
+                  class="text-lg sm:text-xl font-bold text-gray-800 whitespace-nowrap group-hover:text-primary dark:text-gray-200"
+                >
+                  Free Shipping
+                </h3>
+                <p
+                  class="text-gray-600 text-xs sm:text-sm dark:text-gray-400 dark:text-gray-300"
+                >
+                  All around the world
+                </p>
+              </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div
+              class="group flex items-center p-4 cursor-pointer hover:-translate-y-1 transition-transform duration-200 ease-in-out"
+            >
+              <div
+                class="w-12 h-12 sm:w-16 sm:h-16 bg-black rounded-full flex items-center justify-center mr-4 flex-shrink-0 transition-colors duration-300 ease-in-out group-hover:bg-primary"
+              >
+                <i
+                  class="fas fa-credit-card text-white text-lg sm:text-2xl"
+                ></i>
+              </div>
+              <div class="flex flex-col">
+                <h3
+                  class="text-lg sm:text-xl font-bold text-gray-800 whitespace-nowrap group-hover:text-primary dark:text-gray-200"
+                >
+                  100% Return Guarantee
+                </h3>
+                <p
+                  class="text-gray-600 text-xs sm:text-sm dark:text-gray-400 dark:text-gray-300"
+                >
+                  100% Money back guarantee
+                </p>
+              </div>
+            </div>
+
+            <!-- Feature 4 -->
+            <div
+              class="group flex items-center p-4 cursor-pointer hover:-translate-y-1 transition-transform duration-200 ease-in-out"
+            >
+              <div
+                class="w-12 h-12 sm:w-16 sm:h-16 bg-black rounded-full flex items-center justify-center mr-4 flex-shrink-0 transition-colors duration-300 ease-in-out group-hover:bg-primary"
+              >
+                <i class="fas fa-shield-alt text-white text-lg sm:text-2xl"></i>
+              </div>
+              <div class="flex flex-col">
+                <h3
+                  class="text-lg sm:text-xl font-bold text-gray-800 whitespace-nowrap group-hover:text-primary dark:text-gray-200"
+                >
+                  Original Brands
+                </h3>
+                <p
+                  class="text-gray-600 text-xs sm:text-sm dark:text-gray-400 dark:text-gray-300"
+                >
+                  All brands are new original products
+                </p>
+              </div>
+            </div>
+
+            <!-- Feature 5 -->
+            <div
+              class="group flex items-center p-4 cursor-pointer hover:-translate-y-1 transition-transform duration-200 ease-in-out"
+            >
+              <div
+                class="w-12 h-12 sm:w-16 sm:h-16 bg-black rounded-full flex items-center justify-center mr-4 flex-shrink-0 transition-colors duration-300 ease-in-out group-hover:bg-primary"
+              >
+                <i class="fas fa-hands text-white text-lg sm:text-2xl"></i>
+              </div>
+              <div class="flex flex-col">
+                <h3
+                  class="text-lg sm:text-xl font-bold text-gray-800 whitespace-nowrap group-hover:text-primary dark:text-gray-200"
+                >
+                  Live Support
+                </h3>
+                <p
+                  class="text-gray-600 text-xs sm:text-sm dark:text-gray-400 dark:text-gray-300"
+                >
+                  Phone and Email support
+                </p>
+              </div>
+            </div>
+
+            <!-- Feature 6 -->
+            <div
+              class="group flex items-center p-4 cursor-pointer hover:-translate-y-1 transition-transform duration-200 ease-in-out"
+            >
+              <div
+                class="w-12 h-12 sm:w-16 sm:h-16 bg-black rounded-full flex items-center justify-center mr-4 flex-shrink-0 transition-colors duration-300 ease-in-out group-hover:bg-primary"
+              >
+                <i class="fas fa-headset text-white text-lg sm:text-2xl"></i>
+              </div>
+              <div class="flex flex-col">
+                <h3
+                  class="text-lg sm:text-xl font-bold text-gray-800 whitespace-nowrap group-hover:text-primary dark:text-gray-200"
+                >
+                  Warranty Replace
+                </h3>
+                <p
+                  class="text-gray-600 text-xs sm:text-sm dark:text-gray-400 dark:text-gray-300"
+                >
+                  100% Safe warranty replacement
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <p class="text-blue-600 text-lg text-center">New Products</p>
+      </section>
+
+      <!-- Statistics Section -->
+      <div class="text-center mt-16 mb-8">
+        <h1 class="text-2xl sm:text-3xl font-bold dark:text-gray-200">
+          We are in <span class="italic font-normal">Numbers</span>
+        </h1>
+        <p class="mt-2 text-base sm:text-lg text-gray-900 dark:text-gray-300">
+          We are expert in fashion clothes
+        </p>
       </div>
-    </div>
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto pt-10 px-4 pb-16"
+      >
+        <div class="flex flex-col items-center">
+          <div
+            class="bg-blue-600 rounded-lg p-6 sm:p-8 w-full max-w-xs h-32 sm:h-40 flex items-center justify-center mb-4"
+          >
+            <span
+              class="text-white text-3xl sm:text-4xl lg:text-5xl font-bold counter"
+              data-target="63"
+              >0</span
+            >
+            <span class="text-white text-3xl sm:text-4xl lg:text-5xl font-bold"
+              >+</span
+            >
+          </div>
+          <p class="text-blue-600 text-base sm:text-lg text-center">
+            Years of Experience
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div
+            class="bg-blue-600 rounded-lg p-6 sm:p-8 w-full max-w-xs h-32 sm:h-40 flex items-center justify-center mb-4"
+          >
+            <span
+              class="text-white text-3xl sm:text-4xl lg:text-5xl font-bold counter"
+              data-target="93"
+              >0</span
+            >
+            <span class="text-white text-3xl sm:text-4xl lg:text-5xl font-bold"
+              >+</span
+            >
+          </div>
+          <p class="text-blue-600 text-base sm:text-lg text-center">
+            Branch all over the world
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center">
+          <div
+            class="bg-blue-600 rounded-lg p-6 sm:p-8 w-full max-w-xs h-32 sm:h-40 flex items-center justify-center mb-4"
+          >
+            <span
+              class="text-white text-3xl sm:text-4xl lg:text-5xl font-bold counter"
+              data-target="14000"
+              >0</span
+            >
+            <span class="text-white text-3xl sm:text-4xl lg:text-5xl font-bold"
+              >k</span
+            >
+          </div>
+          <p class="text-blue-600 text-base sm:text-lg text-center">
+            New Products
+          </p>
+        </div>
+      </div>
+    </main>
 
     <!-- footer -->
     <footer>
@@ -645,7 +722,7 @@
       </section>
     </footer>
     <!-- <script src="about.js"></script> -->
-     
+
     <script src="indexScript.js"></script>
   </body>
 </html>
